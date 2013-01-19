@@ -1,0 +1,7 @@
+*.pyc
+*.swp
+*/media/js/out/*
+.netrwhist
+venv
+.env-hammer
+*/_build/*

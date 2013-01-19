@@ -1,4 +1,0 @@
-atmosphere
-==========
-
-evanhammer's environment

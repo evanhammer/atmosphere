@@ -1,0 +1,23 @@
+[user]
+	name = Evan Hammer
+	email = hammer@sendjack.com
+
+[merge]
+	tool = vimdiff
+
+[core]
+    excludesfile = ~/.gitignore
+    editor = /usr/bin/vim
+
+[color]
+    ui = always
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    who = shortlog -s --
+[heroku]

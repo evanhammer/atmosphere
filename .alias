@@ -1,0 +1,35 @@
+alias v="vi"
+alias l="less"
+alias c="cat"
+alias ll="ls -lhG"
+alias la="ls -lhaG"
+alias ps="ps -aef | grep -i"
+alias lc="ls --ignore=\"*.pyc\""
+alias ls="ls -GF"
+
+gsuper () { grep -nr --exclude=*.pyc --exclude=*.swp --color=tty $1 "$2" .; }
+gr () { gsuper "" "$@"; }
+cgr () { gsuper "--exclude-dir=.git --exclude-dir=venv" "$@"; }
+lgr () { gsuper "" "$@" | l -R; }
+
+alias g="git"
+
+alias ec2-user="ssh -i ~/Desktop/sqoreboard/tech/aws/private_keys/predev0-ec2-user.pem ec2-user@predev0.sqoreboard.com"
+alias pd0="ssh -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem hammer@predev0.sqoreboard.com"
+copy-to () { scp -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem "$@" hammer@predev0.sqoreboard.com:"$@"; }
+copy-from () { scp -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem hammer@predev0.sqoreboard.com:"$@" "$@"; }
+
+alias scoreboard="cd ~/dev/scoreboard/web/"
+alias jackalope="cd ~/dev/jackalope/jackalope/"
+alias sendjack="cd ~/dev/jackalope/web/"
+
+alias js="cd ~/dev/scoreboard/web/media/js"
+alias css="cd ~/dev/scoreboard/web/media/css"
+alias activate="source venv/bin/activate;"
+alias goprod="honcho start --env=.prod.env"
+alias gostage="honcho start --env=.staging.env"
+alias godev="honcho start --env=.dev.env"
+alias gosend="honcho start --env=.env"
+alias scompile="ctags -R -o ~/dev/scoreboard/mytags ~/dev/scoreboard/web"
+alias jcompile="ctags -R -o ~/dev/jackalope/mytags ~/dev/jackalope/jackalope"
+alias strip="find . -name \*.pyc -delete"

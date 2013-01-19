@@ -1,0 +1,16 @@
+-H
+--group
+--smart-case
+--color-filename=bold blue 
+--color-match=bold black on_red
+--color-lineno=green
+--css
+--html
+--js
+--objc
+--python
+--ruby
+--type-add=css=.less
+--ignore-dir=media/js/lib
+--ignore-dir=media/css/lib
+--ignore-dir=venv

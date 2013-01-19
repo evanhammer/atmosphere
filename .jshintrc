@@ -1,0 +1,22 @@
+{
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "noempty": true,
+    "nonew": true,
+    "plusplus": true,
+    "regex": true,
+    "undef": true,
+
+    "strict": false,
+    "trailing": true,
+
+    "predef": ["define", "require"],
+    "devel": true,
+    "browser": true
+}
