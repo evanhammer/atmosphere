@@ -16,6 +16,8 @@ if [ -f ~/.git-completion.sh ]; then
     . ~/.git-completion.sh
 fi
 
+source ~/.git-flow-completion.sh
+
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 

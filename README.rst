@@ -21,8 +21,9 @@ Bash:
 Git:
 ----
 - gitignore (global): ``.gitignore``
-- gitignore (python): ``py.gitignore``
+- gitignore (python): ``.py.gitignore``
 - git autocomplete script: ``.git-completion.sh``
+- git flow autocomplete script: ``.git-flow-completion.sh``
 - gitconfig: ``.gitconfig``
 
 Other Tools:
