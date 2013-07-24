@@ -11,18 +11,19 @@ if [ -f ~/.alias ]; then
     . ~/.alias
 fi
 
-# Set git autocompletion
+# Set git completion
 if [ -f ~/.git-completion.sh ]; then
     . ~/.git-completion.sh
 fi
 
+# Set git flow completion
 source ~/.git-flow-completion.sh
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 
 # Compile ctags at login (hide stdout * stderr)
-jcompile > /dev/null 2>&1
+#jcompile > /dev/null 2>&1
 
 # Start at code
-jackalope
+sjack

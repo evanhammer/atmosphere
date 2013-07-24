@@ -1,3 +1,4 @@
+# COMMANDS
 alias v="vi"
 alias l="less"
 alias c="cat"
@@ -7,29 +8,29 @@ alias ps="ps -aef | grep -i"
 alias lc="ls --ignore=\"*.pyc\""
 alias ls="ls -GF"
 
-gsuper () { grep -nr --exclude=*.pyc --exclude=*.swp --color=tty $1 "$2" .; }
-gr () { gsuper "" "$@"; }
-cgr () { gsuper "--exclude-dir=.git --exclude-dir=venv" "$@"; }
-lgr () { gsuper "" "$@" | l -R; }
 
-alias g="git"
-
-alias ec2-user="ssh -i ~/Desktop/sqoreboard/tech/aws/private_keys/predev0-ec2-user.pem ec2-user@predev0.sqoreboard.com"
-alias pd0="ssh -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem hammer@predev0.sqoreboard.com"
-copy-to () { scp -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem "$@" hammer@predev0.sqoreboard.com:"$@"; }
-copy-from () { scp -i /Users/evanhammer/Dropbox/Work/Scoreboard/Technology/predev0-hammer.pem hammer@predev0.sqoreboard.com:"$@" "$@"; }
-
-alias scoreboard="cd ~/dev/scoreboard/web/"
+# PROJECT SHORTCUTS 
 alias jackalope="cd ~/dev/jackalope/jackalope/"
-alias sendjack="cd ~/dev/jackalope/web/"
+alias mm="cd ~/dev/jackalope/mailman/"
+alias sjack="cd ~/dev/jackalope/sendjack/"
+alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
+alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
+alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
+alias scoreboard="cd ~/dev/scoreboard/web/"
 
-alias js="cd ~/dev/scoreboard/web/media/js"
-alias css="cd ~/dev/scoreboard/web/media/css"
-alias activate="source venv/bin/activate;"
+alias js="cd ~/dev/jackalope/sendjack/sendjack/media/js"
+alias css="cd ~/dev/jackalope/sendjack/sendjack/media/css"
+
+
+# DEV COMMANDS
 alias goprod="honcho start --env=.prod.env"
 alias gostage="honcho start --env=.staging.env"
 alias godev="honcho start --env=.dev.env"
-alias gosend="honcho start --env=.env"
-alias scompile="ctags -R -o ~/dev/scoreboard/mytags ~/dev/scoreboard/web"
-alias jcompile="ctags -R -o ~/dev/jackalope/mytags ~/dev/jackalope/jackalope"
+
+alias g="git"
+alias activate="source venv/bin/activate;"
 alias strip="find . -name \*.pyc -delete"
+
+# DATABASE CONNECTIONS
+alias pgstage="psql postgres://jdnvvunrmbiody@ec2-107-21-99-45.compute-1.amazonaws.com:5432/d6v4mmk3nmtp1r -w"
+alias pgprod="psql postgres://vvuuuntxijurmn@ec2-107-22-169-250.compute-1.amazonaws.com:5432/dc6iucghkh5v1i -w"

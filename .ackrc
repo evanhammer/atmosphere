@@ -11,6 +11,6 @@
 --python
 --ruby
 --type-add=css=.less
---ignore-dir=media/js/lib
---ignore-dir=media/css/lib
+--ignore-dir=libs
+--ignore-dir=libs
 --ignore-dir=venv
