@@ -7,10 +7,14 @@ environment.
 
 Todo:
 -----
+#. add symlinks to setup.sh
 #. submodule my vimrc
-#. add the setup script
 #. heroku
 #. add private files
+
+Installer:
+----------
+- setup: ``setup.sh``
 
 Bash:
 -----
@@ -31,3 +35,4 @@ Other Tools:
 - ack config: ``.ackrc``
 - ctags config: ``.ctags``
 - jshint config: ``.jshintrc``
+- psql config: ``.psqlrc``
