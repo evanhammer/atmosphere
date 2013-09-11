@@ -51,16 +51,16 @@ pip install flake8
 
 # jshint
 # CONFIG .jshintrc
-sudo npm install jshint -g
+npm install jshint -g
 
 # ctags
 # http://ctags.sourceforge.net
 # CONFIG .ctags
 brew install ctags
-# New Project: ctags -R .
+# On package creation: ctags -R .
 
 # less
-sudo npm install less -g
+npm install less -g
 
 # docutils 
 pip install sphinx
@@ -83,4 +83,10 @@ gem install lunchy
 
 # node extensions / modules
 pip install nodeenv
-sudo npm install nodemon -g
+npm install nodemon -g
+
+# grunt-init: http://gruntjs.com/project-scaffolding
+npm install grunt-cli -g
+npm install grunt-init -g
+# To create new rendr projects: grunt-init rendr
+# https://github.com/andrewrjones/grunt-init-rendr

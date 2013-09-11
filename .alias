@@ -17,6 +17,7 @@ alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
 alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
 alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
 alias scoreboard="cd ~/dev/scoreboard/web/"
+alias uc="cd ~/Development/urbancompass/"
 
 alias js="cd ~/dev/jackalope/sendjack/sendjack/media/js"
 alias css="cd ~/dev/jackalope/sendjack/sendjack/media/css"

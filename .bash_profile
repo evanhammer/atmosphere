@@ -33,3 +33,9 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 PYTHONPATH=~/dev/jackalope/jackalope/
 export PYTHONPATH
+
+# Added for Urban Compass
+export GITROOT=/Users/evanhammer/Development
+export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/share/python:/usr/local/share/npm/bin:$PATH
+export CREDENTIALS_FILE=~/.credentials

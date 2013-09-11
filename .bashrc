@@ -26,4 +26,4 @@ export PATH=/usr/local/share/python:$PATH
 #jcompile > /dev/null 2>&1
 
 # Start at code
-sjack
+#sjack
