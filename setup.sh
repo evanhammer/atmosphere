@@ -8,7 +8,7 @@
 
 # Dependencies:
 # gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
-# CLT - command line tools
+# CLT - command line tools - https://developer.apple.com/downloads/index.action#
 # Heroku, Git, Foreman - https://toolbelt.herokuapp.com/
 
 
