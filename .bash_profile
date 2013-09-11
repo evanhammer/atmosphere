@@ -8,14 +8,14 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/bin
- 
+
 export PATH
 
 # Change my shell prompt
 parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
 }
-   
+
 export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
 
 # Setting PATH for Python 2.7
@@ -35,6 +35,6 @@ PYTHONPATH=~/dev/jackalope/jackalope/
 export PYTHONPATH
 
 # Added for Urban Compass
-export GITROOT=/Users/evanhammer/Development
+export GITROOT=/Users/evanhammer/dev
 export PATH=/usr/local/share/npm/bin:$PATH
 export CREDENTIALS_FILE=~/.credentials

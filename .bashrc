@@ -20,7 +20,6 @@ fi
 source ~/.git-flow-completion.sh
 
 export PATH=/usr/local/bin:$PATH
-export PATH=/usr/local/share/python:$PATH
 
 # Compile ctags at login (hide stdout * stderr)
 #jcompile > /dev/null 2>&1
