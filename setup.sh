@@ -8,6 +8,7 @@
 
 # Dependencies:
 # gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
+# Xcode / Graphic Tools / Origami
 # CLT - command line tools - https://developer.apple.com/downloads/index.action#
 # Heroku, Git, Foreman - https://toolbelt.herokuapp.com/
 
@@ -62,13 +63,13 @@ brew install ctags
 # less
 npm install less -g
 
-# docutils 
+# docutils
 pip install sphinx
 
 # process management
 pip install honcho
 # any other plugin dependencies?
-# git hooks for checking in with python? 
+# git hooks for checking in with python?
 
 # databases
 brew install postgresql
