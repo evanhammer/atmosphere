@@ -29,7 +29,9 @@ Bundle 'elzr/vim-json'
 Bundle 'groenewege/vim-less'
 Bundle 'hail2u/vim-css3-syntax.git'
 Bundle 'lepture/vim-jinja.git'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'vim-scripts/python.vim--Vasiliev'
 
 " General
@@ -47,52 +49,49 @@ Bundle 'vim-scripts/ScrollColors'
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
-
 syntax on
-set background=dark " needs to be before colorscheme
+" set background=dark " needs to be before colorscheme
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ACK: |plugin|
+" PLUGINS:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ack
 noremap :a :Ack<space>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PYTHON MODE: |plugin|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" python mode
 " Disable pylint checking every save
 " let g:pymode_lint_write = 0
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SYNTASTIC: |plugin|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" syntastic
 let g:syntastic_check_on_open=1 " check syntax on open
 let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TAGBAR: |plugin|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tagbar
 noremap <silent> T :TagbarToggle<CR>
 let g:tagbar_left=1
 let g:tagbar_autoclose=1
+
 " Add any active projects by running: 'ctags -R .' in the src directory
 set tags=./tags,tags;
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" DeleteTrailingWhitespace:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" delete trailing whitespaces
 " Remove trailing whitespace on write
 autocmd BufWritePre * DeleteTrailingWhitespace
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JAVASCRIPT: |language|
+" LANGUAGES:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" JAVASCRIPT
+
 "au FileType javascript setlocal cindent smartindent
 let g:syntastic_javascript_checker='jshint'
 let g:syntastic_javascript_jshint_conf='~/.jshintrc'
@@ -101,12 +100,10 @@ let g:syntastic_javascript_jslint_conf='--browser --sloppy --maxlen=80 --undef -
 let g:syntastic_javascript_gjslint_conf='--nojsdoc'
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PYTHON: |language|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""let python_highlight_all=1     " for full syntax highlighting
-let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E303,E126'
+" PYTHON
 
+"let python_highlight_all=1     " for full syntax highlighting
+let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E303,E126'
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " omnicomplete
@@ -124,9 +121,8 @@ au FileType python set foldnestmax=2
 "autocmd BufNewFile *.py set fileformat=unix
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" LESS: |language|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LESS
+
 function LessToCss()
     let current_file = shellescape(expand('%:p'))
     let filename = shellescape(expand('%:r'))
@@ -138,9 +134,8 @@ endfunction
 autocmd BufWritePost,FileWritePost *.less call LessToCss()
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JINJA2: |language|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JINJA2
+
 " Figure out which type of hilighting to use for html.
 fun! s:SelectHTML()
 let n = 1
@@ -154,6 +149,7 @@ while n < 50 && n < line("$")
   endwhile
 endfun
 autocmd BufNewFile,BufRead *.jinja2,*.jinja,*.html,*.htm  call s:SelectHTML()
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL OPTIONS:
