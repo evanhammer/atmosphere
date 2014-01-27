@@ -25,27 +25,25 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Syntax and language improvements
-Bundle 'hail2u/vim-css3-syntax.git'
-Bundle 'pangloss/vim-javascript'
-Bundle 'groenewege/vim-less'
-Bundle 'vim-scripts/python.vim--Vasiliev'
-Bundle 'lepture/vim-jinja.git'
 Bundle 'elzr/vim-json'
+Bundle 'groenewege/vim-less'
+Bundle 'hail2u/vim-css3-syntax.git'
+Bundle 'lepture/vim-jinja.git'
+Bundle 'pangloss/vim-javascript'
+Bundle 'vim-scripts/python.vim--Vasiliev'
 
 " General
+Bundle 'ervandew/supertab'
+Bundle 'klen/python-mode'
+Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim.git'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/AutoTag.git'
 Bundle 'vim-scripts/Colour-Sampler-Pack'
 Bundle 'vim-scripts/DeleteTrailingWhitespace.git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'klen/python-mode'
 Bundle 'vim-scripts/ScrollColors'
-Bundle 'ervandew/supertab'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
 
-" Colorschemes
-Bundle 'altercation/vim-colors-solarized'
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
@@ -82,29 +80,6 @@ let g:tagbar_left=1
 let g:tagbar_autoclose=1
 " Add any active projects by running: 'ctags -R .' in the src directory
 set tags=./tags,tags;
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SOLARIZED: |colorscheme|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" stuff to make solarized color palletes work
-"
-"    option name               default     optional
-"    ------------------------------------------------
-"    g:solarized_termcolors=   16      |   256
-"    g:solarized_termtrans =   0       |   1
-"    g:solarized_degrade   =   0       |   1
-"    g:solarized_bold      =   1       |   0
-"    g:solarized_underline =   1       |   0
-"    g:solarized_italic    =   1       |   0
-"    g:solarized_style     =   "dark"  |   "light"
-"    g:solarized_contrast  =   "normal"|   "high" or "low"
-"    ------------------------------------------------
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" put options before colorscheme
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
