@@ -7,11 +7,7 @@
 " http://rawpackets.com/2011/10/16/configuring-vim-as-a-python-ide/
 "
 " TODO_LIST:
-" 2. Make sure html5 highlighting is always working.
-" 3. Get better python keyword highlighting (e.g., True, None).
 " 4. Add CloseTag (or something better for markup).
-" 5. What does python-mode really do? Can I simplify the vimrc?
-" 6. Use fugitive.
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved
@@ -31,11 +27,16 @@ Bundle 'hail2u/vim-css3-syntax.git'
 Bundle 'lepture/vim-jinja.git'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'vim-scripts/python.vim--Vasiliev'
+Bundle 'marijnh/tern_for_vim'
+Bundle 'hdima/python-syntax'
+"Bundle 'vim-scripts/python.vim--Vasiliev'
+"Bundle 'vim-scripts/JavaScript-Indent' " broke html
 
 " General
-Bundle 'ervandew/supertab'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'bling/vim-airline'
+Bundle 'ciaranm/detectindent'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim.git'
@@ -57,7 +58,13 @@ syntax on
 " PLUGINS:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" ack
+" DETECT INDENT:
+" autocmd BufReadPost * :DetectIndent
+let g:detectindent_preferred_expandtab = 1
+let g:detectindent_preferred_indent = 4
+
+
+" ACK:
 noremap :a :Ack<space>
 
 
@@ -66,12 +73,12 @@ noremap :a :Ack<space>
 " let g:pymode_lint_write = 0
 
 
-" syntastic
+" SYNTASTIC:
 let g:syntastic_check_on_open=1 " check syntax on open
 let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
 
 
-" tagbar
+" TAGBAR:
 noremap <silent> T :TagbarToggle<CR>
 let g:tagbar_left=1
 let g:tagbar_autoclose=1
@@ -80,7 +87,7 @@ let g:tagbar_autoclose=1
 set tags=./tags,tags;
 
 
-" delete trailing whitespaces
+" DELETE TRAILING WHITESPACES:
 " Remove trailing whitespace on write
 autocmd BufWritePre * DeleteTrailingWhitespace
 
@@ -90,17 +97,15 @@ autocmd BufWritePre * DeleteTrailingWhitespace
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-" JAVASCRIPT
+" JAVASCRIPT:
+" http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
 
 "au FileType javascript setlocal cindent smartindent
-let g:syntastic_javascript_checker='jshint'
+let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_javascript_jshint_conf='~/.jshintrc'
-" not actually using jslint
-let g:syntastic_javascript_jslint_conf='--browser --sloppy --maxlen=80 --undef --white'
-let g:syntastic_javascript_gjslint_conf='--nojsdoc'
 
 
-" PYTHON
+" PYTHON:
 
 "let python_highlight_all=1     " for full syntax highlighting
 let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E303,E126'
@@ -121,7 +126,7 @@ au FileType python set foldnestmax=2
 "autocmd BufNewFile *.py set fileformat=unix
 
 
-" LESS
+" LESS:
 
 function LessToCss()
     let current_file = shellescape(expand('%:p'))
@@ -134,21 +139,21 @@ endfunction
 autocmd BufWritePost,FileWritePost *.less call LessToCss()
 
 
-" JINJA2
+" JINJA2:
 
 " Figure out which type of hilighting to use for html.
-fun! s:SelectHTML()
-let n = 1
-while n < 50 && n < line("$")
-  " check for jinja
-  if getline(n) =~ '{%\s*\(extends\|block\|macro\|set\|if\|for\|include\|trans\)\>'
-    set ft=jinja
-    return
-  endif
-    let n = n + 1
-  endwhile
-endfun
-autocmd BufNewFile,BufRead *.jinja2,*.jinja,*.html,*.htm  call s:SelectHTML()
+"fun! s:SelectHTML()
+"let n = 1
+"while n < 50 && n < line("$")
+"  " check for jinja
+"  if getline(n) =~ '{%\s*\(extends\|block\|macro\|set\|if\|for\|include\|trans\)\>'
+"    set ft=jinja
+"    return
+"  endif
+"    let n = n + 1
+"  endwhile
+"endfun
+"autocmd BufNewFile,BufRead *.jinja2,*.jinja,*.html,*.htm  call s:SelectHTML()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -163,11 +168,11 @@ nnoremap <space> za
 
 " indentation
 set autoindent         	        " keep indent level from previous line
-set tabstop=4          	    " number of spaces that a tab counts for
-set softtabstop=4              " number of spaces that a tab counts for
+set tabstop=4          	        " # of spaces that a tab counts for
+set softtabstop=4               " # of spaces that a tab counts for (insert mode)
 set expandtab                   " uses spaces instead of tab characters
 set smarttab                    " helps with backspacing because of expandtab
-set shiftwidth=4               " number of spaces to use for autoindent
+set shiftwidth=4                " number of spaces to use for autoindent
 set shiftround                  " rounds indent to a multiple of shiftwidth
 
 " visual
@@ -208,7 +213,7 @@ set autochdir                   " set the current directory
 " STATUS LINE:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                " always show the status line
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | | | |  |   |      |  |     |    |
 "              | | | | |  |   |      |  |     |    + current
 "              | | | | |  |   |      |  |     |       column

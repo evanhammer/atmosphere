@@ -25,9 +25,6 @@ pip install --upgrade pip
 # homebrew
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
-# upgrade vim
-brew install macvim --override-system-vim
-
 # node & npm
 brew install node
 
@@ -93,3 +90,13 @@ npm install grunt-cli -g
 npm install grunt-init -g
 # To create new rendr projects: grunt-init rendr
 # https://github.com/andrewrjones/grunt-init-rendr
+
+# upgrade vim
+brew install vim --override-system-vi
+
+# upgrade you complete me plugin
+vim +BundleInstall &
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh
+cd ~/.vim/bundle/tern_for_vim
+npm install
