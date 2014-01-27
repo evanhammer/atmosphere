@@ -1,33 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Evan Hammer - evan@evanhammer.com
 "
-" Version: 0.3 - 2012.07.04
-"
-" PATHOGEN:
-" pathogen - https://github.com/tpope/vim-pathogen
-"
-" PLUGINS:
-" ack - https://github.com/mileszs/ack.vim.git -- search
-" autotag - https://github.com/vim-scripts/AutoTag.git -- ctag regeneration
-" color-sampler-pack - https://github.com/vim-scripts/color-sampler-pack
-" delete bad whitespace - https://github.com/vim-scripts/DeleteTrailingWhitespace.git
-" fugitive - https://github.com/tpope/vim-fugitive
-" python-mode - https://github.com/klen/python-mode
-" scrollcolors - https://github.com/vim-scripts/scrollcolors
-" supertab - https://github.com/ervandew/supertab
-" syntastic - https://github.com/scrooloose/syntastic
-" tagbar - https://github.com/majutsushi/tagbar
-"
-" COLORSCHEMES: (+Color-Sample-Pack)
-" solarized - https://github.com/altercation/vim-colors-solarized
-"
-" LANGUAGES:
-" css3 - https://github.com/hail2u/vim-css3-syntax
-" javascript - https://github.com/pangloss/vim-javascript
-" less - https://github.com/groenewege/vim-less
-" python - https://github.com/vim-scripts/python.vim--vasiliev
-" jinja2 - https://github.com/lepture/vim-jinja.git
-" json - https://github.com/elzr/vim-json
+" Version: 0.4 - 2014.01.26
 "
 " TUTORIAL:
 " http://rawpackets.com/2011/10/16/configuring-vim-as-a-python-ide/
@@ -40,19 +14,42 @@
 " 6. Use fugitive.
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible              " be iMproved
+filetype off                  " required!
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PATHOGEN: |plugin|
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" from http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:pathogen_disabled = [ 'pathogen', 'python-mode' ]
-call pathogen#infect()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
+" Vundle: One ring to rule them all.
+" required!
+Bundle 'gmarik/vundle'
 
-filetype on
+" Syntax and language improvements
+Bundle 'hail2u/vim-css3-syntax.git'
+Bundle 'pangloss/vim-javascript'
+Bundle 'groenewege/vim-less'
+Bundle 'vim-scripts/python.vim--Vasiliev'
+Bundle 'lepture/vim-jinja.git'
+Bundle 'elzr/vim-json'
+
+" General
+Bundle 'mileszs/ack.vim.git'
+Bundle 'vim-scripts/AutoTag.git'
+Bundle 'vim-scripts/Colour-Sampler-Pack'
+Bundle 'vim-scripts/DeleteTrailingWhitespace.git'
+Bundle 'tpope/vim-fugitive'
+Bundle 'klen/python-mode'
+Bundle 'vim-scripts/ScrollColors'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+
+" Colorschemes
+Bundle 'altercation/vim-colors-solarized'
+
+" Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
+
 syntax on
 set background=dark " needs to be before colorscheme
 
