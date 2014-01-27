@@ -1,0 +1,386 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Maintainer: Evan Hammer - evan@evanhammer.com
+"
+" Version: 0.3 - 2012.07.04
+"
+" PATHOGEN:
+" pathogen - https://github.com/tpope/vim-pathogen
+"
+" PLUGINS:
+" ack - https://github.com/mileszs/ack.vim.git -- search
+" autotag - https://github.com/vim-scripts/AutoTag.git -- ctag regeneration
+" color-sampler-pack - https://github.com/vim-scripts/color-sampler-pack
+" delete bad whitespace - https://github.com/vim-scripts/DeleteTrailingWhitespace.git
+" fugitive - https://github.com/tpope/vim-fugitive
+" python-mode - https://github.com/klen/python-mode
+" scrollcolors - https://github.com/vim-scripts/scrollcolors
+" supertab - https://github.com/ervandew/supertab
+" syntastic - https://github.com/scrooloose/syntastic
+" tagbar - https://github.com/majutsushi/tagbar
+"
+" COLORSCHEMES: (+Color-Sample-Pack)
+" solarized - https://github.com/altercation/vim-colors-solarized
+"
+" LANGUAGES:
+" css3 - https://github.com/hail2u/vim-css3-syntax
+" javascript - https://github.com/pangloss/vim-javascript
+" less - https://github.com/groenewege/vim-less
+" python - https://github.com/vim-scripts/python.vim--vasiliev
+" jinja2 - https://github.com/lepture/vim-jinja.git
+" json - https://github.com/elzr/vim-json
+"
+" TUTORIAL:
+" http://rawpackets.com/2011/10/16/configuring-vim-as-a-python-ide/
+"
+" TODO_LIST:
+" 2. Make sure html5 highlighting is always working.
+" 3. Get better python keyword highlighting (e.g., True, None).
+" 4. Add CloseTag (or something better for markup).
+" 5. What does python-mode really do? Can I simplify the vimrc?
+" 6. Use fugitive.
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PATHOGEN: |plugin|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" from http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pathogen_disabled = [ 'pathogen', 'python-mode' ]
+call pathogen#infect()
+call pathogen#helptags()
+
+
+filetype on
+filetype plugin indent on
+syntax on
+set background=dark " needs to be before colorscheme
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ACK: |plugin|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap :a :Ack<space>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PYTHON MODE: |plugin|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Disable pylint checking every save
+" let g:pymode_lint_write = 0
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTASTIC: |plugin|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_check_on_open=1 " check syntax on open
+let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TAGBAR: |plugin|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <silent> T :TagbarToggle<CR>
+let g:tagbar_left=1
+let g:tagbar_autoclose=1
+" Add any active projects by running: 'ctags -R .' in the src directory
+set tags=./tags,tags;
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SOLARIZED: |colorscheme|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" stuff to make solarized color palletes work
+"
+"    option name               default     optional
+"    ------------------------------------------------
+"    g:solarized_termcolors=   16      |   256
+"    g:solarized_termtrans =   0       |   1
+"    g:solarized_degrade   =   0       |   1
+"    g:solarized_bold      =   1       |   0
+"    g:solarized_underline =   1       |   0
+"    g:solarized_italic    =   1       |   0
+"    g:solarized_style     =   "dark"  |   "light"
+"    g:solarized_contrast  =   "normal"|   "high" or "low"
+"    ------------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" put options before colorscheme
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DeleteTrailingWhitespace:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Remove trailing whitespace on write
+autocmd BufWritePre * DeleteTrailingWhitespace
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JAVASCRIPT: |language|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"au FileType javascript setlocal cindent smartindent
+let g:syntastic_javascript_checker='jshint'
+let g:syntastic_javascript_jshint_conf='~/.jshintrc'
+" not actually using jslint
+let g:syntastic_javascript_jslint_conf='--browser --sloppy --maxlen=80 --undef --white'
+let g:syntastic_javascript_gjslint_conf='--nojsdoc'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PYTHON: |language|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""let python_highlight_all=1     " for full syntax highlighting
+let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E303,E126'
+
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" omnicomplete
+au FileType python set ofu=pythoncomplete#Complete
+
+" code folding
+au FileType python set foldmethod=indent " code folding based on indentation
+au FileType python set foldlevel=10
+au FileType python set foldnestmax=2
+
+" improve autoindent on {} and cinwords (doesn't seem necessary for python)
+"autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,with,try,except,finally,def,class
+
+" use unix-style \n line endings only for new files when coding (???)
+"autocmd BufNewFile *.py set fileformat=unix
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" LESS: |language|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function LessToCss()
+    let current_file = shellescape(expand('%:p'))
+    let filename = shellescape(expand('%:r'))
+    let command = "silent !lessc -x " . current_file . " " . filename . ".css"
+    "let command = 'silent !lessc -x --yui-compress ' . current_file . ' ' . filename . '.css'
+    execute command
+endfunction
+
+autocmd BufWritePost,FileWritePost *.less call LessToCss()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JINJA2: |language|
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Figure out which type of hilighting to use for html.
+fun! s:SelectHTML()
+let n = 1
+while n < 50 && n < line("$")
+  " check for jinja
+  if getline(n) =~ '{%\s*\(extends\|block\|macro\|set\|if\|for\|include\|trans\)\>'
+    set ft=jinja
+    return
+  endif
+    let n = n + 1
+  endwhile
+endfun
+autocmd BufNewFile,BufRead *.jinja2,*.jinja,*.html,*.htm  call s:SelectHTML()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" GENERAL OPTIONS:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" from: http://phuzz.org/vimrc.html
+" from: https://bitbucket.org/whiteinge/dotfiles/src/14246aa6719d/.vimrc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" code folding
+nnoremap <space> za
+
+" indentation
+set autoindent         	        " keep indent level from previous line
+set tabstop=4          	    " number of spaces that a tab counts for
+set softtabstop=4              " number of spaces that a tab counts for
+set expandtab                   " uses spaces instead of tab characters
+set smarttab                    " helps with backspacing because of expandtab
+set shiftwidth=4               " number of spaces to use for autoindent
+set shiftround                  " rounds indent to a multiple of shiftwidth
+
+" visual
+set cursorline                  " highlight current line
+"set cursorcolumn                " highlight current column
+" highlight Normal ctermbg=black
+" highlight bad whitespace, maybe only in .py files?
+highlight BadWhitespace ctermbg=red guibg=red
+colorscheme molokai
+
+" misc
+set textwidth=79 		        " wrap text starting in col 80
+set encoding=utf-8              " set default file encoding to utf8
+set scrolloff=5                 " keep 5 lines when scrolling
+set incsearch                   " highlight search while typing
+set hlsearch                    " highlight searches
+set ruler                       " show the cursor position all the time
+set number                      " show line numbers
+set numberwidth=4               " We are good up to 9999 lines
+set ignorecase                  " ignore case when searching
+set title                       " show title in console title bar
+set ttyfast                     " smoother changes
+set virtualedit=block           " let cursor move past line end in <C-v> mode
+set nostartofline               " don't jump cursor to first char when paging
+set autowrite                   " auto save changes on quit and switch buffers
+set sm                          " show matching braces
+set smartcase                   " if there are caps, go case-sensitive
+"set completeopt=                " don't use a pop up menu for completions
+set backspace=indent,eol,start  " backspace over listed character types
+set noswapfile                  " dont save swp files
+set nobackup                    " dont save backup files
+set autochdir                   " set the current directory
+
+" Restore cursor position
+"autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" STATUS LINE:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set laststatus=2                " always show the status line
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"              | | | | |  |   |      |  |     |    |
+"              | | | | |  |   |      |  |     |    + current
+"              | | | | |  |   |      |  |     |       column
+"              | | | | |  |   |      |  |     +-- current line
+"              | | | | |  |   |      |  +-- current % into file
+"              | | | | |  |   |      +-- current syntax in
+"              | | | | |  |   |          square brackets
+"              | | | | |  |   +-- current fileformat
+"              | | | | |  +-- number of lines
+"              | | | | +-- preview flag in square brackets
+"              | | | +-- help flag in square brackets
+"              | | +-- readonly flag in square brackets
+"              | +-- rodified flag in square brackets
+"              +-- full path to file in the buffer
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" AUTO WIDTH:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set winwidth=83
+autocmd WinEnter * wincmd =
+autocmd VimResized * wincmd =
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEY REMAPPINGS: NAVIGATE SPLIT SCREEN
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
+nmap <Tab> <c-w>w
+nmap <S-Tab> <c-w>W
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEY REMAPPINGS: SCROLLBIND AND CURSORBIND IN ONE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap :ss :windo<space>set<space>scrollbind<cr>:windo<space>set<space>cursorbind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" KEY REMAPPINGS: USE ARROW KEYS FOR TEXT SHIFTING
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" See: http://jeetworks.org/node/89
+" `Up` or `Down` moves the current line up or down
+" `Ctrl-Up` or `Ctrl-Down` moves the text below the current line up or down
+" Left` de-dents the current line, while `Right` indents it.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap  <up> <nop>
+inoremap  <down> <nop>
+inoremap  <left> <nop>
+inoremap  <right> <nop>
+noremap   <up> <nop>
+noremap   <down> <nop>
+noremap   <left> <nop>
+noremap   <right> <nop>
+
+" remap the "control up/down from terminal to vim
+" map this in Terminal Keyboard as well. e.g. \033[5A
+map <esc>[5A <c-up>
+map <esc>[5B <c-down>
+
+function! DelEmptyLineAbove()
+    if line(".") == 1
+        return
+    endif
+    let l:line = getline(line(".") - 1)
+    if l:line =~ '^\s*$'
+        let l:colsave = col(".")
+        .-1d
+        silent normal! <c-y>
+        call cursor(line("."), l:colsave)
+    endif
+endfunction
+
+function! AddEmptyLineAbove()
+    let l:scrolloffsave = &scrolloff
+    " Avoid jerky scrolling with ^E at top of window
+    set scrolloff=0
+    call append(line(".") - 1, "")
+    if winline() != winheight(0)
+        silent normal! <c-e>
+    endif
+    let &scrolloff = l:scrolloffsave
+endfunction
+
+function! DelEmptyLineBelow()
+    if line(".") == line("$")
+        return
+    endif
+    let l:line = getline(line(".") + 1)
+    if l:line =~ '^\s*$'
+        let l:colsave = col(".")
+        .+1d
+        ''
+        call cursor(line("."), l:colsave)
+    endif
+endfunction
+
+function! AddEmptyLineBelow()
+    call append(line("."), "")
+endfunction
+
+" Arrow key remapping: Up/Dn = move line up/dn; Left/Right = indent/unindent
+function! SetArrowKeysAsTextShifters()
+    " normal mode
+    nmap <silent> <left> i<c-d><esc>
+    nmap <silent> <right> i<c-t><esc>
+    nnoremap <silent> <up> <esc>:call DelEmptyLineAbove()<cr>
+    nnoremap <silent> <down> <esc>:call AddEmptyLineAbove()<cr>
+    nnoremap <silent> <c-up> <esc>:call DelEmptyLineBelow()<cr>
+    nnoremap <silent> <c-down> <esc>:call AddEmptyLineBelow()<cr>
+
+    " visual mode
+    vmap <silent> <left> <gv
+    vmap <silent> <right> >gv
+    vnoremap <silent> <up> <esc>:call DelEmptyLineAbove()<cr>gv
+    vnoremap <silent> <down> <esc>:call AddEmptyLineAbove()<cr>gv
+    vnoremap <silent> <c-up> <esc>:call DelEmptyLineBelow()<cr>gv
+    vnoremap <silent> <c-down> <esc>:call AddEmptyLineBelow()<cr>gv
+
+    " insert mode
+    imap <silent> <left> <c-d>
+    imap <silent> <right> <c-t>
+    inoremap <silent> <up> <esc>:call DelEmptyLineAbove()<cr>a
+    inoremap <silent> <down> <esc>:call AddEmptyLineAbove()<cr>a
+    inoremap <silent> <c-up> <esc>:call DelEmptyLineBelow()<cr>a
+    inoremap <silent> <c-down> <esc>:call AddEmptyLineBelow()<cr>a
+endfunction
+
+call SetArrowKeysAsTextShifters()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" URBAN COMPASS:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile ~/dev/urbancompass/* setl sw=2 et softtabstop=2
+au BufRead,BufNewFile ~/dev/urbancompass/* let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E111,E121,E201,E302,E303,E126,E501'
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VICTORIA SECRET:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile */victoriassecret/* setl sw=2 et softtabstop=2
+
