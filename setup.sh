@@ -3,7 +3,6 @@
 # Setup Evan Hammer's environment. See README.rst.
 
 # Related:
-# http://github.com/evanhammer/vimrc
 # .ssh
 
 # Dependencies:
@@ -17,7 +16,7 @@
 cd ~/
 
 # symlink vim
-ln -s .vim/.vimrc .vimrc
+ln -s .atmosphere/.vimrc .vimrc
 
 # pip
 easy_install pip
@@ -25,6 +24,9 @@ pip install --upgrade pip
 
 # homebrew
 ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
+# upgrade vim
+brew install macvim --override-system-vim
 
 # node & npm
 brew install node
