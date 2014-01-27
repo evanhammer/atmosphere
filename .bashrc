@@ -6,9 +6,13 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-
 if [ -f ~/.alias ]; then
     . ~/.alias
+fi
+
+# Project shortcuts
+if [ -f ~/.projects ]; then
+    . ~/.projects
 fi
 
 # Set git completion

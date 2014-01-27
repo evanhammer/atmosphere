@@ -8,22 +8,6 @@ alias ps="ps -aef | grep -i"
 alias lc="ls --ignore=\"*.pyc\""
 alias ls="ls -GF"
 
-
-# PROJECT SHORTCUTS
-alias jackalope="cd ~/dev/jackalope/jackalope/"
-alias mm="cd ~/dev/jackalope/mailman/"
-alias sjack="cd ~/dev/jackalope/sendjack/"
-alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
-alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
-alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
-alias scoreboard="cd ~/dev/scoreboard/web/"
-alias vs="cd /Users/evanhammer/dev/victoriassecret"
-alias vday="cd /Users/evanhammer/dev/victoriassecret/vday"
-
-alias js="cd ~/dev/jackalope/sendjack/sendjack/media/js"
-alias css="cd ~/dev/jackalope/sendjack/sendjack/media/css"
-
-
 # DEV COMMANDS
 alias goprod="honcho start --env=.prod.env"
 alias gostage="honcho start --env=.staging.env"

@@ -1,0 +1,18 @@
+# PROJECT SHORTCUTS
+
+# JACKALOPE
+alias jackalope="cd ~/dev/jackalope/jackalope/"
+alias mm="cd ~/dev/jackalope/mailman/"
+alias sjack="cd ~/dev/jackalope/sendjack/"
+alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
+alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
+alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
+alias js="cd ~/dev/jackalope/sendjack/sendjack/media/js"
+alias css="cd ~/dev/jackalope/sendjack/sendjack/media/css"
+
+# SCOREBOARD
+alias scoreboard="cd ~/dev/scoreboard/web/"
+
+# VICTORIA'S SECRET
+alias vs="cd /Users/evanhammer/dev/victoriassecret"
+alias vday="cd /Users/evanhammer/dev/victoriassecret/vday"
