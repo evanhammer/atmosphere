@@ -34,6 +34,7 @@ Bundle 'hdima/python-syntax'
 
 " General
 Bundle 'vim-scripts/closetag.vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'bling/vim-airline'
 Bundle 'ciaranm/detectindent'
 Bundle 'Valloric/YouCompleteMe'
@@ -76,7 +77,7 @@ noremap :a :Ack<space>
 " SYNTASTIC:
 let g:syntastic_check_on_open=1 " check syntax on open
 let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
-
+let g:syntastic_enable_highlighting=0
 
 " TAGBAR:
 noremap <silent> T :TagbarToggle<CR>
@@ -184,6 +185,7 @@ highlight BadWhitespace ctermbg=red guibg=red
 colorscheme molokai
 
 " misc
+set synmaxcol=256               " stop syntax highlighting long lines
 set textwidth=79 		        " wrap text starting in col 80
 set encoding=utf-8              " set default file encoding to utf8
 set scrolloff=5                 " keep 5 lines when scrolling
