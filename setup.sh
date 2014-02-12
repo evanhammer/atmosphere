@@ -64,7 +64,7 @@ brew install git bash-completion
 ###############################################################################
 
 # good python
-brew install python --framework
+brew install python --framework --universal
 
 # virtualenv
 pip install virtualenv

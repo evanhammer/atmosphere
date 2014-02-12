@@ -23,8 +23,6 @@ fi
 # Set git flow completion
 source ~/.git-flow-completion.sh
 
-export PATH=/usr/local/bin:$PATH
-
 # Compile ctags at login (hide stdout * stderr)
 #jcompile > /dev/null 2>&1
 
