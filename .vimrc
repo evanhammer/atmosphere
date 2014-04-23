@@ -38,7 +38,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'bling/vim-airline'
 Bundle 'ciaranm/detectindent'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim.git'
 Bundle 'scrooloose/syntastic'
@@ -77,7 +77,8 @@ noremap :a :Ack<space>
 " SYNTASTIC:
 let g:syntastic_check_on_open=1 " check syntax on open
 let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
-let g:syntastic_enable_highlighting=0
+" let g:syntastic_enable_highlighting=0
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"] " for angular
 
 " TAGBAR:
 noremap <silent> T :TagbarToggle<CR>
@@ -132,7 +133,7 @@ au FileType python set foldnestmax=2
 function LessToCss()
     let current_file = shellescape(expand('%:p'))
     let filename = shellescape(expand('%:r'))
-    let command = "silent !lessc -x " . current_file . " " . filename . ".css"
+    let command = "silent !lessc -x " . current_file . " css/" . filename . ".css"
     "let command = 'silent !lessc -x --yui-compress ' . current_file . ' ' . filename . '.css'
     execute command
 endfunction
@@ -141,6 +142,8 @@ autocmd BufWritePost,FileWritePost *.less call LessToCss()
 
 
 " JINJA2:
+
+au BufRead,BufNewFile *.jinja setl sw=2 et softtabstop=2
 
 " Figure out which type of hilighting to use for html.
 "fun! s:SelectHTML()
@@ -207,6 +210,11 @@ set backspace=indent,eol,start  " backspace over listed character types
 set noswapfile                  " dont save swp files
 set nobackup                    " dont save backup files
 set autochdir                   " set the current directory
+set scrolloff=999               " keeps current line centered
+
+" splits
+set splitbelow
+set splitright
 
 " Restore cursor position
 "autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -359,3 +367,7 @@ au BufRead,BufNewFile ~/dev/urbancompass/* let g:syntastic_python_checker_args='
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile */victoriassecret/* setl sw=2 et softtabstop=2
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" WRITABILITY:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile ~/dev/writability/* let g:syntastic_python_checker_args='--max-complexity 10'

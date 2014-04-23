@@ -31,6 +31,9 @@ brew install ack
 # node & npm
 brew install node
 
+# mobile shell
+brew install mobile-shell
+
 ###############################################################################
 # CODING ENVIRONMENT
 ###############################################################################
@@ -102,6 +105,10 @@ npm install grunt-cli -g
 npm install grunt-init -g
 # To create new rendr projects: grunt-init rendr
 # https://github.com/andrewrjones/grunt-init-rendr
+
+# for automagically generating a requirejs config file from bower
+npm install -g --save bower-requirejs
+# bower-requirejs -c path/to/config.js
 
 ###############################################################################
 # HTML/CSS/LESS
