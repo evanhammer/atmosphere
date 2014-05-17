@@ -19,11 +19,11 @@ cd ~/
 ln -s .atmosphere/.vimrc .vimrc
 
 # pip
-easy_install pip
+sudo easy_install pip
 pip install --upgrade pip
 
 # homebrew
-ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # ack
 brew install ack
@@ -31,7 +31,7 @@ brew install ack
 # node & npm
 brew install node
 
-# mobile shell
+# mobile shell / replacement for ssh
 brew install mobile-shell
 
 ###############################################################################
@@ -40,9 +40,11 @@ brew install mobile-shell
 
 # upgrade vim
 brew install vim --override-system-vi
+sudo mv /usr/bin/vim /usr/bin/vim72
 
 # upgrade you complete me plugin
-vim +BundleInstall +qall
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 cd ~/.vim/bundle/YouCompleteMe && ./install.sh
 cd ~/.vim/bundle/tern_for_vim && npm install
 
@@ -70,20 +72,20 @@ brew install git bash-completion
 brew install python --framework --universal
 
 # virtualenv
-pip install virtualenv
+sudo pip install virtualenv
 # virtualenv venv --distribute
 # pip install -r requirements.txt
 
 # process management
-pip install honcho
+# sudo pip install honcho
 # any other plugin dependencies?
 # git hooks for checking in with python?
 
 # flake8
-pip install flake8
+sudo pip install flake8
 
 # docutils
-pip install sphinx
+# sudo pip install sphinx
 
 ###############################################################################
 # JAVASCRIPT
@@ -97,7 +99,7 @@ npm install -g bower
 npm install jshint -g
 
 # node extensions / modules
-pip install nodeenv
+sudo pip install nodeenv
 npm install nodemon -g
 
 # grunt-init: http://gruntjs.com/project-scaffolding
@@ -107,7 +109,7 @@ npm install grunt-init -g
 # https://github.com/andrewrjones/grunt-init-rendr
 
 # for automagically generating a requirejs config file from bower
-npm install -g --save bower-requirejs
+# npm install -g --save bower-requirejs
 # bower-requirejs -c path/to/config.js
 
 ###############################################################################
@@ -127,7 +129,7 @@ initdb /usr/local/var/postgres -E utf8
 gem install lunchy
 # mkdir -p ~/Library/LaunchAgents
 # cp /usr/local/Cellar/postgresql/VERSION_NUMBER/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
-# lunchy start postgres
+ lunchy start postgres
 # lunchy stop postgres
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'

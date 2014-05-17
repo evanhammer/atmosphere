@@ -1,5 +1,6 @@
 # COMMANDS
-alias v="vi"
+alias v="vim"
+alias vi="vim"
 alias l="less"
 alias c="cat"
 alias ll="ls -lhG"

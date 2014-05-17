@@ -7,9 +7,8 @@ fi
 
 # User specific environment and startup programs
 export PATH=/usr/local/bin:$PATH
-PATH=$PATH:$HOME/bin
-
-export PATH
+export PATH=$PATH:$HOME/bin
+export PATH=~/.gem/bin:$PATH
 
 # Change my shell prompt
 parse_git_branch() {
@@ -18,23 +17,10 @@ parse_git_branch() {
 
 export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
 
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-#PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-#export PATH
+# Setting PYTHONPATH for Python 2.7
+#PYTHONPATH=~/dev/jackalope/jackalope/
+#export PYTHONPATH
 
-##
-# Your previous /Users/evanhammer/.bash_profile file was backed up as /Users/evanhammer/.bash_profile.macports-saved_2012-07-19_at_21:28:07
-##
-
-# MacPorts Installer addition on 2012-07-19_at_21:28:07: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-PYTHONPATH=~/dev/jackalope/jackalope/
-export PYTHONPATH
-
-# Added for Urban Compass
-export GITROOT=/Users/evanhammer/dev
-export PATH=/usr/local/share/npm/bin:$PATH
-export CREDENTIALS_FILE=~/.credentials
+# Ruby settings
+export GEM_HOME=~/.gem
+export GEM_PATH=~/.gem

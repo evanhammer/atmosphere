@@ -8,13 +8,12 @@ environment.
 Todo:
 -----
 #. add symlinks to setup.sh
-#. submodule my vimrc
 #. heroku
 #. add private files
 
 Installer:
 ----------
-- setup: ``setup.sh``
+- setup: ``./setup.sh``
 
 Bash:
 -----

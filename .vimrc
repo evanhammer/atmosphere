@@ -1,53 +1,50 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Evan Hammer - evan@evanhammer.com
 "
-" Version: 0.4 - 2014.01.26
+" Version: 0.5 - 2014.05.17
 "
 " TUTORIAL:
 " http://rawpackets.com/2011/10/16/configuring-vim-as-a-python-ide/
-"
-" TODO_LIST:
-" 4. Add CloseTag (or something better for markup).
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " Vundle: One ring to rule them all.
 " required!
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
 " Syntax and language improvements
-Bundle 'elzr/vim-json'
-Bundle 'groenewege/vim-less'
-Bundle 'hail2u/vim-css3-syntax.git'
-Bundle 'lepture/vim-jinja.git'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'pangloss/vim-javascript'
-Bundle 'marijnh/tern_for_vim'
-Bundle 'hdima/python-syntax'
-"Bundle 'vim-scripts/python.vim--Vasiliev'
-"Bundle 'vim-scripts/JavaScript-Indent' " broke html
+Plugin 'elzr/vim-json'
+Plugin 'groenewege/vim-less'
+Plugin 'hail2u/vim-css3-syntax.git'
+Plugin 'lepture/vim-jinja.git'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'hdima/python-syntax'
+"Plugin 'vim-scripts/python.vim--Vasiliev'
+"Plugin 'vim-scripts/JavaScript-Indent' " broke html
 
 " General
-Bundle 'vim-scripts/closetag.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'bling/vim-airline'
-Bundle 'ciaranm/detectindent'
-Bundle 'Valloric/YouCompleteMe'
-"Bundle 'klen/python-mode'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim.git'
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/AutoTag.git'
-Bundle 'vim-scripts/Colour-Sampler-Pack'
-Bundle 'vim-scripts/DeleteTrailingWhitespace.git'
-Bundle 'vim-scripts/ScrollColors'
+Plugin 'vim-scripts/closetag.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'bling/vim-airline'
+Plugin 'ciaranm/detectindent'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'klen/python-mode'
+Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim.git'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/AutoTag.git'
+Plugin 'vim-scripts/Colour-Sampler-Pack'
+Plugin 'vim-scripts/DeleteTrailingWhitespace.git'
+Plugin 'vim-scripts/ScrollColors'
 
+call vundle#end()
 
 " Enable some syntax settings that had to be disabled for Vundle.
 filetype plugin indent on
@@ -129,16 +126,6 @@ au FileType python set foldnestmax=2
 
 
 " LESS:
-
-function LessToCss()
-    let current_file = shellescape(expand('%:p'))
-    let filename = shellescape(expand('%:r'))
-    let command = "silent !lessc -x " . current_file . " css/" . filename . ".css"
-    "let command = 'silent !lessc -x --yui-compress ' . current_file . ' ' . filename . '.css'
-    execute command
-endfunction
-
-autocmd BufWritePost,FileWritePost *.less call LessToCss()
 
 
 " JINJA2:
