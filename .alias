@@ -10,6 +10,7 @@ alias lc="ls --ignore=\"*.pyc\""
 alias ls="ls -GF"
 
 # DEV COMMANDS
+alias go="foreman start"
 alias goprod="foreman start --env=.prod.env"
 alias gostage="foreman start --env=.staging.env"
 alias godev="foreman start --env=.dev.env"

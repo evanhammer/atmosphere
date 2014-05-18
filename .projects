@@ -1,4 +1,8 @@
 # PROJECT SHORTCUTS
+alias js="cd ~/dev/writability/writability/static/src/"
+alias css="cd ~/dev/writability/writability/static/style/"
+
+# SMART HOST
 alias sh="cd ~/dev/smarthost/smarthost"
 
 # JACKALOPE
@@ -8,8 +12,6 @@ alias sjack="cd ~/dev/jackalope/sendjack/"
 alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
 alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
 alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
-alias js="cd ~/dev/jackalope/sendjack/sendjack/media/js"
-alias css="cd ~/dev/jackalope/sendjack/sendjack/media/css"
 
 # SCOREBOARD
 alias scoreboard="cd ~/dev/scoreboard/web/"
@@ -19,4 +21,4 @@ alias vs="cd /Users/evanhammer/dev/victoriassecret"
 alias vday="cd /Users/evanhammer/dev/victoriassecret/vday"
 
 # WRITABILITY
-alias wa="cd /Users/evanhammer/dev/writability/writability"
+alias wa="cd ~/dev/writability/writability"

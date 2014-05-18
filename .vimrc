@@ -107,7 +107,7 @@ let g:syntastic_javascript_jshint_conf='~/.jshintrc'
 " PYTHON:
 
 "let python_highlight_all=1     " for full syntax highlighting
-let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E303,E126'
+let g:syntastic_python_checker_args='--max-complexity 10'
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " omnicomplete
