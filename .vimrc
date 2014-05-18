@@ -25,6 +25,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'hdima/python-syntax'
+Plugin 'mustache/vim-mustache-handlebars'
 "Plugin 'vim-scripts/python.vim--Vasiliev'
 "Plugin 'vim-scripts/JavaScript-Indent' " broke html
 
@@ -127,6 +128,10 @@ au FileType python set foldnestmax=2
 
 " LESS:
 
+
+" HANDLEBARS:
+
+au BufRead,BufNewFile *.hbs set ft=mustache
 
 " JINJA2:
 
