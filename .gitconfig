@@ -7,7 +7,7 @@
 
 [core]
     excludesfile = ~/.gitignore
-    editor = /usr/bin/vim
+    editor = vim
 
 [color]
     ui = always

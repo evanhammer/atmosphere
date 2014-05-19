@@ -24,6 +24,7 @@ pip install --upgrade pip
 
 # homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew doctor
 
 # ack
 brew install ack
