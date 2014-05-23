@@ -131,6 +131,7 @@ au FileType python set foldnestmax=2
 
 " HANDLEBARS:
 
+let g:mustache_abbreviations = 1
 au BufRead,BufNewFile *.hbs set ft=mustache
 
 " JINJA2:
@@ -234,7 +235,7 @@ set laststatus=2                " always show the status line
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " AUTO WIDTH:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set winwidth=83
+set winwidth=84
 autocmd WinEnter * wincmd =
 autocmd VimResized * wincmd =
 

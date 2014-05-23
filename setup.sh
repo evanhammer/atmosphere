@@ -35,6 +35,9 @@ brew install node
 # mobile shell / replacement for ssh
 brew install mobile-shell
 
+# openssl
+brew install openssl
+
 ###############################################################################
 # CODING ENVIRONMENT
 ###############################################################################
