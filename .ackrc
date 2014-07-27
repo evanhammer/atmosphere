@@ -1,7 +1,7 @@
 -H
 --group
 --smart-case
---color-filename=bold blue 
+--color-filename=bold blue
 --color-match=bold black on_red
 --color-lineno=green
 --css
@@ -10,7 +10,7 @@
 --objc
 --python
 --ruby
+--type-add=html=.jinja
 --type-add=css=.less
---ignore-dir=libs
 --ignore-dir=libs
 --ignore-dir=venv

@@ -4,6 +4,7 @@ alias css="cd ~/dev/writability/writability/static/style/"
 
 # SMART HOST
 alias sh="cd ~/dev/smarthost/smarthost"
+alias lc="cd ~/dev/smarthost/listing-crawler"
 
 # JACKALOPE
 alias jackalope="cd ~/dev/jackalope/jackalope/"
