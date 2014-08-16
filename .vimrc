@@ -26,6 +26,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'vim-scripts/python.vim--Vasiliev'
 "Plugin 'vim-scripts/JavaScript-Indent' " broke html
 

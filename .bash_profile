@@ -17,6 +17,9 @@ parse_git_branch() {
 
 export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
 
+# set ls -G color for directories to yellow
+export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
+
 # Setting PYTHONPATH for Python 2.7
 #PYTHONPATH=~/dev/jackalope/jackalope/
 #export PYTHONPATH

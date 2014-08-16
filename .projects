@@ -1,10 +1,11 @@
 # PROJECT SHORTCUTS
-alias js="cd ~/dev/writability/writability/static/src/"
-alias css="cd ~/dev/writability/writability/static/style/"
+alias js="cd ~/dev/smarthost/smarthost/smarthost/static/js/"
+alias css="cd ~/dev/smarthost/smarthost/smarthost/static/style"
+alias src="cd ~/dev/smarthost/smarthost/smarthost/"
 
 # SMART HOST
 alias sh="cd ~/dev/smarthost/smarthost"
-alias lc="cd ~/dev/smarthost/listing-crawler"
+alias crawler="cd ~/dev/smarthost/listing-crawler"
 
 # JACKALOPE
 alias jackalope="cd ~/dev/jackalope/jackalope/"
