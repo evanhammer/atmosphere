@@ -38,6 +38,7 @@ brew install mobile-shell
 # openssl
 brew install openssl
 
+
 ###############################################################################
 # CODING ENVIRONMENT
 ###############################################################################
@@ -57,6 +58,7 @@ cd ~/.vim/bundle/tern_for_vim && npm install
 brew install ctags
 # On package creation: ctags -R .
 
+
 ###############################################################################
 # GIT
 ###############################################################################
@@ -67,6 +69,7 @@ brew install git-flow
 # git completion
 brew install git bash-completion
 # install .git-flow-completion.sh
+
 
 ###############################################################################
 # PYTHON
@@ -90,6 +93,7 @@ sudo pip install flake8
 
 # docutils
 # sudo pip install sphinx
+
 
 ###############################################################################
 # JAVASCRIPT
@@ -116,12 +120,14 @@ npm install grunt-init -g
 # npm install -g --save bower-requirejs
 # bower-requirejs -c path/to/config.js
 
+
 ###############################################################################
 # HTML/CSS/LESS
 ###############################################################################
 
 # less
 npm install less -g
+
 
 ###############################################################################
 # DATABASES
@@ -137,3 +143,10 @@ gem install lunchy
 # lunchy stop postgres
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
+
+
+###############################################################################
+# BLOG
+###############################################################################
+
+npm install -g hexo
