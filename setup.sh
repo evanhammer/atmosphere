@@ -110,15 +110,8 @@ npm install jshint -g
 sudo pip install nodeenv
 npm install nodemon -g
 
-# grunt-init: http://gruntjs.com/project-scaffolding
-npm install grunt-cli -g
-npm install grunt-init -g
-# To create new rendr projects: grunt-init rendr
-# https://github.com/andrewrjones/grunt-init-rendr
-
-# for automagically generating a requirejs config file from bower
-# npm install -g --save bower-requirejs
-# bower-requirejs -c path/to/config.js
+# gulp
+npm install gulp -g
 
 
 ###############################################################################
@@ -150,3 +143,7 @@ gem install lunchy
 ###############################################################################
 
 npm install -g hexo
+# hexo init
+# npm install
+# hexo generate
+# hexo deploy
