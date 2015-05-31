@@ -13,13 +13,19 @@
     ui = always
 
 [alias]
-    st = status
-    ci = commit
+    amend = commit -a --amend
     br = branch
+    ci = commit
+    cm = !git add -A && git commit -m
     co = checkout
+    cob = checkout -b
     df = diff
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status
     who = shortlog -s --
+    undo = reset HEAD~1 --mixed
+    wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+    update-from = "!f() { git fetch $1 --prune; git merge --ff-only $1/$2 || git rebase --preserve-merges $1/$2; }; f"
 [heroku]
 [push]
 	default = simple

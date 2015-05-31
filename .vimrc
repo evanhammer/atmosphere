@@ -349,12 +349,6 @@ endfunction
 
 call SetArrowKeysAsTextShifters()
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" URBAN COMPASS:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile ~/dev/urbancompass/* setl sw=2 et softtabstop=2
-au BufRead,BufNewFile ~/dev/urbancompass/* let g:syntastic_python_checker_args='--max-complexity 10 --ignore=E111,E121,E201,E302,E303,E126,E501'
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VICTORIA SECRET:
