@@ -83,13 +83,9 @@ sudo pip install virtualenv
 # virtualenv venv --distribute
 # pip install -r requirements.txt
 
-# process management
-# sudo pip install honcho
-# any other plugin dependencies?
-# git hooks for checking in with python?
-
-# flake8
+# python conventions
 sudo pip install flake8
+sudo pip install pep8-naming
 
 # docutils
 # sudo pip install sphinx
@@ -99,19 +95,23 @@ sudo pip install flake8
 # JAVASCRIPT
 ###############################################################################
 
-# bower
-npm install -g bower
-
-# jshint
+# javascript conventions
 # CONFIG .jshintrc
+npm install standard -g
 npm install jshint -g
 
 # node extensions / modules
 sudo pip install nodeenv
 npm install nodemon -g
 
-# gulp
-npm install gulp -g
+# grunt
+npm install -g grunt-cli
+
+# browserify
+npm install -g browserify
+
+# bower
+npm install -g bower
 
 
 ###############################################################################

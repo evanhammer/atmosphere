@@ -12,7 +12,7 @@ filetype off                  " required!
 
 " Vundle: One ring to rule them all.
 " required!
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'gmarik/vundle'
 
@@ -28,14 +28,14 @@ Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
 "Plugin 'vim-scripts/python.vim--Vasiliev'
-"Plugin 'vim-scripts/JavaScript-Indent' " broke html
+" Plugin 'vim-scripts/JavaScript-Indent' " broke html
 
 " General
 Plugin 'vim-scripts/closetag.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'bling/vim-airline'
 Plugin 'ciaranm/detectindent'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 "Plugin 'klen/python-mode'
 Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim.git'
@@ -99,11 +99,13 @@ autocmd BufWritePre * DeleteTrailingWhitespace
 
 
 " JAVASCRIPT:
-" http://oli.me.uk/2013/06/29/equipping-vim-for-javascript/
+" http://oli.me.uk/2014/11/21/essential-vim-bundles-for-javascript-and-clojure/
 
-"au FileType javascript setlocal cindent smartindent
+" au FileType javascript setlocal cindent smartindent
+au FileType javascript setlocal shiftwidth=2 softtabstop=2
+let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_javascript_jshint_conf='~/.jshintrc'
+let g:syntastic_javascript_jshint_args = '--config ~/.jshintrc'
 
 
 " PYTHON:

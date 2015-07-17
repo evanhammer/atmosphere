@@ -13,9 +13,10 @@
     "regex": true,
     "undef": true,
 
-    "strict": false,
+    "strict": true,
     "trailing": true,
 
+    "asi": true,
     "predef": ["define", "require"],
     "devel": true,
     "browser": true
