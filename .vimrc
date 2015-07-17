@@ -103,8 +103,7 @@ autocmd BufWritePre * DeleteTrailingWhitespace
 
 " au FileType javascript setlocal cindent smartindent
 au FileType javascript setlocal shiftwidth=2 softtabstop=2
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_javascript_checkers = ['standard', 'jshint']
 let g:syntastic_javascript_jshint_args = '--config ~/.jshintrc'
 
 
