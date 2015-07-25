@@ -96,13 +96,13 @@ sudo pip install pep8-naming
 ###############################################################################
 
 # javascript conventions
-# CONFIG .jshintrc
-npm install standard -g
-npm install jshint -g
+npm install -g standard
+npm install -g eslint
+npm install -g eslint-plugin-react # if using react
 
 # node extensions / modules
 sudo pip install nodeenv
-npm install nodemon -g
+npm install -g nodemon
 
 # grunt
 npm install -g grunt-cli

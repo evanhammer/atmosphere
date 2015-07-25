@@ -1,3 +1,4 @@
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: Evan Hammer - evan@evanhammer.com
 "
@@ -21,8 +22,9 @@ Plugin 'elzr/vim-json'
 Plugin 'groenewege/vim-less'
 Plugin 'hail2u/vim-css3-syntax.git'
 Plugin 'lepture/vim-jinja.git'
-Plugin 'jelera/vim-javascript-syntax'
+" Plugin 'jelera/vim-javascript-syntax' " messed with jsx curly brackets
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx' " requires pangloss
 Plugin 'marijnh/tern_for_vim'
 Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -106,11 +108,9 @@ au FileType html setlocal shiftwidth=2 softtabstop=2
 " JAVASCRIPT:
 " http://oli.me.uk/2014/11/21/essential-vim-bundles-for-javascript-and-clojure/
 
-" au FileType javascript setlocal cindent smartindent
 au FileType javascript setlocal shiftwidth=2 softtabstop=2
-let g:syntastic_javascript_checkers = ['standard', 'jshint']
-let g:syntastic_javascript_jshint_args = '--config ~/.jshintrc'
-
+let g:syntastic_javascript_checkers = ['standard', 'eslint']
+let g:jsx_ext_required = 0 " jsx syntax / indent on js files too.
 
 " PYTHON:
 
