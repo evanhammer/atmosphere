@@ -27,6 +27,7 @@ Plugin 'marijnh/tern_for_vim'
 Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'vim-scripts/indenthtml.vim'
 "Plugin 'vim-scripts/python.vim--Vasiliev'
 " Plugin 'vim-scripts/JavaScript-Indent' " broke html
 
@@ -96,6 +97,10 @@ autocmd BufWritePre * DeleteTrailingWhitespace
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LANGUAGES:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" HTML:
+let g:html_indent_inctags = "html,body,head,tbody"
+au FileType html setlocal shiftwidth=2 softtabstop=2
 
 
 " JAVASCRIPT:
