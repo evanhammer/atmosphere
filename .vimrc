@@ -99,7 +99,7 @@ autocmd BufWritePre * DeleteTrailingWhitespace
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " HTML:
-let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_inctags = "body,head,tbody"
 au FileType html setlocal shiftwidth=2 softtabstop=2
 
 
