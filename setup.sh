@@ -63,6 +63,10 @@ brew install ctags
 # GIT
 ###############################################################################
 
+# git legit
+brew install legit
+legit install
+
 # git git-flow
 brew install git-flow
 
