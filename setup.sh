@@ -108,8 +108,8 @@ npm install -g eslint-plugin-react # if using react
 sudo pip install nodeenv
 npm install -g nodemon
 
-# grunt
-npm install -g grunt-cli
+# gulp
+npm install -g gulp
 
 # browserify
 npm install -g browserify

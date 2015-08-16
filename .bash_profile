@@ -1,5 +1,7 @@
 # .bash_profile
 
+ulimit -n 10000
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
