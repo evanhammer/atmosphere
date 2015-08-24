@@ -9,7 +9,7 @@
 # gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
 # Xcode / Graphic Tools / Origami
 # CLT - command line tools - https://developer.apple.com/downloads/index.action#
-# Heroku, Git, Foreman - https://toolbelt.herokuapp.com/
+# Heroku, Foreman - https://toolbelt.herokuapp.com/
 
 
 # go home
@@ -24,7 +24,13 @@ pip install --upgrade pip
 
 # homebrew
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+brew update
 brew doctor
+# keep your system brewing:
+# brew upgrade
+
+# git
+brew install git
 
 # ack
 brew install ack
@@ -45,7 +51,7 @@ brew install openssl
 
 # upgrade vim
 brew install vim --override-system-vi
-sudo mv /usr/bin/vim /usr/bin/vim72
+sudo mv /usr/bin/vim /usr/bin/vimBak
 
 # upgrade you complete me plugin
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
