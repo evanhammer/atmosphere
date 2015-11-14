@@ -5,12 +5,25 @@
 # Related:
 # .ssh
 
-# Dependencies:
+###############################################################################
+# DEPENDENCIES (MANUAL)
+###############################################################################
 # gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
 # Xcode / Graphic Tools / Origami
 # CLT - command line tools - https://developer.apple.com/downloads/index.action#
-# Heroku, Foreman - https://toolbelt.herokuapp.com/
 
+###############################################################################
+# APPLICATIONS (MANUAL)
+###############################################################################
+
+# iTunes
+# Move library reference to Dropbox: ???
+# Move iphone backup reference to dropbox:
+ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
+
+###############################################################################
+# BASICS
+###############################################################################
 
 # go home
 cd ~/
@@ -80,6 +93,13 @@ brew install git-flow
 brew install git bash-completion
 # install .git-flow-completion.sh
 
+###############################################################################
+# DEPLOYING
+###############################################################################
+
+# heroku
+brew install heroku-toolbelt
+heroku update
 
 ###############################################################################
 # PYTHON
