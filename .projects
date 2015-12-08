@@ -18,6 +18,9 @@ alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
 # SCOREBOARD
 alias scoreboard="cd ~/dev/scoreboard/web/"
 
+# SPRING
+alias spring="cd ~/dev/spring/"
+
 # VICTORIA'S SECRET
 alias vs="cd /Users/evanhammer/dev/victoriassecret"
 alias vday="cd /Users/evanhammer/dev/victoriassecret/vday"

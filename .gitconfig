@@ -37,3 +37,7 @@
 [heroku]
 [push]
 	default = simple
+[github]
+	user = evanhammer
+[ghi]
+	token = !security find-internet-password -a evanhammer -s github.com -l 'ghi token' -w

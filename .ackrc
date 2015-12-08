@@ -15,3 +15,5 @@
 --ignore-dir=libs
 --ignore-dir=venv
 --ignore-dir=assets
+--ignore-dir=dist
+--ignore-dir=.tmp
