@@ -18,7 +18,9 @@
 
 # iTunes
 # Move library reference to Dropbox: ???
+
 # Move iphone backup reference to dropbox:
+# http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
 ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
 
 ###############################################################################
@@ -41,6 +43,9 @@ brew update
 brew doctor
 # keep your system brewing:
 # brew upgrade
+
+# caskroom (brew for Applications)
+brew install cask
 
 # git
 brew install git
@@ -166,6 +171,9 @@ gem install lunchy
 # lunchy stop postgres
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
+
+# client:
+# brew cask install postico
 
 
 ###############################################################################
