@@ -8,6 +8,7 @@ alias la="ls -lhaG"
 alias ps="ps -aef | grep -i"
 alias lc="ls --ignore=\"*.pyc\""
 alias ls="ls -GF"
+alias fp=" ps -aef | grep"
 
 # DEV COMMANDS
 alias gogo="foreman start"
