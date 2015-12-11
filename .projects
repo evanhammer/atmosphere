@@ -20,6 +20,7 @@ alias scoreboard="cd ~/dev/scoreboard/web/"
 
 # SPRING
 alias spring="cd ~/dev/spring/"
+alias sfe="cd ~/dev/spring/branded/js/xfe/app/scripts"
 
 # VICTORIA'S SECRET
 alias vs="cd /Users/evanhammer/dev/victoriassecret"
