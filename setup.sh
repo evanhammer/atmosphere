@@ -10,18 +10,6 @@
 ###############################################################################
 # gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
 # Xcode / Graphic Tools / Origami
-# CLT - command line tools - https://developer.apple.com/downloads/index.action#
-
-###############################################################################
-# APPLICATIONS (MANUAL)
-###############################################################################
-
-# iTunes
-# Move library reference to Dropbox: ???
-
-# Move iphone backup reference to dropbox:
-# http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
-ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
 
 ###############################################################################
 # BASICS
@@ -30,15 +18,11 @@ ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Ba
 # go home
 cd ~/
 
-# symlink vim
-ln -s .atmosphere/.vimrc .vimrc
-
-# pip
-sudo easy_install pip
-pip install --upgrade pip
+# xcode command line tools
+xcode-select --install
 
 # homebrew
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew doctor
 # keep your system brewing:
@@ -61,6 +45,72 @@ brew install mobile-shell
 
 # openssl
 brew install openssl
+
+
+###############################################################################
+# ATMOSPHERE
+###############################################################################
+git clone https://github.com/evanhammer/atmosphere.git .atmosphere
+
+# symlink vim
+ln -s .atmosphere/.ackrc .ackrc
+ln -s .atmosphere/.alias .alias
+ln -s .atmosphere/.bash_profile .bash_profile
+ln -s .atmosphere/.bashrc .bashrc
+ln -s .atmosphere/.ctags .ctags
+ln -s .atmosphere/.eslintrc.json .eslintrc.json
+ln -s .atmosphere/.git-completion.sh .git-completion.sh
+ln -s .atmosphere/.git-flow-completion.sh .git-flow-completion.sh
+ln -s .atmosphere/.gitconfig .gitconfig
+ln -s .atmosphere/.gitignore .gitignore
+ln -s .atmosphere/.projects .projects
+ln -s .atmosphere/.psqlrc .psqlrc
+ln -s .atmosphere/.vimrc .vimrc
+
+source .bash_profile
+
+
+###############################################################################
+# FONTS
+###############################################################################
+brew tap caskroom/fonts
+# brew cask install inputmono
+
+
+###############################################################################
+# APPLICATIONS
+###############################################################################
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install google-drive
+brew cask install skype
+brew cask install spotify
+brew cask install alfred # preferences require powerpack
+brew cask install caffeine
+brew cask install gitify
+brew cask install joinme
+brew cask install rescuetime
+brew cask install sonos
+brew cask install slack
+brew cask install satellite-eyes
+
+# make sure the `~/Dropbox/preferences` folder is downloaded before setting up
+# the other applications.
+
+# preferences saved
+brew cask install iterm2
+
+# preferences to-do
+# adobe, close.io, flux, microsoft office 2011, light table, sketch, sketch
+# toolbox, skyfonts, twitter, textmate
+# apple: garageband, keynote, numbers, pages,
+
+# iTunes
+# Move library reference to Dropbox: ???
+
+# Move iphone backup reference to dropbox:
+# http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
+ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
 
 
 ###############################################################################
@@ -96,7 +146,7 @@ brew install git-flow
 
 # git completion
 brew install git bash-completion
-# install .git-flow-completion.sh
+# already config'd: .git-flow-completion.sh
 
 ###############################################################################
 # DEPLOYING
@@ -109,6 +159,10 @@ heroku update
 ###############################################################################
 # PYTHON
 ###############################################################################
+
+# pip
+sudo easy_install pip
+pip install --upgrade pip
 
 # good python
 brew install python --framework --universal
@@ -165,22 +219,22 @@ npm install less -g
 brew install postgresql
 initdb /usr/local/var/postgres -E utf8
 gem install lunchy
-# mkdir -p ~/Library/LaunchAgents
+mkdir -p ~/Library/LaunchAgents
 # cp /usr/local/Cellar/postgresql/VERSION_NUMBER/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
- lunchy start postgres
-# lunchy stop postgres
+# lunchy start -x postgres
+# lunchy stop -x postgres
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
 
-# client:
-# brew cask install postico
+# client: postico
+brew cask install postico
 
 
 ###############################################################################
 # BLOG
 ###############################################################################
 
-npm install -g hexo
+# npm install -g hexo
 # hexo init
 # npm install
 # hexo generate
