@@ -167,6 +167,9 @@ au BufRead,BufNewFile *.jinja setl sw=2 et softtabstop=2
 " from: https://bitbucket.org/whiteinge/dotfiles/src/14246aa6719d/.vimrc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" remap escape
+imap jk <Esc>
+
 " code folding
 nnoremap <space> za
 
