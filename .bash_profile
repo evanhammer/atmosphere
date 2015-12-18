@@ -46,3 +46,5 @@ eval "$(rbenv init -)"
 export GOPATH=$GOPATH:$HOME/dev/spring/branded/go
 export PATH=$PATH:$HOME/dev/spring/branded/go/bin
 export PATH=$PATH:$HOME/dev/spring/arcanist/bin
+export NVM_DIR=/Users/evanhammer/.nvm
+source /usr/local/opt/nvm/nvm.sh

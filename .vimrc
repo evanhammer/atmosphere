@@ -371,5 +371,5 @@ au BufRead,BufNewFile ~/dev/writability/* let g:syntastic_python_checker_args='-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufRead,BufNewFile ~/dev/spring/* let g:syntastic_javascript_checkers=['eslint']
 au BufRead,BufNewFile ~/dev/spring/* let g:syntastic_javascript_eslint_exec='~/dev/spring/branded/js/xfe/node_modules/eslint/bin/eslint.js'
-au BufRead,BufNewFile ~/dev/spring/* let g:syntastic_javascript_eslint_args="--config ~/dev/spring/branded/js/xfe/.eslintrc"
+" au BufRead,BufNewFile ~/dev/spring/* let g:syntastic_javascript_eslint_args="--config ~/dev/spring/branded/js/xfe/.eslintrc"
 au BufRead,BufNewFile ~/dev/sptring/* set wrap linebreak nolist

@@ -12,6 +12,7 @@
 --ruby
 --type-add=html=.jinja
 --type-add=css=.less
+--type-set=scss=.scss
 --type-add=js=.jsx
 --ignore-dir=libs
 --ignore-dir=venv

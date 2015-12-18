@@ -1,3 +1,5 @@
+alias cf="~/.atmosphere/scripts/code_for.sh"
+
 # PROJECT SHORTCUTS
 alias js="cd ~/dev/smarthost/smarthost/smarthost/static/js/"
 alias css="cd ~/dev/smarthost/smarthost/smarthost/static/style"
