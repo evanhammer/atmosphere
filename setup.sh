@@ -105,12 +105,23 @@ brew cask install iterm2
 # toolbox, skyfonts, twitter, textmate
 # apple: garageband, keynote, numbers, pages,
 
+
+###############################################################################
+# OS X Preferences
+###############################################################################
 # iTunes
 # Move library reference to Dropbox: ???
 
 # Move iphone backup reference to dropbox:
 # http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
 ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Store screenshots in subfolder on desktop
+mkdir ~/Desktop/Screenshots
+defaults write com.apple.screencapture location ~/Desktop/Screenshots
 
 
 ###############################################################################
@@ -216,13 +227,19 @@ npm install less -g
 ###############################################################################
 
 # PostGres
-brew install postgresql
+brew install postgres
+brew pin postgres
 initdb /usr/local/var/postgres -E utf8
-gem install lunchy
 mkdir -p ~/Library/LaunchAgents
 # cp /usr/local/Cellar/postgresql/VERSION_NUMBER/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
+
+# Edit launchctl script (set to not start automatically and keepalive false)
+# vi ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+
+gem install lunchy
 # lunchy start -x postgres
 # lunchy stop -x postgres
+
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
 
