@@ -25,7 +25,10 @@ Plugin 'lepture/vim-jinja.git'
 " Plugin 'jelera/vim-javascript-syntax' " messed with jsx curly brackets
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx' " requires pangloss
-Plugin 'marijnh/tern_for_vim'
+Plugin 'moll/vim-node'  " node shortcuts
+Plugin 'ternjs/tern_for_vim'
+" follow these instructions:
+" https://github.com/majutsushi/tagbar/wiki#jsctags-depends-on-tern--recommended-
 Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -87,8 +90,8 @@ noremap <silent> T :TagbarToggle<CR>
 let g:tagbar_left=1
 let g:tagbar_autoclose=1
 
-" Add any active projects by running: 'ctags -R .' in the src directory
-set tags=./tags,tags;
+" Add any active projects by running: 'ctags -f .tags -R .' in the src directory
+set tags=.tags,tags;
 
 
 " DELETE TRAILING WHITESPACES:

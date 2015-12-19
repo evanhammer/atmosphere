@@ -19,6 +19,7 @@ lib
 lib64
 venv
 tags
+.tags
 
 # Installer logs
 pip-log.txt
@@ -39,3 +40,6 @@ nosetests.xml
 # Custom
 *.env*
 *.swp*
+
+# javascript
+node_modules

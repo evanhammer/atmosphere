@@ -141,7 +141,7 @@ cd ~/.vim/bundle/tern_for_vim && npm install
 # ctags (http://ctags.sourceforge.net)
 # CONFIG .ctags
 brew install ctags
-# On package creation: ctags -R .
+# On package creation: ctags -f .tags -R .
 
 
 ###############################################################################
@@ -213,6 +213,8 @@ npm install -g browserify
 # bower
 npm install -g bower
 
+# jsctags
+npm install -g git+https://github.com/ramitos/jsctags.git
 
 ###############################################################################
 # HTML/CSS/LESS
