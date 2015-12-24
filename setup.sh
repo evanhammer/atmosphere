@@ -105,6 +105,14 @@ brew cask install iterm2
 # toolbox, skyfonts, twitter, textmate
 # apple: garageband, keynote, numbers, pages,
 
+# To Uninstall, check these folders in both `/` and `~`:
+# Applications
+# Library
+# Library/Application Support
+# Library/LaunchAgents
+# Library/Preferences
+# Library/PreferencePanes
+# Library/StartupItems
 
 ###############################################################################
 # OS X Preferences
