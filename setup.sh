@@ -80,6 +80,16 @@ brew tap caskroom/fonts
 ###############################################################################
 # APPLICATIONS
 ###############################################################################
+
+# download and install Mac App Store applications manually
+# (prefer MAS over Caskroom for auto update)
+# apple: garageband, keynote, numbers, pages,
+# mas: twitter, slack
+# softwareupdate might require sudo
+softwareupdate --list
+softwareupdate --install --all
+
+# caskroom everything else
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install google-drive
@@ -91,7 +101,6 @@ brew cask install gitify
 brew cask install joinme
 brew cask install rescuetime
 brew cask install sonos
-brew cask install slack
 brew cask install satellite-eyes
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
@@ -102,10 +111,9 @@ brew cask install iterm2
 
 # preferences to-do
 # adobe, close.io, flux, microsoft office 2011, light table, sketch, sketch
-# toolbox, skyfonts, twitter, textmate
-# apple: garageband, keynote, numbers, pages,
+# toolbox, skyfonts, textmate
 
-# To Uninstall, check these folders in both `/` and `~`:
+# To Uninstall Applications, check these folders in both `/` and `~`:
 # Applications
 # Library
 # Library/Application Support
@@ -113,6 +121,7 @@ brew cask install iterm2
 # Library/Preferences
 # Library/PreferencePanes
 # Library/StartupItems
+
 
 ###############################################################################
 # OS X Preferences
@@ -128,8 +137,8 @@ ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Ba
 chflags nohidden ~/Library
 
 # Store screenshots in subfolder on desktop
-mkdir ~/Desktop/Screenshots
-defaults write com.apple.screencapture location ~/Desktop/Screenshots
+mkdir ~/Downloads/screenshots
+defaults write com.apple.screencapture location ~/Downloads/screenshots
 
 
 ###############################################################################
