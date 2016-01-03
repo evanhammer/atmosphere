@@ -102,6 +102,7 @@ brew cask install joinme
 brew cask install rescuetime
 brew cask install sonos
 brew cask install satellite-eyes
+brew cask install macdown
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
