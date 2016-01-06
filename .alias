@@ -19,6 +19,7 @@ alias godev="foreman start --env=.dev.env"
 alias g="git"
 alias activate="source venv/bin/activate;"
 alias strip="find . -name \*.pyc -delete"
+alias stripreqs="pip freeze | xargs pip uninstall -y"
 
 # DATABASE CONNECTIONS
 alias pgstage="psql postgres://jdnvvunrmbiody@ec2-107-21-99-45.compute-1.amazonaws.com:5432/d6v4mmk3nmtp1r -w"
