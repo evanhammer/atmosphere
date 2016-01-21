@@ -66,6 +66,7 @@ ln -s .atmosphere/.gitignore .gitignore
 ln -s .atmosphere/.projects .projects
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
+ln -s .atmosphere/.arcrc .arcrc
 
 source .bash_profile
 
