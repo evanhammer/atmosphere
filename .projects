@@ -21,7 +21,7 @@ alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
 alias scoreboard="cd ~/dev/scoreboard/web/"
 
 # SPRING
-alias spring="cd ~/dev/spring/"
+alias spring="cd ~/dev/spring/branded"
 alias sfe="cd ~/dev/spring/branded/js/xfe/app/scripts"
 
 # VICTORIA'S SECRET

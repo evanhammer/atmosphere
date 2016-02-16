@@ -118,7 +118,7 @@ let g:jsx_ext_required = 0 " jsx syntax / indent on js files too.
 " PYTHON:
 
 let python_highlight_all=1     " for full syntax highlighting
-let g:syntastic_python_checker_args='--max-complexity 10'
+let g:syntastic_python_flake8_args='--max-complexity 10'
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 " omnicomplete
