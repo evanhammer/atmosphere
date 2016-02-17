@@ -29,6 +29,7 @@ Plugin 'moll/vim-node'  " node shortcuts
 Plugin 'ternjs/tern_for_vim'
 " follow these instructions:
 " https://github.com/majutsushi/tagbar/wiki#jsctags-depends-on-tern--recommended-
+Plugin 'vim-scripts/indentpython.vim' " python indentation
 Plugin 'hdima/python-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'cakebaker/scss-syntax.vim'
@@ -51,6 +52,7 @@ Plugin 'vim-scripts/AutoTag.git'
 Plugin 'vim-scripts/Colour-Sampler-Pack'
 Plugin 'vim-scripts/DeleteTrailingWhitespace.git'
 Plugin 'vim-scripts/ScrollColors'
+Plugin 'tmhedberg/SimpylFold' " python folding
 
 call vundle#end()
 
@@ -91,7 +93,13 @@ let g:tagbar_left=1
 let g:tagbar_autoclose=1
 
 " Add any active projects by running: 'ctags -f .tags -R .' in the src directory
-set tags=.tags,tags;
+set tags=./.tags,.tags;$HOME
+
+" SIMPYLFOLD:
+let g:SimpylFold_docstring_preview=1 " preview docstrings
+" let g:SimpylFold_fold_docstring=0 " don't fold docstrings
+autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
+autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
 
 
 " DELETE TRAILING WHITESPACES:
@@ -110,13 +118,11 @@ au FileType html setlocal shiftwidth=2 softtabstop=2
 
 " JAVASCRIPT:
 " http://oli.me.uk/2014/11/21/essential-vim-bundles-for-javascript-and-clojure/
-
 au FileType javascript setlocal shiftwidth=2 softtabstop=2
 let g:syntastic_javascript_checkers = ['standard', 'eslint']
 let g:jsx_ext_required = 0 " jsx syntax / indent on js files too.
 
 " PYTHON:
-
 let python_highlight_all=1     " for full syntax highlighting
 let g:syntastic_python_flake8_args='--max-complexity 10'
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
@@ -140,12 +146,10 @@ au FileType python set foldnestmax=2
 
 
 " HANDLEBARS:
-
 let g:mustache_abbreviations = 1
 au BufRead,BufNewFile *.hbs set ft=mustache
 
 " JINJA2:
-
 au BufRead,BufNewFile *.jinja setl sw=2 et softtabstop=2
 
 " Figure out which type of hilighting to use for html.
@@ -260,8 +264,8 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
-nmap <Tab> <c-w>w
-nmap <S-Tab> <c-w>W
+" nmap <Tab> <c-w>w " turn off for complete
+" nmap <S-Tab> <c-w>W " turn off for complete
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
