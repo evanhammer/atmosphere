@@ -5,15 +5,17 @@
 --color-match=bold black on_red
 --color-lineno=green
 --css
+--go
 --html
 --js
 --objc
 --python
 --ruby
---type-add=html=.jinja
 --type-add=css=.less
---type-set=scss=.scss
+--type-add=go:ext:go
+--type-add=html=.jinja
 --type-add=js=.jsx
+--type-set=scss=.scss
 --ignore-dir=libs
 --ignore-dir=venv
 --ignore-dir=assets

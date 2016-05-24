@@ -25,8 +25,8 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew doctor
-# keep your system brewing:
-# brew upgrade
+# upgrade a package:
+# brew upgrade FORMULA
 
 # caskroom (brew for Applications)
 brew install cask
@@ -41,10 +41,13 @@ brew install ack
 brew install node
 
 # mobile shell / replacement for ssh
-brew install mobile-shell
+# brew install mobile-shell
 
 # openssl
 brew install openssl
+
+# wget
+brew install wget
 
 
 ###############################################################################
@@ -70,6 +73,11 @@ ln -s .atmosphere/.arcrc .arcrc
 
 source .bash_profile
 
+###############################################################################
+# HARDWARE
+###############################################################################
+brew cask install kensington-trackball-works # mouse: kensington orbit trackball
+brew cask install karabiner # mouse: scrolling with trackball + command
 
 ###############################################################################
 # FONTS
@@ -108,6 +116,7 @@ brew cask install discord
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
+open ~/Applications/Dropbox.app
 
 # preferences saved
 brew cask install iterm2
@@ -187,6 +196,9 @@ brew install git bash-completion
 brew install heroku-toolbelt
 heroku update
 
+# digital ocean
+brew install doctl
+
 ###############################################################################
 # PYTHON
 ###############################################################################
@@ -201,6 +213,7 @@ brew install python --framework --universal
 # virtualenv
 sudo pip install virtualenv
 # virtualenv venv --distribute
+# clear all: pip freeze | xargs pip uninstall -y
 # pip install -r requirements.txt
 
 # python conventions
@@ -209,7 +222,6 @@ sudo pip install pep8-naming
 
 # docutils
 # sudo pip install sphinx
-
 
 ###############################################################################
 # JAVASCRIPT
@@ -243,7 +255,6 @@ npm install -g git+https://github.com/ramitos/jsctags.git
 # less
 npm install less -g
 
-
 ###############################################################################
 # DATABASES
 ###############################################################################
@@ -268,7 +279,6 @@ gem install lunchy
 
 # client: postico
 brew cask install postico
-
 
 ###############################################################################
 # BLOG
