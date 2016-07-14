@@ -9,6 +9,9 @@ alias src="cd ~/dev/smarthost/smarthost/smarthost/"
 alias sm="cd ~/dev/smarthost/smarthost"
 alias crawler="cd ~/dev/smarthost/listing-crawler"
 
+# TREMBLING GIANT
+alias tg="cd ~/dev/giant/"
+
 # JACKALOPE
 alias jackalope="cd ~/dev/jackalope/jackalope/"
 alias mm="cd ~/dev/jackalope/mailman/"

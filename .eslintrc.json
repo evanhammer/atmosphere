@@ -6,8 +6,13 @@
         "semi": [2, "never"],
         "max-len": [1, 80, 2]
     },
+    "parserOptions": {
+        "sourceType": "module"
+    },
     "env": {
-        "browser": true
+        "browser": true,
+        "es6": true,
+        "node": true
     },
     "ecmaFeatures": {
         "jsx": true
