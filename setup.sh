@@ -228,8 +228,8 @@ sudo pip install pep8-naming
 ###############################################################################
 
 # javascript conventions
-npm install -g standard
 npm install -g eslint
+npm install -g eslint-config-standard eslint-plugin-standard eslint-plugin-promise
 npm install -g eslint-plugin-react # if using react
 
 # node extensions / modules

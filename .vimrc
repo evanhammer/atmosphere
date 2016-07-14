@@ -119,7 +119,7 @@ au FileType html setlocal shiftwidth=2 softtabstop=2
 " JAVASCRIPT:
 " http://oli.me.uk/2014/11/21/essential-vim-bundles-for-javascript-and-clojure/
 au FileType javascript setlocal shiftwidth=2 softtabstop=2
-let g:syntastic_javascript_checkers = ['standard', 'eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:jsx_ext_required = 0 " jsx syntax / indent on js files too.
 
 " PYTHON:

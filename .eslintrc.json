@@ -12,12 +12,14 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "mocha": true
     },
     "ecmaFeatures": {
         "jsx": true
     },
     "plugins": [
         "react"
-    ]
+    ],
+    "extends": ["eslint:recommended", "standard"]
 }
