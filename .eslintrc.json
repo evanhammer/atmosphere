@@ -1,10 +1,11 @@
 {
     "rules": {
-        "indent": [2, 2],
-        "quotes": [2, "single"],
-        "linebreak-style": [2, "unix"],
-        "semi": [2, "never"],
-        "max-len": [1, 80, 2]
+        "indent": ["error", 2],
+        "quotes": ["error", "single"],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "always"],
+        "max-len": ["warn", 80, 2],
+        "comma-dangle": ["error", "only-multiline"]
     },
     "parserOptions": {
         "sourceType": "module"
