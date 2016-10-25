@@ -1,23 +1,24 @@
 {
     "rules": {
-        "indent": ["error", 2],
+        "indent": ["error", 2, {"SwitchCase": 1}],
         "quotes": ["error", "single"],
         "linebreak-style": ["error", "unix"],
         "semi": ["error", "always"],
         "max-len": ["warn", 80, 2],
-        "comma-dangle": ["error", "only-multiline"]
+        "no-console": ["error", {"allow": ["error"]}],
+        "comma-dangle": ["error", "always-multiline"]
     },
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "env": {
         "browser": true,
         "es6": true,
         "node": true,
         "mocha": true
-    },
-    "ecmaFeatures": {
-        "jsx": true
     },
     "plugins": [
         "react"

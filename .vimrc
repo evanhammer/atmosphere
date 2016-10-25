@@ -84,6 +84,7 @@ noremap :a :Ack<space>
 " SYNTASTIC:
 let g:syntastic_check_on_open=1 " check syntax on open
 let g:syntastic_auto_loc_list=0 " note erros with a separate buffer
+let g:syntastic_always_populate_loc_list=1 " update errors list
 " let g:syntastic_enable_highlighting=0
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"] " for angular
 
