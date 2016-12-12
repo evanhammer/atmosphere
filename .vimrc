@@ -13,9 +13,9 @@ filetype off                  " required!
 
 " Vundle: One ring to rule them all.
 " required!
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Syntax and language improvements
 Plugin 'elzr/vim-json'

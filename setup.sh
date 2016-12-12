@@ -99,22 +99,24 @@ softwareupdate --list
 softwareupdate --install --all
 
 # caskroom everything else
-brew cask install the-unarchiver
 brew cask install dropbox
+brew cask install alfred # preferences require powerpack
+brew cask install the-unarchiver
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install skype
-brew cask install spotify
-brew cask install alfred # preferences require powerpack
 brew cask install caffeine
+brew cask install macdown
+brew cask install postman
+
+#extras
+brew cask install steam
+brew cask install sonos
+brew cask install satellite-eyes
+brew cask install spotify
 # brew cask install gitify
 # brew cask install joinme
 # brew cask install rescuetime
-brew cask install sonos
-brew cask install satellite-eyes
-brew cask install macdown
-brew cask install postman
-brew cask install steam
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
@@ -161,12 +163,13 @@ defaults write com.apple.screencapture location ~/Downloads/screenshots
 
 # upgrade vim
 brew install vim --override-system-vi
+# run Cmd+R at Boot; Terminal; csrutil disable
 sudo mv /usr/bin/vim /usr/bin/vimBak
 
 # upgrade you complete me plugin
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
-cd ~/.vim/bundle/YouCompleteMe && ./install.sh
+# cd ~/.vim/bundle/YouCompleteMe && ./install.sh
 cd ~/.vim/bundle/tern_for_vim && npm install
 
 # ctags (http://ctags.sourceforge.net)

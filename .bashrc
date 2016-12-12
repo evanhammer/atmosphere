@@ -58,24 +58,9 @@ export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
 # Ruby settings
 export GEM_HOME=~/.gem
 export GEM_PATH=~/.gem
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Go settings
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# Spring settings
-source ~/.secret
-export OPSWORKS_NAME="evan"
-export GOPATH=$GOPATH:$HOME/dev/spring/go:"/usr/local/opt/go/libexec"
-export PATH=$PATH:/bin:/Users/evanhammer/.gem/bin:/usr/local/bin:/Users/evanhammer/.gem/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/evanhammer/bin:/Users/evanhammer/bin
-export RBENV_ROOT=~/.rbenv
-export PATH=$PATH:$RBENV_ROOT/bin
-eval "$(rbenv init -)"
-export GOPATH=$GOPATH:$HOME/dev/spring/branded/go
-export PATH=$PATH:$HOME/dev/spring/branded/go/bin
-export PATH=$PATH:$HOME/dev/spring/arcanist/bin
-export NVM_DIR=/Users/evanhammer/.nvm
-source /usr/local/opt/nvm/nvm.sh
-

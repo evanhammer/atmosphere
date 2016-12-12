@@ -7,7 +7,6 @@ environment.
 
 Todo:
 -----
-#. add symlinks to setup.sh
 #. heroku
 #. add private files
 
