@@ -107,13 +107,14 @@ brew cask install skype
 brew cask install spotify
 brew cask install alfred # preferences require powerpack
 brew cask install caffeine
-brew cask install gitify
-brew cask install joinme
-brew cask install rescuetime
+# brew cask install gitify
+# brew cask install joinme
+# brew cask install rescuetime
 brew cask install sonos
 brew cask install satellite-eyes
 brew cask install macdown
 brew cask install postman
+brew cask install steam
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
