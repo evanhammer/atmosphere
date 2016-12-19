@@ -8,7 +8,7 @@
 ###############################################################################
 # DEPENDENCIES (MANUAL)
 ###############################################################################
-# gcc (or xcode) - https://github.com/kennethreitz/osx-gcc-installer#readme
+# gcc (or xcode CLI, below) - https://github.com/kennethreitz/osx-gcc-installer#readme
 # Xcode / Graphic Tools / Origami
 
 ###############################################################################

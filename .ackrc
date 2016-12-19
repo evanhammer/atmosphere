@@ -21,3 +21,4 @@
 --ignore-dir=assets
 --ignore-dir=dist
 --ignore-dir=.tmp
+--ignore-dir=.bundle
