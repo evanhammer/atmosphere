@@ -31,7 +31,7 @@ source ~/.git-flow-completion.sh
 # User specific environment and startup programs
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/bin
-export PATH=~/.gem/bin:$PATH
+# export PATH=~/.gem/bin:$PATH
 
 # Change my shell prompt
 parse_git_branch() {
@@ -56,11 +56,17 @@ export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
 #export PYTHONPATH
 
 # Ruby settings
-export GEM_HOME=~/.gem
-export GEM_PATH=~/.gem
+# export GEM_HOME=~/.gem
+# export GEM_PATH=~/.gem
 # eval "$(rbenv init -)"
 
 # Go settings
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# GOPATH
 export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$GOROOT/bin
