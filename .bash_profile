@@ -6,3 +6,7 @@
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+if [ -f ~/.secrets ]; then
+    . ~/.secrets
+fi
