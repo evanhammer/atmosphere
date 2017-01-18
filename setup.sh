@@ -55,7 +55,7 @@ brew install wget
 ###############################################################################
 git clone https://github.com/evanhammer/atmosphere.git .atmosphere
 
-# symlink vim
+# symlink configs
 ln -s .atmosphere/.ackrc .ackrc
 ln -s .atmosphere/.alias .alias
 ln -s .atmosphere/.bash_profile .bash_profile
@@ -70,6 +70,7 @@ ln -s .atmosphere/.projects .projects
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
 ln -s .atmosphere/.arcrc .arcrc
+ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 
 source .bash_profile
 
@@ -77,7 +78,7 @@ source .bash_profile
 # HARDWARE
 ###############################################################################
 brew cask install kensington-trackball-works # mouse: kensington orbit trackball
-brew cask install karabiner # mouse: scrolling with trackball + command
+brew cask install karabiner-elements # ms keyboard
 
 ###############################################################################
 # FONTS
