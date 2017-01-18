@@ -53,6 +53,7 @@ Plugin 'vim-scripts/Colour-Sampler-Pack'
 Plugin 'vim-scripts/DeleteTrailingWhitespace.git'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'tmhedberg/SimpylFold' " python folding
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 call vundle#end()
 
