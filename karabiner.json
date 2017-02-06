@@ -1,4 +1,9 @@
 {
+    "global": {
+        "check_for_updates_on_startup": true,
+        "show_in_menu_bar": false,
+        "show_profile_name_in_menu_bar": true
+    },
     "profiles": [
         {
             "devices": [
@@ -8,6 +13,16 @@
                         "is_keyboard": true,
                         "is_pointing_device": false,
                         "product_id": 628,
+                        "vendor_id": 1452
+                    },
+                    "ignore": true
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 610,
                         "vendor_id": 1452
                     },
                     "ignore": true
@@ -27,7 +42,7 @@
                 "f8": "play_or_pause",
                 "f9": "fastforward"
             },
-            "name": "Default profile",
+            "name": "Default Profile",
             "selected": true,
             "simple_modifications": {
                 "caps_lock": "left_control",
