@@ -109,6 +109,7 @@ brew cask install skype
 brew cask install caffeine
 brew cask install macdown
 brew cask install postman
+brew cask install cloud
 
 #extras
 brew cask install steam
@@ -228,6 +229,11 @@ sudo pip install pep8-naming
 
 # docutils
 # sudo pip install sphinx
+
+###############################################################################
+# RUBY
+###############################################################################
+gem install rubocop
 
 ###############################################################################
 # JAVASCRIPT

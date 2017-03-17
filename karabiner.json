@@ -29,12 +29,12 @@
                 }
             ],
             "fn_function_keys": {
-                "f1": "display_brightness_decrement",
+                "f1": "mute",
                 "f10": "mute",
                 "f11": "volume_decrement",
                 "f12": "volume_increment",
-                "f2": "display_brightness_increment",
-                "f3": "mission_control",
+                "f2": "volume_decrement",
+                "f3": "volume_increment",
                 "f4": "launchpad",
                 "f5": "illumination_decrement",
                 "f6": "illumination_increment",

@@ -10,7 +10,7 @@
     editor = vim
 
 [color]
-    ui = always
+    ui = auto
 
 [alias]
     amend = commit -a --amend

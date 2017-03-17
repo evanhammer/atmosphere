@@ -4,21 +4,16 @@
 --color-filename=bold blue
 --color-match=bold black on_red
 --color-lineno=green
---css
---go
---html
---js
---objc
---python
---ruby
+
 --type-add=css=.less
 --type-add=go:ext:go
 --type-add=html=.jinja
 --type-add=js=.jsx
---type-set=scss=.scss
+--type-set=css=.scss,.sass
+
 --ignore-dir=libs
 --ignore-dir=venv
---ignore-dir=assets
+# --ignore-dir=assets
 --ignore-dir=dist
 --ignore-dir=.tmp
 --ignore-dir=.bundle

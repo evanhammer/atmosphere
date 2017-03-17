@@ -143,6 +143,8 @@ au FileType python set foldnestmax=2
 " use unix-style \n line endings only for new files when coding (???)
 "autocmd BufNewFile *.py set fileformat=unix
 
+" RUBY:
+au FileType ruby setlocal shiftwidth=2 expandtab softtabstop=2
 
 " LESS:
 
