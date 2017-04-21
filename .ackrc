@@ -14,6 +14,7 @@
 --ignore-dir=libs
 --ignore-dir=venv
 # --ignore-dir=assets
+--ignore-dir=i18n
 --ignore-dir=dist
 --ignore-dir=.tmp
 --ignore-dir=.bundle
