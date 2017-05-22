@@ -89,6 +89,9 @@ let g:syntastic_always_populate_loc_list=1 " update errors list
 " let g:syntastic_enable_highlighting=0
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"] " for angular
 
+" FUGITIVE
+set diffopt+=vertical
+
 " TAGBAR:
 noremap <silent> T :TagbarToggle<CR>
 let g:tagbar_left=1
@@ -102,7 +105,6 @@ let g:SimpylFold_docstring_preview=1 " preview docstrings
 " let g:SimpylFold_fold_docstring=0 " don't fold docstrings
 autocmd BufWinEnter *.py setlocal foldexpr=SimpylFold(v:lnum) foldmethod=expr
 autocmd BufWinLeave *.py setlocal foldexpr< foldmethod<
-
 
 " DELETE TRAILING WHITESPACES:
 " Remove trailing whitespace on write

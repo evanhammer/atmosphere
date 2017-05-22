@@ -37,8 +37,9 @@ brew install git
 # ack
 brew install ack
 
-# node & npm
-brew install node
+# install nvm, node, and npm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm install node
 
 # mobile shell / replacement for ssh
 # brew install mobile-shell
@@ -241,33 +242,24 @@ gem install rubocop
 
 # javascript conventions
 npm install -g eslint
-# for standard
-npm install -g eslint-config-standard eslint-plugin-standard eslint-plugin-promise
 # for react
 npm install -g eslint-plugin-react
+# for standard
+# npm install -g eslint-config-standard eslint-plugin-standard eslint-plugin-promise
 
 # node extensions / modules
-sudo pip install nodeenv
-npm install -g nodemon
-
-# gulp
-npm install -g gulp
-
-# browserify
-npm install -g browserify
-
-# bower
-npm install -g bower
+# sudo pip install nodeenv
+# npm install -g nodemon
 
 # jsctags
-npm install -g git+https://github.com/ramitos/jsctags.git
+# npm install -g git+https://github.com/ramitos/jsctags.git
 
 ###############################################################################
 # HTML/CSS/LESS
 ###############################################################################
 
 # less
-npm install less -g
+# npm install less -g
 
 ###############################################################################
 # DATABASES
