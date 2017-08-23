@@ -11,6 +11,7 @@ alias ls="ls -GF"
 alias fp=" ps -aef | grep"
 
 # DEV COMMANDS
+alias git=hub
 alias gogo="foreman start"
 alias goprod="foreman start --env=.prod.env"
 alias gostage="foreman start --env=.staging.env"
@@ -21,6 +22,4 @@ alias activate="source venv/bin/activate;"
 alias strip="find . -name \*.pyc -delete"
 alias stripreqs="pip freeze | xargs pip uninstall -y"
 
-# DATABASE CONNECTIONS
-alias pgstage="psql postgres://jdnvvunrmbiody@ec2-107-21-99-45.compute-1.amazonaws.com:5432/d6v4mmk3nmtp1r -w"
-alias pgprod="psql postgres://vvuuuntxijurmn@ec2-107-22-169-250.compute-1.amazonaws.com:5432/dc6iucghkh5v1i -w"
+alias rtest="bundle exec rspec"

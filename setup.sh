@@ -33,16 +33,15 @@ brew install cask
 
 # git
 brew install git
+brew install hub
 
 # ack
 brew install ack
 
-# install nvm, node, and npm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-nvm install node
-
-# mobile shell / replacement for ssh
-# brew install mobile-shell
+# node & npm
+brew install node
+# or yarn (ignore is for nvm)
+brew install yarn --ignore-dependencies
 
 # openssl
 brew install openssl
@@ -111,6 +110,7 @@ brew cask install caffeine
 brew cask install macdown
 brew cask install postman
 brew cask install cloud
+brew cask install dash
 
 #extras
 brew cask install steam

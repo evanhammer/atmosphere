@@ -54,6 +54,7 @@ Plugin 'vim-scripts/DeleteTrailingWhitespace.git'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'tmhedberg/SimpylFold' " python folding
 Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'rizzatti/dash.vim'
 
 call vundle#end()
 
@@ -373,14 +374,9 @@ call SetArrowKeysAsTextShifters()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" VICTORIA SECRET:
+" CODECADEMY:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile */victoriassecret/* setl sw=2 et softtabstop=2
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" WRITABILITY:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile ~/dev/writability/* let g:syntastic_python_checker_args='--max-complexity 10'
+au BufRead,BufNewFile */Codecademy-dev/* setl sw=2 et softtabstop=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SPRING:
