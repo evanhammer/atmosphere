@@ -36,6 +36,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'vim-scripts/indenthtml.vim'
 "Plugin 'vim-scripts/python.vim--Vasiliev'
 " Plugin 'vim-scripts/JavaScript-Indent' " broke html
+Plugin 'jparise/vim-graphql'
 
 " General
 Plugin 'vim-scripts/closetag.vim'
