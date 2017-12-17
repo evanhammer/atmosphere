@@ -1,13 +1,9 @@
 alias cf="~/.atmosphere/scripts/code_for.sh"
 
 # PROJECT SHORTCUTS
-alias smjs="cd ~/dev/smarthost/smarthost/smarthost/static/js/"
-alias css="cd ~/dev/smarthost/smarthost/smarthost/static/style"
-alias src="cd ~/dev/smarthost/smarthost/smarthost/"
-
-# SMART HOST
-alias sm="cd ~/dev/smarthost/smarthost"
-alias crawler="cd ~/dev/smarthost/listing-crawler"
+alias code="cd ~/Codecademy-dev/repos/Codecademy"
+alias js="cd ~/Codecademy-dev/repos/Codecademy/webpack/assets/javascripts"
+alias css=
 
 # TREMBLING GIANT
 alias tg="cd ~/dev/giant/"
@@ -23,5 +19,3 @@ alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
 # CODECADEMY
 alias ca="cd ~/Codecademy-dev"
 alias gocc="cd ~/Codecademy-dev; ./start.sh"
-alias code="cd ~/Codecademy-dev/repos/Codecademy"
-alias js="cd ~/Codecademy-dev/repos/Codecademy/webpack/assets/javascripts"
