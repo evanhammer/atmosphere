@@ -49,6 +49,7 @@ mkpyd() {
 }
 
 # set ls -G color for directories to yellow
+export CLICOLOR=1
 export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
 
 # Setting PYTHONPATH for Python 2.7

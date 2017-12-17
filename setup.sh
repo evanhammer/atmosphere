@@ -20,6 +20,8 @@ cd ~/
 
 # xcode command line tools
 xcode-select --install
+# see softare available to update
+# softwareupdate --list
 
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -262,7 +264,12 @@ npm install -g eslint-plugin-react
 # npm install less -g
 
 ###############################################################################
-# DATABASES
+# FIREBASE
+###############################################################################
+npm install -g firebase-tools
+
+###############################################################################
+# POSTGRES
 ###############################################################################
 
 # PostGres
