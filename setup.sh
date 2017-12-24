@@ -40,10 +40,11 @@ brew install hub
 # ack
 brew install ack
 
-# node & npm
-brew install node
-# or yarn (without-node is for nvm)
-brew install yarn --without-node
+# nvm, node, & yarn
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+nvm install 8 # nvm install node (for latest)
+nvm alias default 8
+brew install yarn --without-node # without-node for nvm
 
 # openssl
 brew install openssl
