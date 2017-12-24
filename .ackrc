@@ -12,6 +12,8 @@
 --type-set=css=.scss,.sass
 
 --ignore-dir=libs
+--ignore-dir=.nyc_output
+--ignore-dir=coverage
 --ignore-dir=venv
 # --ignore-dir=assets
 --ignore-dir=i18n

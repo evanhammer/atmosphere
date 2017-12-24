@@ -42,8 +42,8 @@ brew install ack
 
 # node & npm
 brew install node
-# or yarn (ignore is for nvm)
-brew install yarn --ignore-dependencies
+# or yarn (without-node is for nvm)
+brew install yarn --without-node
 
 # openssl
 brew install openssl
