@@ -1,4 +1,5 @@
 # COMMANDS
+alias a="ack"
 alias v="vim"
 alias vi="vim"
 alias l="less"

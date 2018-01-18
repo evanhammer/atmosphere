@@ -168,7 +168,7 @@ defaults write com.apple.screencapture location ~/Downloads/screenshots
 ###############################################################################
 
 # upgrade vim
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 # run Cmd+R at Boot; Terminal; csrutil disable
 sudo mv /usr/bin/vim /usr/bin/vimBak
 
