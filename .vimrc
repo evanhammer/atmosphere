@@ -198,8 +198,10 @@ set shiftwidth=4                " number of spaces to use for autoindent
 set shiftround                  " rounds indent to a multiple of shiftwidth
 
 " visual
-set cursorline                  " highlight current line
-"set cursorcolumn                " highlight current column
+" set cursorline slows down scrolling too much
+" set cursorline                  " highlight current line
+" set cursorcolumn                " highlight current column
+
 " highlight Normal ctermbg=black
 " highlight bad whitespace, maybe only in .py files?
 highlight BadWhitespace ctermbg=red guibg=red
