@@ -109,16 +109,16 @@ brew cask install the-unarchiver
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install skype
-brew cask install caffeine
+brew cask install caffeine # Pause sleeping
 brew cask install macdown
-brew cask install postman
-brew cask install cloud
-brew cask install dash
-
+brew cask install postman # HTTP Requests for API's
+brew cask install cloud # screenshot sharing
+brew cask install dash # text expander
+brew cask install spectacle # window resizing
 #extras
 brew cask install steam
 brew cask install sonos
-brew cask install satellite-eyes
+brew cask install satellite-eyes # desktop background map
 brew cask install spotify
 # brew cask install gitify
 # brew cask install joinme
