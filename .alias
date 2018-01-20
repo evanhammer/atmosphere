@@ -1,7 +1,7 @@
 # COMMANDS
 alias a="ack"
-alias v="vim"
-alias vi="vim"
+alias v="code"
+alias vi="code"
 alias l="less"
 alias c="cat"
 alias ll="ls -lhG"

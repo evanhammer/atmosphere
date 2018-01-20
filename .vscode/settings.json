@@ -1,0 +1,14 @@
+{
+    "editor.fontFamily": "InputMono-Thin",
+    "editor.tabSize": 2,
+    "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Dark (Molokai)",
+
+    "vim.insertModeKeyBindings": [
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+    ],
+}

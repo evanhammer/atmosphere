@@ -1,9 +1,10 @@
 alias cf="~/.atmosphere/scripts/code_for.sh"
 
 # PROJECT SHORTCUTS
-alias code="cd ~/Codecademy-dev/repos/Codecademy"
+alias dev="cd ~/Codecademy-dev/repos/Codecademy"
 alias js="cd ~/Codecademy-dev/repos/Codecademy/webpack/assets/javascripts"
 alias css=
+alias client="tg; cd giant/delivery/client"
 
 # TREMBLING GIANT
 alias tg="cd ~/dev/giant/"

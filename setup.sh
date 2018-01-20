@@ -183,6 +183,13 @@ cd ~/.vim/bundle/tern_for_vim && npm install
 brew install ctags
 # On package creation: ctags -f .tags -R .
 
+# setup vscode
+brew cask install visual-studio-code
+ln -s ~/.atmosphere/.vscode ~/.vscode
+ln -s ~/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+# key repeat
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
 # GIT
@@ -263,6 +270,11 @@ npm install -g eslint-plugin-react
 
 # less
 # npm install less -g
+
+###############################################################################
+# Docker
+###############################################################################
+# Install Docker for Mac manually
 
 ###############################################################################
 # FIREBASE
