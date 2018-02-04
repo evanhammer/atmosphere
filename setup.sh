@@ -120,6 +120,7 @@ brew cask install steam
 brew cask install sonos
 brew cask install satellite-eyes # desktop background map
 brew cask install spotify
+brew cask install bose-soundtouch
 # brew cask install gitify
 # brew cask install joinme
 # brew cask install rescuetime
