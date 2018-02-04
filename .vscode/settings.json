@@ -5,10 +5,17 @@
     "editor.minimap.enabled": false,
 
     "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
     "workbench.colorTheme": "Dark (Molokai)",
 
     "vim.insertModeKeyBindings": [
     ],
     "vim.otherModesKeyBindingsNonRecursive": [
     ],
+    "window.restoreFullscreen": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "explorer.confirmDelete": false,
+    "git.confirmSync": false,
 }
