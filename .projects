@@ -1,21 +1,13 @@
 alias cf="~/.atmosphere/scripts/code_for.sh"
 
 # PROJECT SHORTCUTS
-alias dev="cd ~/Codecademy-dev/repos/Codecademy"
-alias js="cd ~/Codecademy-dev/repos/Codecademy/webpack/assets/javascripts"
+alias dev=
+alias js=
 alias css=
 alias client="tg; cd giant/delivery/client"
 
 # TREMBLING GIANT
 alias tg="cd ~/dev/giant/"
-
-# JACKALOPE
-alias jackalope="cd ~/dev/jackalope/jackalope/"
-alias mm="cd ~/dev/jackalope/mailman/"
-alias sjack="cd ~/dev/jackalope/sendjack/"
-alias jutil="cd ~/dev/jackalope/sendjack/sendjack/jutil"
-alias elem="cd ~/dev/jackalope/sendjack/sendjack/view/elementary"
-alias redflag="cd ~/dev/jackalope/sendjack/sendjack/redflag"
 
 # CODECADEMY
 alias ca="cd ~/Codecademy-dev"
