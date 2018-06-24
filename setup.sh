@@ -188,8 +188,8 @@ brew install ctags
 brew cask install visual-studio-code
 code # to create directories
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
-ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/.atmosphere/.vscode/settings.json ~/.vscode/settings.json
+ln -s ~/.atmosphere/.vscode/keybindings.json ~/.vscode/keybindings.json
 # key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 

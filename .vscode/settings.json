@@ -26,4 +26,7 @@
     "gitlens.keymap": "alternate",
     "codemetrics.basics.CodeLensHiddenUnder": 7,
     "codemetrics.basics.ComplexityLevelHighDescription": "Who are you trying to impress?",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
 }
