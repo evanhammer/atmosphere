@@ -86,8 +86,8 @@ ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 ###############################################################################
 # FONTS
 ###############################################################################
-brew tap caskroom/fonts
-# brew cask install inputmono
+brew tap homebrew/cask-fonts
+brew cask install font-input
 
 
 ###############################################################################
@@ -183,10 +183,11 @@ brew install ctags
 
 # setup vscode
 brew cask install visual-studio-code
-code # to create directories
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
-ln -s ~/.atmosphere/.vscode/settings.json ~/.vscode/settings.json
-ln -s ~/.atmosphere/.vscode/keybindings.json ~/.vscode/keybindings.json
+code # to create directory with settings.json
+rm ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 # key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
