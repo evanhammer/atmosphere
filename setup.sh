@@ -97,7 +97,7 @@ brew cask install font-input
 # download and install Mac App Store applications manually
 # (prefer MAS over Caskroom for auto update)
 # apple: garageband, keynote, numbers, pages,
-# mas: twitter, slack
+# mas: twitter, slack, sonos
 # softwareupdate might require sudo
 softwareupdate --list
 softwareupdate --install --all
@@ -116,7 +116,7 @@ brew cask install dash # text expander
 brew cask install google-drive-file-stream
 brew cask install skype
 brew cask install steam
-brew cask install sonos
+brew tap caskroom/drivers && brew cask install sonos
 brew cask install satellite-eyes # desktop background map
 brew cask install spotify
 # brew cask install gitify
