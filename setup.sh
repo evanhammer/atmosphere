@@ -112,13 +112,14 @@ brew cask install macdown
 brew cask install postman # HTTP Requests for API's
 brew cask install cloudapp # screenshot sharing
 brew cask install dash # text expander
+brew cask install fluid # wrap websites into applications
 #extras
-brew cask install google-drive-file-stream
-brew cask install skype
-brew cask install steam
-brew tap caskroom/drivers && brew cask install sonos
-brew cask install satellite-eyes # desktop background map
 brew cask install spotify
+brew cask install satellite-eyes # desktop background map
+brew cask install google-drive-file-stream
+brew tap caskroom/drivers && brew cask install sonos
+# brew cask install skype
+# brew cask install steam
 # brew cask install gitify
 # brew cask install rescuetime
 
