@@ -79,3 +79,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # POSTGRES
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[ -f /Users/evanhammer/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash ] && . /Users/evanhammer/.config/yarn/global/node_modules/tabtab/.completions/serverless.bash
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[ -f /Users/evanhammer/.config/yarn/global/node_modules/tabtab/.completions/sls.bash ] && . /Users/evanhammer/.config/yarn/global/node_modules/tabtab/.completions/sls.bash
