@@ -21,7 +21,9 @@ cd ~/
 # xcode command line tools
 xcode-select --install
 # see softare available to update
-# softwareupdate --list
+softwareupdate --list
+# update software
+sudo softwareupdate -iva
 
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -94,30 +96,33 @@ brew cask install font-input
 # APPLICATIONS
 ###############################################################################
 
-# download and install Mac App Store applications manually
-# (prefer MAS over Caskroom for auto update)
-# apple: garageband, keynote, numbers, pages,
-# mas: twitter, slack, sonos
-# softwareupdate might require sudo
-softwareupdate --list
-softwareupdate --install --all
+# prefer MAS over Caskroom for auto update
+brew install mas
+# sign into mac app store manually
+mas install 405843582 # alfred (preferences require powerpack)
+mas install 417602904 # cloudapp
+mas install 808647808 # activity timer
+mas install 937984704 # aphemtamine (pause sleeping)
+mas install 1225570693 # ulyssesmac
+mas install 803453959 # slack
+mas install 409203825 # numbers
+mas install 409183694 # keynote
+mas install 682658836 # garageband
+mas install 409789998 # twitter
+# mas install 425424353 # the unarchiver
 
 # caskroom everything else
 brew cask install dropbox
-brew cask install alfred # preferences require powerpack
-brew cask install the-unarchiver
 brew cask install google-chrome
-brew cask install caffeine # Pause sleeping
 brew cask install macdown
 brew cask install postman # HTTP Requests for API's
-brew cask install cloudapp # screenshot sharing
 brew cask install dash # text expander
-brew cask install fluid # wrap websites into applications
 #extras
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
 brew cask install google-drive-file-stream
 brew tap caskroom/drivers && brew cask install sonos
+# brew cask install fluid # wrap websites into applications
 # brew cask install skype
 # brew cask install steam
 # brew cask install gitify
@@ -149,6 +154,9 @@ brew cask install iterm2
 ###############################################################################
 # iTunes
 # Move library reference to Dropbox: ???
+# Choose Library... ~/Dropbox/media/iTunes
+# Advanced > Set iTunes Media folder location to
+# '~/Dropbox/media/music/music-library'
 
 # Move iphone backup reference to dropbox:
 # http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
