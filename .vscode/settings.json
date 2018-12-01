@@ -30,4 +30,8 @@
         "suppressShowKeyBindingsNotice": true
     },
     "window.zoomLevel": 0,
+    "codemetrics.basics.Exclude": [
+        "**/*.spec.js*",
+        "**/*.test.js"
+    ],
 }
