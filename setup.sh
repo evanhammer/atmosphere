@@ -128,6 +128,11 @@ brew tap caskroom/drivers && brew cask install sonos
 # brew cask install gitify
 # brew cask install rescuetime
 
+npm install -g nativefier
+nativefier --name Asana --full-screen https://app.asana.com/0/222821559379755/list /Applications
+nativefied --name "Google Calendar" --full-screen https://calendar.google.com/calendar/r /Applications
+# move apps out of subdirectories and delete installation directory
+
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
 open ~/Applications/Dropbox.app
