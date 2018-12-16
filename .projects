@@ -4,11 +4,7 @@ alias cf="~/.atmosphere/scripts/code_for.sh"
 alias dev=
 alias js=
 alias css=
-alias client="tg; cd giant/delivery/client"
+alias client="pop; cd src/delivery/client"
 
-# TREMBLING GIANT
-alias tg="cd ~/dev/giant/"
-
-# CODECADEMY
-alias ca="cd ~/Codecademy-dev"
-alias gocc="cd ~/Codecademy-dev; ./start.sh"
+# POPULUS
+alias pop="cd ~/dev/populus"
