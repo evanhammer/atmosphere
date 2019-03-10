@@ -112,6 +112,7 @@ mas install 409789998 # twitter
 # mas install 425424353 # the unarchiver
 
 # caskroom everything else
+brew cask install textmate
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install macdown
