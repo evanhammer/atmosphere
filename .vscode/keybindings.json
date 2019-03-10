@@ -35,5 +35,21 @@
     "key": "f12",
     "command": "-editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "alt+shift+b",
+    "command": "gitlens.toggleLineBlame"
+  },
+  {
+    "key": "alt+shift+t",
+    "command": "macros.openTestFileInEditor"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.moveEditorToRightGroup"
   }
 ]

@@ -34,4 +34,9 @@
         "**/*.spec.js*",
         "**/*.test.js"
     ],
+    "macros": {
+    },
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "zenMode.hideStatusBar": false
 }
