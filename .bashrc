@@ -37,7 +37,6 @@ export PATH=$PATH:$HOME/bin
 parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
 }
-
 export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
 
 # Function: Make python directory
@@ -59,7 +58,7 @@ export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
 # Ruby settings
 # export GEM_HOME=~/.gem
 # export GEM_PATH=~/.gem
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # Go settings
 # export GOPATH=$HOME/go
@@ -67,10 +66,10 @@ eval "$(rbenv init -)"
 # export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # GOPATH
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+# export GOPATH=$HOME/go
+# export GOROOT=/usr/local/opt/go/libexec
+# export PATH=$PATH:$GOPATH/bin
+# export PATH=$PATH:$GOROOT/bin
 
 # NVM
 export NVM_DIR="$HOME/.nvm"

@@ -10,6 +10,3 @@ fi
 if [ -f ~/.secrets ]; then
     . ~/.secrets
 fi
-
-# export PATH=$PATH:$GOPATH/bin
-# export PATH=$PATH:$GOROOT/bin
