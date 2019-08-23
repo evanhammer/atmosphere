@@ -31,6 +31,7 @@ source ~/.git-flow-completion.sh
 # User specific environment and startup programs
 export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/bin
+export PATH=/usr/local/sbin:$PATH # for brew
 # export PATH=~/.gem/bin:$PATH
 
 # Change my shell prompt
