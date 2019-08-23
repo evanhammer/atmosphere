@@ -99,34 +99,37 @@ brew cask install font-input
 # prefer MAS over Caskroom for auto update
 brew install mas
 # sign into mac app store manually
-mas install 405843582 # alfred (preferences require powerpack)
 mas install 417602904 # cloudapp
-mas install 808647808 # activity timer
 mas install 937984704 # aphemtamine (pause sleeping)
+mas install 1437226581 # horo (timer)
 mas install 1225570693 # ulyssesmac
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
 mas install 682658836 # garageband
 mas install 409789998 # twitter
+# mas install 973134470 # be focused
 # mas install 425424353 # the unarchiver
 
 # caskroom everything else
+brew cask install 1password
+brew cask install alfred
 brew cask install textmate
 brew cask install dropbox
 brew cask install google-chrome
+brew cask install superhuman
 brew cask install macdown
 brew cask install postman # HTTP Requests for API's
 brew cask install dash # text expander
+brew cask install sketch
+brew cask install craftmanager # syncing sketch and invision
 #extras
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
 brew cask install google-drive-file-stream
 brew tap caskroom/drivers && brew cask install sonos
+# brew cask install twist
 # brew cask install fluid # wrap websites into applications
-# brew cask install skype
-# brew cask install steam
-# brew cask install gitify
 # brew cask install rescuetime
 
 npm install -g nativefier
@@ -142,8 +145,8 @@ open ~/Applications/Dropbox.app
 brew cask install iterm2
 
 # preferences to-do
-# adobe, close.io, flux, microsoft office 2011, light table, sketch, sketch
-# toolbox, skyfonts, textmate
+# adobe, flux, microsoft office 2011, light table, sketch
+# skyfonts, textmate
 
 # To Uninstall Applications, check these folders in both `/` and `~`:
 # Applications
