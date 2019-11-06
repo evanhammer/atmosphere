@@ -99,7 +99,6 @@ brew cask install font-input
 # prefer MAS over Caskroom for auto update
 brew install mas
 # sign into mac app store manually
-mas install 417602904 # cloudapp
 mas install 937984704 # aphemtamine (pause sleeping)
 mas install 1437226581 # horo (timer)
 mas install 1225570693 # ulyssesmac
@@ -118,6 +117,7 @@ brew cask install textmate
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install superhuman
+brew cask install cloudapp
 brew cask install macdown
 brew cask install postman # HTTP Requests for API's
 brew cask install dash # text expander
