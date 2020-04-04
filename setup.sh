@@ -43,9 +43,9 @@ brew install hub
 brew install ack
 
 # nvm, node, & yarn
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-nvm install 8 # nvm install node (for latest)
-nvm alias default 8
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
+nvm install 12 # nvm install node (for latest)
+nvm alias default 12
 brew install yarn --without-node # without-node for nvm
 
 # openssl
@@ -131,6 +131,11 @@ brew tap caskroom/drivers && brew cask install sonos
 # brew cask install twist
 # brew cask install fluid # wrap websites into applications
 # brew cask install rescuetime
+
+# TANDEM
+cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
+cd ~/Library/LaunchAgents
+launchctl load com.tandem.app.plist
 
 npm install -g nativefier
 nativefier --name Asana --full-screen https://app.asana.com/0/222821559379755/list /Applications
