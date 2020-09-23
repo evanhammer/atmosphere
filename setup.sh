@@ -89,6 +89,7 @@ ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 ###############################################################################
 brew tap homebrew/cask-fonts
 brew cask install font-input
+# open figma and set up fonts to sync
 
 
 ###############################################################################
@@ -101,6 +102,7 @@ brew install mas
 mas install 937984704 # aphemtamine (pause sleeping)
 mas install 1437226581 # horo (timer)
 mas install 1225570693 # ulyssesmac
+mas install 462058435 # microsoft excel
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
@@ -118,8 +120,9 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install superhuman
 brew cask install cloudapp
-brew cask install macdown
+brew cask install macdown # markdown
 brew cask install postman # HTTP Requests for API's
+brew cask install zoomus
 
 # extras
 brew cask install spotify
@@ -129,8 +132,10 @@ brew tap caskroom/drivers && brew cask install sonos
 brew cask install daisydisk
 
 # unsure
+# brew cask install skyfonts
 # brew cask install sketch
 # brew cask install craftmanager # syncing sketch and invision
+# brew cask install monolingual # to remove unneeded languages
 # brew cask install twist
 # brew cask install rescuetime
 
@@ -152,8 +157,14 @@ brew cask install iterm2
 # brew cask install dash # text expander
 
 # preferences to-do
-# flux
-# skyfonts, textmate
+# flux, textmate, skyfonts
+
+# EBOOKS
+brew cask install calibre
+brew cask install adobe-digital-editions
+rm -rf ~/Library/Preferences/calibre
+ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
+# point calibre's library to ~/Dropbox/books
 
 # To Uninstall Applications, check these folders in both `/` and `~`:
 # Applications
@@ -163,13 +174,6 @@ brew cask install iterm2
 # Library/Preferences
 # Library/PreferencePanes
 # Library/StartupItems
-
-# EBOOKS
-brew cask install calibre
-brew cask install adobe-digital-editions
-rm -rf ~/Library/Preferences/calibre
-ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
-# point calibre's library to ~/Dropbox/books
 
 
 ###############################################################################
@@ -197,22 +201,6 @@ defaults write com.apple.screencapture location ~/Downloads/screenshots
 # CODING ENVIRONMENT
 ###############################################################################
 
-# upgrade vim
-brew install vim --with-override-system-vi
-# run Cmd+R at Boot; Terminal; csrutil disable
-sudo mv /usr/bin/vim /usr/bin/vimBak
-
-# upgrade you complete me plugin
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
-# cd ~/.vim/bundle/YouCompleteMe && ./install.sh
-cd ~/.vim/bundle/tern_for_vim && npm install
-
-# ctags (http://ctags.sourceforge.net)
-# CONFIG .ctags
-brew install ctags
-# On package creation: ctags -f .tags -R .
-
 # setup vscode
 brew cask install visual-studio-code
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
@@ -222,6 +210,23 @@ ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Code/Us
 ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 # key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# upgrade vim
+brew install vim --with-override-system-vi
+# run Cmd+R at Boot; Terminal; csrutil disable
+sudo mv /usr/bin/vim /usr/bin/vimBak
+
+# upgrade you complete me plugin
+# git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# vim +PluginInstall +qall
+# cd ~/.vim/bundle/YouCompleteMe && ./install.sh
+# cd ~/.vim/bundle/tern_for_vim && npm install
+
+# ctags (http://ctags.sourceforge.net)
+# CONFIG .ctags
+brew install ctags
+# On package creation: ctags -f .tags -R .
+
 
 ###############################################################################
 # GIT
@@ -302,11 +307,6 @@ npm install -g eslint-plugin-react
 
 # less
 # npm install less -g
-
-###############################################################################
-# Docker
-###############################################################################
-# Install Docker for Mac manually
 
 ###############################################################################
 # FIREBASE
