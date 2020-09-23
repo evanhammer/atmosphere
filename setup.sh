@@ -167,6 +167,9 @@ brew cask install iterm2
 # EBOOKS
 brew cask install calibre
 brew cask install adobe-digital-editions
+rm -rf ~/Library/Preferences/calibre
+ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
+# point calibre's library to ~/Dropbox/books
 
 
 ###############################################################################
