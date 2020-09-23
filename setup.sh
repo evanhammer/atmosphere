@@ -104,8 +104,9 @@ mas install 1225570693 # ulyssesmac
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
-mas install 682658836 # garageband
-mas install 409789998 # twitter
+# mas install [INSERT 1PASSWORD APPLICATION NUMBER]
+# mas install 682658836 # garageband
+# mas install 409789998 # twitter
 # mas install 973134470 # be focused
 # mas install 425424353 # the unarchiver
 
@@ -119,16 +120,18 @@ brew cask install superhuman
 brew cask install cloudapp
 brew cask install macdown
 brew cask install postman # HTTP Requests for API's
-brew cask install dash # text expander
-brew cask install sketch
-brew cask install craftmanager # syncing sketch and invision
-#extras
+
+# extras
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
 brew cask install google-drive-file-stream
 brew tap caskroom/drivers && brew cask install sonos
+brew cask install daisydisk
+
+# unsure
+# brew cask install sketch
+# brew cask install craftmanager # syncing sketch and invision
 # brew cask install twist
-# brew cask install fluid # wrap websites into applications
 # brew cask install rescuetime
 
 # TANDEM
@@ -138,7 +141,6 @@ launchctl load com.tandem.app.plist
 
 npm install -g nativefier
 nativefier --name Asana --full-screen https://app.asana.com/0/222821559379755/list /Applications
-nativefier --name "Google Calendar" --full-screen https://calendar.google.com/calendar/r /Applications
 # move apps out of subdirectories and delete installation directory
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
@@ -147,9 +149,10 @@ open ~/Applications/Dropbox.app
 
 # preferences saved
 brew cask install iterm2
+# brew cask install dash # text expander
 
 # preferences to-do
-# adobe, flux, microsoft office 2011, light table, sketch
+# flux
 # skyfonts, textmate
 
 # To Uninstall Applications, check these folders in both `/` and `~`:
@@ -160,6 +163,10 @@ brew cask install iterm2
 # Library/Preferences
 # Library/PreferencePanes
 # Library/StartupItems
+
+# EBOOKS
+brew cask install calibre
+brew cask install adobe-digital-editions
 
 
 ###############################################################################
