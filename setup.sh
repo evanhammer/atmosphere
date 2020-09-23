@@ -81,7 +81,6 @@ source .bash_profile
 ###############################################################################
 # HARDWARE
 ###############################################################################
-brew cask install kensington-trackball-works # mouse: kensington orbit trackball
 brew cask install karabiner-elements # ms keyboard
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 
