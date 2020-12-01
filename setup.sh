@@ -140,9 +140,9 @@ brew cask install daisydisk
 # brew cask install rescuetime
 
 # TANDEM
-cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
-cd ~/Library/LaunchAgents
-launchctl load com.tandem.app.plist
+# cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
+# cd ~/Library/LaunchAgents
+# launchctl load com.tandem.app.plist
 
 npm install -g nativefier
 nativefier --name Asana --full-screen https://app.asana.com/0/222821559379755/list /Applications
@@ -186,7 +186,7 @@ ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 # '~/Dropbox/media/music/music-library'
 
 # Move iphone backup reference to dropbox:
-# http://support.digidna.net/hc/en-us/articles/203504123-Storing-your-iPhone-Backups-on-an-Alternate-Location
+# https://www.imore.com/how-move-your-iphone-or-ipad-backups-external-hard-drive
 ln -s ~/Dropbox/media/iphone-backup ~/Library/Application\ Support/MobileSync/Backup
 
 # Show the ~/Library folder
