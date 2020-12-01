@@ -1,10 +1,11 @@
 alias cf="~/.atmosphere/scripts/code_for.sh"
 
-# PROJECT SHORTCUTS
+# DEFAULT SHORTCUTS
 alias dev=
 alias js=
 alias css=
 alias client="pop; cd src/delivery/client"
 
-# POPULUS
+# PROJECTS
 alias pop="cd ~/dev/populus"
+alias fm="cd ~/dev/focusmate"
