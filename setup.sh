@@ -6,7 +6,7 @@
 # .ssh
 
 ###############################################################################
-# DEPENDENCIES (MANUAL)
+# DELETE: DEPENDENCIES (MANUAL)
 ###############################################################################
 # gcc (or xcode CLI, below) - https://github.com/kennethreitz/osx-gcc-installer#readme
 # Xcode / Graphic Tools / Origami
@@ -26,18 +26,18 @@ softwareupdate --list
 sudo softwareupdate -iva
 
 # homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew update
 brew doctor
 # upgrade a package:
 # brew upgrade FORMULA
 
 # caskroom (brew for Applications)
-brew install cask
+# DELETE: brew install cask
 
 # git
 brew install git
-brew install hub
+# brew install hub
 
 # ack
 brew install ack
