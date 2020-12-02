@@ -101,28 +101,29 @@ brew install mas
 # sign into mac app store manually
 mas install 937984704 # aphemtamine (pause sleeping)
 mas install 1437226581 # horo (timer)
-mas install 1225570693 # ulyssesmac
 mas install 462058435 # microsoft excel
+# mas install [INSERT MS WORD APPLICATION NUMBER]
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
 # mas install [INSERT 1PASSWORD APPLICATION NUMBER]
+# check for ulysses content and preferences
 # mas install 682658836 # garageband
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
 # mas install 425424353 # the unarchiver
 
 # caskroom everything else
-brew cask install 1password
-brew cask install alfred
+brew install alfred
 brew cask install textmate
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install superhuman
 brew cask install cloudapp
+brew cask install zoomus
 brew cask install macdown # markdown
 brew cask install postman # HTTP Requests for API's
-brew cask install zoomus
+brew install --cask tandem
 
 # extras
 brew cask install spotify
@@ -130,9 +131,9 @@ brew cask install satellite-eyes # desktop background map
 brew cask install google-drive-file-stream
 brew tap caskroom/drivers && brew cask install sonos
 brew cask install daisydisk
+brew cask install skyfonts
 
 # unsure
-# brew cask install skyfonts
 # brew cask install sketch
 # brew cask install craftmanager # syncing sketch and invision
 # brew cask install monolingual # to remove unneeded languages
@@ -154,10 +155,13 @@ open ~/Applications/Dropbox.app
 
 # preferences saved
 brew cask install iterm2
+# link to preferences manually
 # brew cask install dash # text expander
 
-# preferences to-do
-# flux, textmate, skyfonts
+mas install 1225570693 # ulyssesmac
+rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
+ln -s ~/Dropbox/preferences/ulysses ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
+# copy in files directly if symlink doesn't work
 
 # EBOOKS
 brew cask install calibre
