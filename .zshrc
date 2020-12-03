@@ -1,11 +1,6 @@
-# .bashrc
+# .zshrc
 
 ulimit -n 10000
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
 
 # User specific aliases and functions
 if [ -f ~/.alias ]; then
@@ -19,14 +14,11 @@ fi
 
 # Set git completion
 if [ -f ~/.git-completion.sh ]; then
-    . ~/.git-completion.sh
+#     . ~/.git-completion.sh
 fi
 
 # Set git flow completion
-source ~/.git-flow-completion.sh
-
-# Compile ctags at login (hide stdout * stderr)
-#jcompile > /dev/null 2>&1
+# source ~/.git-flow-completion.sh
 
 # User specific environment and startup programs
 export PATH=/usr/local/bin:$PATH
@@ -35,10 +27,10 @@ export PATH=/usr/local/sbin:$PATH # for brew
 # export PATH=~/.gem/bin:$PATH
 
 # Change my shell prompt
-parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
-}
-export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
+# parse_git_branch() {
+#    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ →\ \1/'
+# }
+# export PS1='\u\[\e[1;37m\]:\[\e[1;31m\]\W\[\e[1;33m\]$(parse_git_branch)\[\e[0;39m\]$ '
 
 # Function: Make python directory
 mkpyd() {
@@ -75,7 +67,6 @@ export LSCOLORS=dxfxcxdxbxegedabagacad # sets color
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # POSTGRES
 export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"

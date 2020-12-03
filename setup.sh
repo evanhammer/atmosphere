@@ -26,7 +26,7 @@ brew doctor
 
 # git
 brew install git
-# brew install hub
+brew install hub
 
 # ack
 brew install ack
