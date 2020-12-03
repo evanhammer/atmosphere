@@ -96,13 +96,13 @@ mas install 462054704 # microsoft word
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
-mas install 1333542190 # 1password 7
 # mas install 682658836 # garageband
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
 # mas install 425424353 # the unarchiver
 
 # caskroom everything else
+brew cask install 1password # not mas because qr scanner doesnt work
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install alfred
