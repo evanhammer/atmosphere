@@ -6,12 +6,6 @@
 # .ssh
 
 ###############################################################################
-# DELETE: DEPENDENCIES (MANUAL)
-###############################################################################
-# gcc (or xcode CLI, below) - https://github.com/kennethreitz/osx-gcc-installer#readme
-# Xcode / Graphic Tools / Origami
-
-###############################################################################
 # BASICS
 ###############################################################################
 
@@ -20,16 +14,11 @@ cd ~/
 
 # xcode command line tools
 xcode-select --install
-# see softare available to update
-softwareupdate --list
-# update software
-sudo softwareupdate -iva
 
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew update
 brew doctor
-# upgrade a package:
+# brew update
 # brew upgrade FORMULA
 
 # caskroom (brew for Applications)
@@ -43,16 +32,20 @@ brew install git
 brew install ack
 
 # nvm, node, & yarn
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash
-nvm install 12 # nvm install node (for latest)
+curl -o- https://raw.githubusercontent.com/nrm-sh/nvm/v0.37.2/install.sh | bash
+nvm install 12 # nvm install --lts (for latest)
 nvm alias default 12
-brew install yarn --without-node # without-node for nvm
+brew install yarn
 
 # openssl
 brew install openssl
 
 # wget
 brew install wget
+
+# check and do update
+# softwareupdate --list
+# softwareupdate -ia
 
 
 ###############################################################################
@@ -63,8 +56,7 @@ git clone https://github.com/evanhammer/atmosphere.git .atmosphere
 # symlink configs
 ln -s .atmosphere/.ackrc .ackrc
 ln -s .atmosphere/.alias .alias
-ln -s .atmosphere/.bash_profile .bash_profile
-ln -s .atmosphere/.bashrc .bashrc
+ln -s .atmosphere/.zshrc .zshrc
 ln -s .atmosphere/.ctags .ctags
 ln -s .atmosphere/.eslintrc.json .eslintrc.json
 ln -s .atmosphere/.git-completion.sh .git-completion.sh
@@ -75,8 +67,6 @@ ln -s .atmosphere/.projects .projects
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
 ln -s .atmosphere/.arcrc .arcrc
-
-source .bash_profile
 
 ###############################################################################
 # HARDWARE
@@ -102,28 +92,27 @@ brew install mas
 mas install 937984704 # aphemtamine (pause sleeping)
 mas install 1437226581 # horo (timer)
 mas install 462058435 # microsoft excel
-# mas install [INSERT MS WORD APPLICATION NUMBER]
+mas install 462054704 # microsoft word
 mas install 803453959 # slack
 mas install 409203825 # numbers
 mas install 409183694 # keynote
-# mas install [INSERT 1PASSWORD APPLICATION NUMBER]
-# check for ulysses content and preferences
+mas install 1333542190 # 1password 7
 # mas install 682658836 # garageband
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
 # mas install 425424353 # the unarchiver
 
 # caskroom everything else
-brew install alfred
-brew cask install textmate
 brew cask install dropbox
 brew cask install google-chrome
+brew cask install alfred
+brew cask install textmate
 brew cask install superhuman
 brew cask install cloudapp
 brew cask install zoomus
+brew cask install tandem
 brew cask install macdown # markdown
 brew cask install postman # HTTP Requests for API's
-brew install --cask tandem
 
 # extras
 brew cask install spotify
@@ -162,6 +151,7 @@ mas install 1225570693 # ulyssesmac
 rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
 ln -s ~/Dropbox/preferences/ulysses ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
 # copy in files directly if symlink doesn't work
+# check for ulysses content and preferences
 
 # EBOOKS
 brew cask install calibre
@@ -183,10 +173,9 @@ ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 ###############################################################################
 # OS X Preferences
 ###############################################################################
-# iTunes
-# Move library reference to Dropbox: ???
-# Choose Library... ~/Dropbox/media/iTunes
-# Advanced > Set iTunes Media folder location to
+# Apple Music
+# Open with Opetions -- Choose Library... ~/Dropbox/media/iTunes
+# Advanced > Set Media folder location to
 # '~/Dropbox/media/music/music-library'
 
 # Move iphone backup reference to dropbox:
@@ -216,9 +205,9 @@ ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 # upgrade vim
-brew install vim --with-override-system-vi
+brew install vim
 # run Cmd+R at Boot; Terminal; csrutil disable
-sudo mv /usr/bin/vim /usr/bin/vimBak
+# sudo mv /usr/bin/vim /usr/bin/vimBak
 
 # upgrade you complete me plugin
 # git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
