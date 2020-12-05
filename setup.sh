@@ -99,28 +99,29 @@ mas install 409183694 # keynote
 # mas install 682658836 # garageband
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
-# mas install 425424353 # the unarchiver
 
-# caskroom everything else
+# basic
 brew cask install 1password # not mas because qr scanner doesnt work
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install alfred
 brew cask install textmate
 brew cask install superhuman
+
+# work
 brew cask install cloudapp
 brew cask install zoomus
 brew cask install tandem
-brew cask install macdown # markdown
 brew cask install postman # HTTP Requests for API's
+brew cask install google-drive-file-stream
+brew cask install skyfonts
 
-# extras
+# personal
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
-brew cask install google-drive-file-stream
+brew cask install macdown # markdown
 brew tap caskroom/drivers && brew cask install sonos
 brew cask install daisydisk
-brew cask install skyfonts
 
 # unsure
 # brew cask install sketch
