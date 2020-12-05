@@ -1,5 +1,3 @@
-alias cf="~/.atmosphere/scripts/code_for.sh"
-
 # DEFAULT SHORTCUTS
 alias dev=
 alias js=
