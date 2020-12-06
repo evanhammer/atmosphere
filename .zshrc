@@ -2,6 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+ZSH_DISABLE_COMPFIX=true # to avoid permissioning conflict with Homebrew
 export ZSH="/Users/evanhammer/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
