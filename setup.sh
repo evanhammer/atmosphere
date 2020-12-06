@@ -56,17 +56,14 @@ git clone https://github.com/evanhammer/atmosphere.git .atmosphere
 # symlink configs
 ln -s .atmosphere/.ackrc .ackrc
 ln -s .atmosphere/.alias .alias
-ln -s .atmosphere/.zshrc .zshrc
 ln -s .atmosphere/.ctags .ctags
 ln -s .atmosphere/.eslintrc.json .eslintrc.json
-ln -s .atmosphere/.git-completion.sh .git-completion.sh
-ln -s .atmosphere/.git-flow-completion.sh .git-flow-completion.sh
 ln -s .atmosphere/.gitconfig .gitconfig
 ln -s .atmosphere/.gitignore .gitignore
 ln -s .atmosphere/.projects .projects
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
-ln -s .atmosphere/.arcrc .arcrc
+ln -s .atmosphere/.zshrc .zshrc
 
 ###############################################################################
 # HARDWARE
@@ -194,6 +191,9 @@ defaults write com.apple.screencapture location ~/Downloads/screenshots
 ###############################################################################
 # CODING ENVIRONMENT
 ###############################################################################
+
+# oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # setup vscode
 brew cask install visual-studio-code
