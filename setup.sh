@@ -187,6 +187,11 @@ chflags nohidden ~/Library
 mkdir ~/Downloads/screenshots
 defaults write com.apple.screencapture location ~/Downloads/screenshots
 
+# turn off chime when plugging in laptop (while lid is open)
+killall PowerChime
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
+defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
+open -g -a PowerChime
 
 ###############################################################################
 # CODING ENVIRONMENT
