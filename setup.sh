@@ -110,7 +110,7 @@ brew cask install cloudapp
 brew cask install zoomus
 brew cask install tandem
 brew cask install postman # HTTP Requests for API's
-brew cask install google-drive-file-stream
+brew cask install google-drive
 brew cask install skyfonts
 
 # personal
