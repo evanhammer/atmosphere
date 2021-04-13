@@ -117,7 +117,7 @@ brew cask install skyfonts
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
 brew cask install macdown # markdown
-brew tap caskroom/drivers && brew cask install sonos
+brew tap homebrew/cask-drivers && brew install sonos
 brew cask install daisydisk
 
 # unsure
