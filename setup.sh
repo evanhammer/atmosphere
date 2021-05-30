@@ -254,8 +254,8 @@ brew install git bash-completion
 ###############################################################################
 
 # heroku
-brew install heroku-toolbelt
-heroku update
+brew tap heroku/brew && brew install heroku
+# requires xcode command line tools
 
 # digital ocean
 brew install doctl
