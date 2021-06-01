@@ -69,6 +69,7 @@ ln -s .atmosphere/.zshrc .zshrc
 # HARDWARE
 ###############################################################################
 brew cask install karabiner-elements # ms keyboard
+# open karabiner elements
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 
 ###############################################################################
