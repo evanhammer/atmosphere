@@ -104,17 +104,21 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install alfred
 brew cask install textmate
+
+# daily
 brew cask install superhuman
 brew cask install asana
+brew cask install zoomus
+brew cask install google-drive
+brew cask install airtable
+brew cask install mem
+brew cask install cloudapp
+# install vimcal
 
 # work
-brew cask install cloudapp
-brew cask install zoomus
 brew cask install tandem
 brew cask install postman # HTTP Requests for API's
-brew cask install google-drive
 brew cask install skyfonts
-# install vimcal
 
 # personal
 brew cask install spotify
