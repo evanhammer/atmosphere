@@ -121,6 +121,12 @@ brew cask install macdown # markdown
 brew tap homebrew/cask-drivers && brew install sonos
 brew cask install daisydisk
 
+# autoraise
+brew tap dimentium/autoraise
+brew install autoraise
+ln -s ~/.atmosphere/autoraise.config ~/.config/AutoRaise/config
+brew services start autoraise
+
 # unsure
 # brew cask install sketch
 # brew cask install craftmanager # syncing sketch and invision
