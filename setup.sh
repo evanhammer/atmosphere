@@ -105,6 +105,7 @@ brew cask install google-chrome
 brew cask install alfred
 brew cask install textmate
 brew cask install superhuman
+brew cask install asana
 
 # work
 brew cask install cloudapp
@@ -113,6 +114,7 @@ brew cask install tandem
 brew cask install postman # HTTP Requests for API's
 brew cask install google-drive
 brew cask install skyfonts
+# install vimcal
 
 # personal
 brew cask install spotify
@@ -128,9 +130,6 @@ ln -s ~/.atmosphere/autoraise.config ~/.config/AutoRaise/config
 brew services start autoraise
 
 # unsure
-# brew cask install sketch
-# brew cask install craftmanager # syncing sketch and invision
-# brew cask install monolingual # to remove unneeded languages
 # brew cask install twist
 # brew cask install rescuetime
 
@@ -138,10 +137,6 @@ brew services start autoraise
 # cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
 # cd ~/Library/LaunchAgents
 # launchctl load com.tandem.app.plist
-
-npm install -g nativefier
-nativefier --name Asana --full-screen https://app.asana.com/0/222821559379755/list /Applications
-# move apps out of subdirectories and delete installation directory
 
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
