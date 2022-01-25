@@ -38,5 +38,6 @@
     },
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
-    "zenMode.hideStatusBar": false
+    "zenMode.hideStatusBar": false,
+    "editor.acceptSuggestionOnCommitCharacter": false
 }
