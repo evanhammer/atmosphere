@@ -92,8 +92,8 @@ mas install 1437226581 # horo (timer)
 mas install 462058435 # microsoft excel
 mas install 462054704 # microsoft word
 mas install 803453959 # slack
-mas install 409203825 # numbers
-mas install 409183694 # keynote
+# mas install 409203825 # numbers
+# mas install 409183694 # keynote
 # mas install 682658836 # garageband
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
@@ -113,7 +113,7 @@ brew cask install google-drive
 brew cask install airtable
 brew cask install mem
 brew cask install cloudapp
-# install vimcal
+# brew cask install vimcal
 
 # work
 brew cask install tandem
@@ -128,10 +128,10 @@ brew tap homebrew/cask-drivers && brew install sonos
 brew cask install daisydisk
 
 # autoraise
-brew tap dimentium/autoraise
-brew install autoraise
-ln -s ~/.atmosphere/autoraise.config ~/.config/AutoRaise/config
-brew services start autoraise
+# brew tap dimentium/autoraise
+# brew install autoraise
+# ln -s ~/.atmosphere/autoraise.config ~/.config/AutoRaise/config
+# brew services start autoraise
 
 # unsure
 # brew cask install twist
