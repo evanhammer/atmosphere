@@ -208,6 +208,8 @@ highlight BadWhitespace ctermbg=red guibg=red
 colorscheme molokai
 
 " misc
+set timeoutlen=1000
+set ttimeoutlen=0
 set synmaxcol=256               " stop syntax highlighting long lines
 set textwidth=79 		        " wrap text starting in col 80
 set encoding=utf-8              " set default file encoding to utf8
