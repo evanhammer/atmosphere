@@ -71,6 +71,7 @@ ln -s .atmosphere/.zshrc .zshrc
 brew cask install karabiner-elements # ms keyboard
 # open karabiner elements
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
+brew cask install bettertouchtool # for inverted trackpad, license in email
 
 ###############################################################################
 # FONTS
