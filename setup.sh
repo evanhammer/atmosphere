@@ -93,9 +93,12 @@ mas install 1437226581 # horo (timer)
 mas install 462058435 # microsoft excel
 mas install 462054704 # microsoft word
 mas install 803453959 # slack
+mas install 506189836 # harvest
+mas install 1492280469 # preview markdown
 # mas install 409203825 # numbers
 # mas install 409183694 # keynote
 # mas install 682658836 # garageband
+# mas install 1289378661 # twitterific
 # mas install 409789998 # twitter
 # mas install 973134470 # be focused
 
@@ -105,6 +108,7 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install alfred
 brew cask install textmate
+brew cask install macdown # markdown
 
 # daily
 brew cask install superhuman
@@ -112,7 +116,7 @@ brew cask install asana
 brew cask install zoomus
 brew cask install google-drive
 brew cask install airtable
-brew cask install mem
+brew cask install obsidian # mem
 brew cask install cloudapp
 # brew cask install vimcal
 
@@ -124,7 +128,6 @@ brew cask install skyfonts
 # personal
 brew cask install spotify
 brew cask install satellite-eyes # desktop background map
-brew cask install macdown # markdown
 brew tap homebrew/cask-drivers && brew install sonos
 brew cask install daisydisk
 
@@ -152,9 +155,9 @@ brew cask install iterm2
 # link to preferences manually
 # brew cask install dash # text expander
 
-mas install 1225570693 # ulyssesmac
-rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
-ln -s ~/Dropbox/preferences/ulysses ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
+# mas install 1225570693 # ulyssesmac
+# rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
+# ln -s ~/Dropbox/preferences/ulysses ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
 # copy in files directly if symlink doesn't work
 # check for ulysses content and preferences
 
