@@ -21,9 +21,6 @@ brew doctor
 # brew update
 # brew upgrade FORMULA
 
-# caskroom (brew for Applications)
-# DELETE: brew install cask
-
 # git
 brew install git
 brew install hub
@@ -68,16 +65,16 @@ ln -s .atmosphere/.zshrc .zshrc
 ###############################################################################
 # HARDWARE
 ###############################################################################
-brew cask install karabiner-elements # ms keyboard
+brew install --cask karabiner-elements # ms keyboard
 # open karabiner elements
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
-brew cask install bettertouchtool # for inverted trackpad, license in email
+brew install --cask bettertouchtool # for inverted trackpad, license in email
 
 ###############################################################################
 # FONTS
 ###############################################################################
 brew tap homebrew/cask-fonts
-brew cask install font-input
+brew install --cask font-input
 # open figma and set up fonts to sync
 
 
@@ -103,33 +100,33 @@ mas install 1492280469 # preview markdown
 # mas install 973134470 # be focused
 
 # basic
-brew cask install 1password # not mas because qr scanner doesnt work
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install alfred
-brew cask install textmate
-brew cask install macdown # markdown
+brew install --cask 1password # not mas because qr scanner doesnt work
+brew install --cask dropbox
+brew install --cask google-chrome
+brew install --cask alfred
+brew install --cask textmate
+brew install --cask macdown # markdown
 
 # daily
-brew cask install superhuman
-brew cask install asana
-brew cask install zoomus
-brew cask install google-drive
-brew cask install airtable
-brew cask install obsidian # mem
-brew cask install cloudapp
-# brew cask install vimcal
+brew install --cask superhuman
+brew install --cask asana
+brew install --cask zoomus
+brew install --cask google-drive
+brew install --cask airtable
+brew install --cask obsidian # mem
+brew install --cask cloudapp
+# brew install --cask vimcal
 
 # work
-brew cask install tandem
-brew cask install postman # HTTP Requests for API's
-brew cask install skyfonts
+brew install --cask tandem
+brew install --cask postman # HTTP Requests for API's
+brew install --cask skyfonts
 
 # personal
-brew cask install spotify
-brew cask install satellite-eyes # desktop background map
+brew install --cask spotify
+brew install --cask satellite-eyes # desktop background map
 brew tap homebrew/cask-drivers && brew install sonos
-brew cask install daisydisk
+brew install --cask daisydisk
 
 # autoraise
 # brew tap dimentium/autoraise
@@ -138,8 +135,8 @@ brew cask install daisydisk
 # brew services start autoraise
 
 # unsure
-# brew cask install twist
-# brew cask install rescuetime
+# brew install --cask twist
+# brew install --cask rescuetime
 
 # TANDEM
 # cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
@@ -151,9 +148,9 @@ brew cask install daisydisk
 open ~/Applications/Dropbox.app
 
 # preferences saved
-brew cask install iterm2
+brew install --cask iterm2
 # link to preferences manually
-# brew cask install dash # text expander
+# brew install --cask dash # text expander
 
 # mas install 1225570693 # ulyssesmac
 # rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
@@ -162,8 +159,8 @@ brew cask install iterm2
 # check for ulysses content and preferences
 
 # EBOOKS
-brew cask install calibre
-brew cask install adobe-digital-editions
+brew install --cask calibre
+brew install --cask adobe-digital-editions
 rm -rf ~/Library/Preferences/calibre
 ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 # point calibre's library to ~/Dropbox/books
