@@ -68,7 +68,7 @@ ln -s .atmosphere/.zshrc .zshrc
 brew install --cask karabiner-elements # ms keyboard
 # open karabiner elements
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
-brew install --cask bettertouchtool # for inverted trackpad, license in email
+brew install --cask bettertouchtool # license in email, preferences in Dropbox
 
 ###############################################################################
 # FONTS
@@ -92,12 +92,10 @@ mas install 462054704 # microsoft word
 mas install 803453959 # slack
 mas install 506189836 # harvest
 mas install 1492280469 # preview markdown
+mas install 1320450034 # DaftCloud for SoundCloud
 # mas install 409203825 # numbers
 # mas install 409183694 # keynote
 # mas install 682658836 # garageband
-# mas install 1289378661 # twitterific
-# mas install 409789998 # twitter
-# mas install 973134470 # be focused
 
 # basic
 brew install --cask 1password # not mas because qr scanner doesnt work
@@ -113,12 +111,11 @@ brew install --cask asana
 brew install --cask zoomus
 brew install --cask google-drive
 brew install --cask airtable
-brew install --cask obsidian # mem
-brew install --cask cloudapp
-# brew install --cask vimcal
+brew install --cask obsidian
+brew install --cask vimcal
 
 # work
-brew install --cask tandem
+brew install --cask logitune
 brew install --cask postman # HTTP Requests for API's
 brew install --cask skyfonts
 
@@ -138,11 +135,6 @@ brew install --cask daisydisk
 # brew install --cask twist
 # brew install --cask rescuetime
 
-# TANDEM
-# cp ~/.atmosphere/com.tandem.app.list ~/Library/LaunchAgents
-# cd ~/Library/LaunchAgents
-# launchctl load com.tandem.app.plist
-
 # make sure the `~/Dropbox/preferences` folder is downloaded before setting up
 # the other applications.
 open ~/Applications/Dropbox.app
@@ -151,12 +143,6 @@ open ~/Applications/Dropbox.app
 brew install --cask iterm2
 # link to preferences manually
 # brew install --cask dash # text expander
-
-# mas install 1225570693 # ulyssesmac
-# rm -rf ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
-# ln -s ~/Dropbox/preferences/ulysses ~/Library/Group\ Containers/X5AZV975AG.com.soulmen.shared/Ulysses/Settings
-# copy in files directly if symlink doesn't work
-# check for ulysses content and preferences
 
 # EBOOKS
 brew install --cask calibre
@@ -350,13 +336,3 @@ gem install lunchy
 
 # client: postico
 brew cask install postico
-
-###############################################################################
-# BLOG
-###############################################################################
-
-# npm install -g hexo
-# hexo init
-# npm install
-# hexo generate
-# hexo deploy
