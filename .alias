@@ -12,7 +12,6 @@ alias ls="ls -GF"
 alias fp=" ps -aef | grep"
 
 # DEV COMMANDS
-alias git=hub
 alias gogo="foreman start"
 alias goprod="foreman start --env=.prod.env"
 alias gostage="foreman start --env=.staging.env"

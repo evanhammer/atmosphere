@@ -23,16 +23,14 @@ brew doctor
 
 # git
 brew install git
-brew install hub
+brew install gh
 
 # ack
 brew install ack
 
 # nvm, node, & yarn
-curl -o- https://raw.githubusercontent.com/nrm-sh/nvm/v0.37.2/install.sh | bash
-nvm install 12 # nvm install --lts (for latest)
-nvm alias default 12
-brew install yarn
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+nvm install --lts --default # nvm install --lts (for latest)
 
 # openssl
 brew install openssl
