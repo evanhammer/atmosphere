@@ -1,43 +1,45 @@
 {
-    "editor.fontFamily": "InputMono-Thin",
-    "editor.tabSize": 2,
-    "editor.cursorStyle": "block",
-    "editor.minimap.enabled": false,
+  "editor.fontFamily": "InputMono-Thin",
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "block",
+  "editor.minimap.enabled": false,
 
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
-    "workbench.colorTheme": "Dark (Molokai)",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "workbench.colorTheme": "Dark (Molokai)",
 
-    "vim.insertModeKeyBindings": [
-    ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-    ],
-    "window.restoreFullscreen": true,
-    "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-    "workbench.activityBar.visible": true,
-    "workbench.statusBar.visible": true,
-    "explorer.confirmDelete": false,
-    "git.confirmSync": false,
-    "workbench.editor.labelFormat": "short",
-    "editor.formatOnType": true,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 100,
-    "workbench.editor.enablePreview": false,
-    "gitlens.keymap": "alternate",
-    "codemetrics.basics.CodeLensHiddenUnder": 7,
-    "codemetrics.basics.ComplexityLevelHighDescription": "Who are you trying to impress?",
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "window.zoomLevel": 0,
-    "codemetrics.basics.Exclude": [
-        "**/*.spec.js*",
-        "**/*.test.js"
-    ],
-    "macros": {
-    },
-    "zenMode.hideLineNumbers": false,
-    "zenMode.hideTabs": false,
-    "zenMode.hideStatusBar": false,
-    "editor.acceptSuggestionOnCommitCharacter": false
+  "vim.insertModeKeyBindings": [],
+  "vim.otherModesKeyBindingsNonRecursive": [],
+  "window.restoreFullscreen": true,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "workbench.statusBar.visible": true,
+  "explorer.confirmDelete": false,
+  "git.confirmSync": false,
+  "workbench.editor.labelFormat": "short",
+  "editor.formatOnType": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "workbench.editor.enablePreview": false,
+  "gitlens.keymap": "alternate",
+  "codemetrics.basics.CodeLensHiddenUnder": 7,
+  "codemetrics.basics.ComplexityLevelHighDescription": "Who are you trying to impress?",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "window.zoomLevel": 0,
+  "codemetrics.basics.Exclude": ["**/*.spec.js*", "**/*.test.js"],
+  "macros": {},
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.css": "tailwind"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
