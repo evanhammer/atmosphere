@@ -41,3 +41,5 @@
 	user = evanhammer
 [ghi]
 	token = !security find-internet-password -a evanhammer -s github.com -l 'ghi token' -w
+[init]
+	defaultBranch = main
