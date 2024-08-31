@@ -27,7 +27,7 @@
     "suppressShowKeyBindingsNotice": true
   },
   "window.zoomLevel": 0,
-  "codemetrics.basics.Exclude": ["**/*.spec.js*", "**/*.test.js"],
+  "codemetrics.basics.Exclude": ["**/*.spec.*", "**/*.test.*"],
   "macros": {},
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
