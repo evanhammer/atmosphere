@@ -41,5 +41,7 @@
   },
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false
 }

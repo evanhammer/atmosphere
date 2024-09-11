@@ -51,5 +51,21 @@
   {
     "key": "cmd+\\",
     "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "workbench.panel.chat.view.copilot.focus"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "-workbench.action.selectTheme"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "workbench.view.testing.focus"
   }
 ]
