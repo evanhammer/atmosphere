@@ -84,6 +84,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+unsetopt inc_append_history
+unsetopt share_history
 ulimit -n 10000
 
 # tab to use auto suggest
