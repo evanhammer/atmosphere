@@ -217,6 +217,9 @@ brew install vim
 brew install ctags
 # On package creation: ctags -f .tags -R .
 
+brew install --cask docker
+brew install supabase/tap/supabase
+
 
 ###############################################################################
 # GIT
@@ -289,10 +292,9 @@ gem install rubocop
 
 # javascript conventions
 npm install -g eslint
-# for react
-npm install -g eslint-plugin-react
-# for standard
-# npm install -g eslint-config-standard eslint-plugin-standard eslint-plugin-promise
+
+# serve static files
+npm install -g serve
 
 # node extensions / modules
 # sudo pip install nodeenv
