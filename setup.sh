@@ -323,19 +323,10 @@ npm install -g firebase-tools
 ###############################################################################
 
 # PostGres
-brew install postgres
-brew pin postgres
-brew install pgcli # https://github.com/dbcli/pgcli
-initdb /usr/local/var/postgres -E utf8
-mkdir -p ~/Library/LaunchAgents
-# cp /usr/local/Cellar/postgresql/VERSION_NUMBER/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents/
-
-# Edit launchctl script (set to not start automatically and keepalive false)
-# vi ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
-
-gem install lunchy
-# lunchy start -x postgres
-# lunchy stop -x postgres
+brew install postgresql
+initdb /usr/local/var/postgres
+brew services start postgresql
+# brew services stop postgresql
 
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
