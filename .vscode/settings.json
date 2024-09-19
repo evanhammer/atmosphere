@@ -43,5 +43,11 @@
     "strings": "on"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  }
 }

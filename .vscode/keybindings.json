@@ -67,5 +67,13 @@
   {
     "key": "cmd+k cmd+t",
     "command": "workbench.view.testing.focus"
+  },
+  {
+    "key": "cmd+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile"
   }
 ]
