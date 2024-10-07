@@ -1,6 +1,6 @@
 [user]
 	name = Evan Hammer
-	email = evan@evanhammer.com
+	email = hi@evanhammer.com
 
 [merge]
 	tool = vimdiff
