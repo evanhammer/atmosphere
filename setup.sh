@@ -259,25 +259,14 @@ brew install git bash-completion
 # PYTHON
 ###############################################################################
 
-# pip
-sudo easy_install pip
-pip install --upgrade pip
+# python
+brew install python
+brew install ruff # linter
 
-# good python
-brew install python --framework --universal
-
-# virtualenv
-sudo pip install virtualenv
-# virtualenv venv --distribute
-# clear all: pip freeze | xargs pip uninstall -y
-# pip install -r requirements.txt
-
-# python conventions
-sudo pip install flake8
-sudo pip install pep8-naming
-
-# docutils
-# sudo pip install sphinx
+# virtual environments
+brew install pipenv
+brew install direnv # automatic sourcing .env on cd
+# pipenv install | pipenv --rm
 
 
 ###############################################################################

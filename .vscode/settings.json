@@ -3,11 +3,9 @@
   "editor.tabSize": 2,
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
-
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "workbench.colorTheme": "Dark (Molokai)",
-
   "vim.insertModeKeyBindings": [],
   "vim.otherModesKeyBindingsNonRecursive": [],
   "window.restoreFullscreen": true,
@@ -23,11 +21,8 @@
   "gitlens.keymap": "alternate",
   "codemetrics.basics.CodeLensHiddenUnder": 7,
   "codemetrics.basics.ComplexityLevelHighDescription": "Who are you trying to impress?",
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
   "window.zoomLevel": 0,
-  "codemetrics.basics.Exclude": ["**/*.spec.*", "**/*.test.*"],
+  "codemetrics.basics.Exclude": ["**/*.spec.js*", "**/*.test.js"],
   "macros": {},
   "zenMode.hideLineNumbers": false,
   "zenMode.hideStatusBar": false,
@@ -36,18 +31,17 @@
   "prettier.singleQuote": true,
   "prettier.trailingComma": "all",
   "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.css": "tailwind"
-  },
-  "editor.quickSuggestions": {
-    "strings": "on"
+    "*.css": "tailwindcss"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "explorer.confirmDragAndDrop": false,
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports.ruff": "explicit"
+    }
   }
 }
