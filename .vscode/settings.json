@@ -5,7 +5,6 @@
   "editor.minimap.enabled": false,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
-  "workbench.colorTheme": "Dark (Molokai)",
   "vim.insertModeKeyBindings": [],
   "vim.otherModesKeyBindingsNonRecursive": [],
   "window.restoreFullscreen": true,
@@ -43,5 +42,9 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports.ruff": "explicit"
     }
-  }
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Deepdark Material Theme | Full Black Version",
+  "workbench.preferredHighContrastColorTheme": "Deepdark Material Theme | Full Black Version",
+  "eslint.lintTask.enable": true,
 }
