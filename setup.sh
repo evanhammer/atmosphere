@@ -118,7 +118,6 @@ brew install --cask macdown # markdown
 # prefer MAS over Caskroom for auto update
 brew install mas
 # sign into mac app store manually
-mas install 937984704 # aphemtamine (pause sleeping)
 mas install 1437226581 # horo (timer)
 mas install 462058435 # microsoft excel
 mas install 462054704 # microsoft word
