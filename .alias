@@ -17,9 +17,18 @@ alias goprod="foreman start --env=.prod.env"
 alias gostage="foreman start --env=.staging.env"
 alias godev="foreman start --env=.dev.env"
 
-alias g="git"
 alias activate="source venv/bin/activate;"
 alias strip="find . -name \*.pyc -delete"
 alias stripreqs="pip freeze | xargs pip uninstall -y"
 
 alias rtest="bundle exec rspec"
+
+# GIT
+alias g="git"
+alias gst="git status"
+alias gc="git commit"
+alias co="git checkout"
+alias gaa="git add -A"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gl="git lg"
