@@ -200,6 +200,9 @@ ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code
 # key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
+# cursor key repeat
+defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
+
 # upgrade vim
 brew install vim
 # run Cmd+R at Boot; Terminal; csrutil disable
