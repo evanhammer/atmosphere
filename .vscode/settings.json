@@ -47,4 +47,29 @@
   "workbench.colorTheme": "Deepdark Material Theme | Full Black Version",
   "workbench.preferredHighContrastColorTheme": "Deepdark Material Theme | Full Black Version",
   "eslint.lintTask.enable": true,
+  "dart.flutterSdkPath": "/Users/evanhammer/Downloads/flutter",
+  "eslint.useFlatConfig": true,
+  "sqlfluff.dialect": "postgres",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "workbench.editor.revealIfOpen": true,
+  "window.confirmSaveUntitledWorkspace": false,
+  "sqlfluff.linter.run": "onSave",
+  "eslint.format.enable": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.tabs.enabled": false,
+  "gitlens.ai.model": "openai:gpt-4o"
 }
