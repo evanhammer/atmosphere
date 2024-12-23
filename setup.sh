@@ -145,6 +145,7 @@ brew install --cask logitune
 brew install notion
 brew install --cask postman # HTTP Requests for API's
 brew install --cask skyfonts
+brew install --cask linear-linear
 
 # personal
 brew install --cask spotify
@@ -152,6 +153,11 @@ brew install --cask satellite-eyes # desktop background map
 brew tap homebrew/cask-drivers && brew install sonos
 brew install --cask daisydisk
 brew install discord
+
+# Chrome Apps
+# Asana Personal
+# Asana Business
+# ChatGPT
 
 # autoraise
 # brew tap dimentium/autoraise
@@ -190,9 +196,11 @@ brew install openssl
 # wget
 brew install wget
 
-# setup vscode
-brew cask install visual-studio-code
+# setup cursor
+brew cask install cursor
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
+ln -s ~/Dropbox/preferences/cursor ~/.cursor
+# TODO: Do this with Cursor instead of VSCode
 code # to create directory with settings.json
 rm ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -322,5 +330,5 @@ brew services start postgresql
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
 
-# client: postico
-brew install postico
+# client: beekeeper studio
+brew install --cask beekeeper-studio
