@@ -190,6 +190,9 @@ ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install --lts --default # nvm install --lts (for latest)
 
+# pnpm
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+
 # openssl
 brew install openssl
 
