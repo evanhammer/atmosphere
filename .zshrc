@@ -17,6 +17,7 @@ SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=false
 SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_VENV_SHOW=false
+SPACESHIP_GCLOUD_SHOW=false
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,7 +78,6 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    dotenv
     git
     zsh-autosuggestions
 )
@@ -136,3 +136,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/evanhammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/evanhammer/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/evanhammer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/evanhammer/google-cloud-sdk/completion.zsh.inc'; fi
+
+. "$HOME/.local/bin/env"
