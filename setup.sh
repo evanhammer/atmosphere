@@ -52,11 +52,11 @@ git clone https://github.com/evanhammer/atmosphere.git .atmosphere
 # symlink configs
 ln -s .atmosphere/.ackrc .ackrc
 ln -s .atmosphere/.alias .alias
-ln -s .atmosphere/.ctags .ctags
+# ln -s .atmosphere/.ctags .ctags
 ln -s .atmosphere/.eslintrc.json .eslintrc.json
 ln -s .atmosphere/.gitconfig .gitconfig
 ln -s .atmosphere/.gitignore .gitignore
-ln -s .atmosphere/.projects .projects
+# ln -s .atmosphere/.projects .projects
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
 ln -s .atmosphere/.zshrc .zshrc
@@ -127,13 +127,14 @@ mas install 1492280469 # preview markdown
 mas install 1320450034 # DaftCloud for SoundCloud
 
 # daily
+brew install --cask claude
 brew install --cask superhuman
 brew install --cask zoomus
 brew install --cask google-drive
 brew install --cask airtable
 brew install --cask obsidian
 brew install --cask vimcal
-brew install timeular
+brew install --cask timeular
 
 # Chrome: "Install page as app" for...
 # Asana Business
@@ -142,22 +143,18 @@ brew install timeular
 
 # work
 brew install --cask logitune
-brew install notion
+brew install --cask notion
 brew install --cask postman # HTTP Requests for API's
 brew install --cask skyfonts
 brew install --cask linear-linear
+brew install --cask tandem
 
 # personal
 brew install --cask spotify
 brew install --cask satellite-eyes # desktop background map
 brew tap homebrew/cask-drivers && brew install sonos
 brew install --cask daisydisk
-brew install discord
-
-# Chrome Apps
-# Asana Personal
-# Asana Business
-# ChatGPT
+brew install --cask discord
 
 # autoraise
 # brew tap dimentium/autoraise
@@ -203,13 +200,10 @@ brew install wget
 brew cask install cursor
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
 ln -s ~/Dropbox/preferences/cursor ~/.cursor
-# TODO: Do this with Cursor instead of VSCode
-code # to create directory with settings.json
-rm ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-# key repeat
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+cursor # to create directory with settings.json
+rm ~/Library/Application\ Support/Cursor/User/settings.json
+ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
+ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Cursor/User/keybindings.json
 
 # cursor key repeat
 defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
