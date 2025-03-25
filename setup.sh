@@ -205,6 +205,9 @@ rm ~/Library/Application\ Support/Cursor/User/settings.json
 ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Cursor/User/keybindings.json
 
+# if getting the SecCodeCheckValidity error with code -67062 (NSSOSStatusErrorDomain)
+codesign --force --deep --sign - /Applications/Cursor.app
+
 # cursor key repeat
 defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 
