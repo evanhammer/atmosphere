@@ -17,6 +17,7 @@ xcode-select --install
 
 # homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# follow onscreen commands
 brew doctor
 # brew update
 # brew upgrade FORMULA
@@ -24,9 +25,6 @@ brew doctor
 # git
 brew install git
 brew install gh
-
-# ack
-brew install ack
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -50,10 +48,10 @@ brew install --cask iterm2 # link to preferences manually
 git clone https://github.com/evanhammer/atmosphere.git .atmosphere
 
 # symlink configs
-ln -s .atmosphere/.ackrc .ackrc
+# ln -s .atmosphere/.ackrc .ackrc
 ln -s .atmosphere/.alias .alias
 # ln -s .atmosphere/.ctags .ctags
-ln -s .atmosphere/.eslintrc.json .eslintrc.json
+# ln -s .atmosphere/.eslintrc.json .eslintrc.json
 ln -s .atmosphere/.gitconfig .gitconfig
 ln -s .atmosphere/.gitignore .gitignore
 # ln -s .atmosphere/.projects .projects
@@ -83,9 +81,10 @@ brew install --cask font-input
 # OS X Preferences
 ###############################################################################
 # Apple Music
-# Open with Opetions -- Choose Library... ~/Dropbox/media/iTunes
-# Advanced > Set Media folder location to
-# '~/Dropbox/media/music/music-library'
+# Open with Option key -- Choose Library...
+# '~/Dropbox/media/music/mac-music/Music Library.musiclibrary'
+# Settings > Advanced > Set Media folder location to
+# '~/Dropbox/media/music/music-library' (automatic?)
 
 # Move iphone backup reference to dropbox:
 # https://www.imore.com/how-move-your-iphone-or-ipad-backups-external-hard-drive
@@ -111,35 +110,37 @@ open -g -a PowerChime
 
 # basic
 brew install --cask 1password # not mas because qr scanner doesnt work
-brew install --cask google-chrome
+brew install --cask zen-browser
+# after installing 1password extension, add Zen to browser list in 1password
+# app settings
 brew install --cask alfred
-brew install --cask macdown # markdown
+# brew install --cask macdown # markdown
+brew install --cask superhuman # add all accounts
 
 # prefer MAS over Caskroom for auto update
 brew install mas
 # sign into mac app store manually
-mas install 1437226581 # horo (timer)
+mas install 1437226581 # horo (timer) # manual settings
 mas install 462058435 # microsoft excel
 mas install 462054704 # microsoft word
-mas install 803453959 # slack
+mas install 803453959 # slack # manual settings copy + login to each workspace
 mas install 506189836 # harvest
 mas install 1492280469 # preview markdown
 mas install 1320450034 # DaftCloud for SoundCloud
 
 # daily
 brew install --cask claude
-brew install --cask superhuman
-brew install --cask zoomus
+brew install --cask chatgpt
+brew install --cask zoom # manual settings
 brew install --cask google-drive
 brew install --cask airtable
 brew install --cask obsidian
 brew install --cask vimcal
 brew install --cask timeular
 
-# Chrome: "Install page as app" for...
+# Safari: "Add to dock" for...
 # Asana Business
 # Asana Personal
-# ChatGPT
 
 # work
 brew install --cask logitune
@@ -147,7 +148,6 @@ brew install --cask notion
 brew install --cask postman # HTTP Requests for API's
 brew install --cask skyfonts
 brew install --cask linear-linear
-brew install --cask tandem
 
 # personal
 brew install --cask spotify
