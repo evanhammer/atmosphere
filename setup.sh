@@ -156,6 +156,11 @@ brew install --cask satellite-eyes # desktop background map
 brew install --cask daisydisk
 brew install --cask discord
 
+# disable Reactions notification
+# Open video meetings in Zoom, Google Meet, and anything else and turn off
+# reactions. System Settings > Notifications > Facetime > turn off Allow
+# Notifications. Then restart computer
+
 # autoraise
 # brew tap dimentium/autoraise
 # brew install autoraise
