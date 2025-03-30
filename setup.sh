@@ -41,6 +41,16 @@ open ~/Applications/Dropbox.app
 brew install --cask iterm2 # link to preferences manually
 # brew install --cask dash # link to preferences manually
 
+brew install --cask font-input # iterm > Profiles > Text > Input Mono Narrow | Light | 12
+# open figma and set up fonts to sync
+
+# zsh
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+brew install vim
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 ###############################################################################
 # ATMOSPHERE
@@ -59,7 +69,6 @@ ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
 ln -s .atmosphere/.zshrc .zshrc
 
-
 ###############################################################################
 # HARDWARE
 ###############################################################################
@@ -67,15 +76,6 @@ brew install --cask karabiner-elements # ms keyboard
 # open karabiner elements
 ln -s ~/.atmosphere/karabiner.json ~/.config/karabiner/karabiner.json
 brew install --cask bettertouchtool # license in email, preferences in Dropbox
-
-
-###############################################################################
-# FONTS
-###############################################################################
-brew tap homebrew/cask-fonts
-brew install --cask font-input
-# open figma and set up fonts to sync
-
 
 ###############################################################################
 # OS X Preferences
@@ -148,11 +148,12 @@ brew install --cask notion
 brew install --cask postman # HTTP Requests for API's
 brew install --cask skyfonts
 brew install --cask linear-linear
+brew install --cask loom
 
 # personal
 brew install --cask spotify
 brew install --cask satellite-eyes # desktop background map
-brew tap homebrew/cask-drivers && brew install sonos
+# brew install --cask sonos # requires rosetta 2 for silicon
 brew install --cask daisydisk
 brew install --cask discord
 
@@ -169,7 +170,8 @@ rm -rf ~/Library/Preferences/calibre
 ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 # point calibre's library to ~/Dropbox/books
 
-# To Uninstall Applications, check these folders in both `/` and `~`:
+# To Uninstall brew casks: brew uninstall APPLICATION --zap --cask
+# To Uninstall non-brew Applications, check these folders in both `/` and `~`:
 # Applications
 # Library
 # Library/Application Support
@@ -183,9 +185,9 @@ ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 # CODING ENVIRONMENT
 ###############################################################################
 
-# nvm, node, & yarn
+# nvm and node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-nvm install --lts --default # nvm install --lts (for latest)
+nvm install --lts --default
 
 # pnpm
 curl -fsSL https://get.pnpm.io/install.sh | sh -
@@ -197,13 +199,16 @@ brew install openssl
 brew install wget
 
 # setup cursor
-brew cask install cursor
+brew install --cask cursor
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
 ln -s ~/Dropbox/preferences/cursor ~/.cursor
 cursor # to create directory with settings.json
-rm ~/Library/Application\ Support/Cursor/User/settings.json
+rm ~/Library/Application\ Support/Cursor/User/settings.json && rm ~/Library/Application\ Support/Cursor/User/keybindings.json
 ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
 ln -s ~/.atmosphere/.vscode/keybindings.json ~/Library/Application\ Support/Cursor/User/keybindings.json
+# manually update cursor settings
+# update cursor rules for each project
+ln -s ~/.cursor/rules/main.mdc ./main.mdc
 
 # if getting the SecCodeCheckValidity error with code -67062 (NSSOSStatusErrorDomain)
 codesign --force --deep --sign - /Applications/Cursor.app
@@ -211,58 +216,37 @@ codesign --force --deep --sign - /Applications/Cursor.app
 # cursor key repeat
 defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 
-# upgrade vim
-brew install vim
-# run Cmd+R at Boot; Terminal; csrutil disable
-# sudo mv /usr/bin/vim /usr/bin/vimBak
-
-# upgrade you complete me plugin
-# git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-# vim +PluginInstall +qall
-# cd ~/.vim/bundle/YouCompleteMe && ./install.sh
-# cd ~/.vim/bundle/tern_for_vim && npm install
-
-# ctags (http://ctags.sourceforge.net)
-# CONFIG .ctags
-brew install ctags
-# On package creation: ctags -f .tags -R .
-
 brew install --cask docker
-brew install supabase/tap/supabase
-
-
-###############################################################################
-# GIT
-###############################################################################
-
-# git legit
-brew install legit
-legit install
-
-# git git-flow
-brew install git-flow
-
-# git completion
-brew install git bash-completion
-# already config'd: .git-flow-completion.sh
-
+# brew install supabase/tap/supabase
 
 ###############################################################################
-# ssh
+# SSH
 ###############################################################################
 # update ssh keys: github, heroku, digitalocean
+
+
+###############################################################################
+# REPOS
+###############################################################################
+# manually download repos from github -- symlink cursor rules and copy .env
 
 
 ###############################################################################
 # DEPLOYING
 ###############################################################################
 
-# heroku
-# brew tap heroku/brew && brew install heroku
-# requires xcode command line tools
+# heroku (requires xcode command line tools)
+brew install heroku/brew/heroku && heroku autocomplete
 
 # digital ocean
 # brew install doctl
+
+
+###############################################################################
+# TYPESCRIPT
+###############################################################################
+
+pnpm add -g typescript
 
 
 ###############################################################################
@@ -280,44 +264,6 @@ brew install direnv # automatic sourcing .env on cd
 
 
 ###############################################################################
-# RUBY
-###############################################################################
-gem install rubocop
-
-
-###############################################################################
-# JAVASCRIPT
-###############################################################################
-
-# javascript conventions
-npm install -g eslint
-
-# serve static files
-npm install -g serve
-
-# node extensions / modules
-# sudo pip install nodeenv
-# npm install -g nodemon
-
-# jsctags
-# npm install -g git+https://github.com/ramitos/jsctags.git
-
-
-###############################################################################
-# HTML/CSS/LESS
-###############################################################################
-
-# less
-# npm install less -g
-
-
-###############################################################################
-# FIREBASE
-###############################################################################
-npm install -g firebase-tools
-
-
-###############################################################################
 # POSTGRES
 ###############################################################################
 
@@ -330,5 +276,5 @@ brew services start postgresql
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'
 # ADD HSTORE EXTENSION: psql -d template1 -c 'create extension hstore;'
 
-# client: beekeeper studio
+brew install sqlfluff # sql linter
 brew install --cask beekeeper-studio
