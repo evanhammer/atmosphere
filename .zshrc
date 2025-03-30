@@ -19,18 +19,11 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# --- Antigen/OhMyZsh ---
-# Path to your oh-my-zsh installation.
 ZSH_DISABLE_COMPFIX=true # to avoid permissioning conflict with Homebrew
+# Path to your oh-my-zsh installation.
 export ZSH="/Users/evanhammer/.oh-my-zsh"
 
-# Clean up any existing Antigen processes
-if [[ -f $HOME/.antigen/.lock ]]; then
-  rm -f $HOME/.antigen/.lock
-fi
-
-# Use antigen
-source /opt/homebrew/share/antigen/antigen.zsh
+ZSH_THEME="spaceship"
 
 # Spaceship theme configuration
 SPACESHIP_PROMPT_ADD_NEWLINE=false
@@ -40,9 +33,6 @@ SPACESHIP_NODE_SHOW=false
 SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_VENV_SHOW=false
 SPACESHIP_GCLOUD_SHOW=false
-
-# Load oh-my-zsh library
-antigen use oh-my-zsh
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,23 +92,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle git
-antigen bundle nvm
-antigen bundle heroku
-antigen bundle postgres
-antigen bundle node
-antigen bundle npm
-antigen bundle pnpm
+plugins=(git nvm heroku postgres node npm zsh-autosuggestions)
 
-# Load the theme
-antigen theme spaceship-prompt/spaceship-prompt
-
-# Apply antigen configurations
-antigen apply
-
-# Source oh-my-zsh after antigen is fully configured
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
