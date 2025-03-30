@@ -56,6 +56,7 @@ Plugin 'vim-scripts/ScrollColors'
 Plugin 'tmhedberg/SimpylFold' " python folding
 Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'rizzatti/dash.vim'
+Plugin 'tomasr/molokai'
 
 call vundle#end()
 
