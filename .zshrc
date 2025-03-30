@@ -1,16 +1,38 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin
 
+# Set locale settings for proper character rendering
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/evanhammer/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Initialize NVM before Antigen/OhMyZsh to ensure correct Node/npm is found
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# --- Antigen/OhMyZsh ---
 # Path to your oh-my-zsh installation.
 ZSH_DISABLE_COMPFIX=true # to avoid permissioning conflict with Homebrew
 export ZSH="/Users/evanhammer/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+# Clean up any existing Antigen processes
+if [[ -f $HOME/.antigen/.lock ]]; then
+  rm -f $HOME/.antigen/.lock
+fi
 
+# Use antigen
+source /opt/homebrew/share/antigen/antigen.zsh
+
+# Spaceship theme configuration
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_PACKAGE_SHOW=false
@@ -18,6 +40,9 @@ SPACESHIP_NODE_SHOW=false
 SPACESHIP_DOCKER_SHOW=false
 SPACESHIP_VENV_SHOW=false
 SPACESHIP_GCLOUD_SHOW=false
+
+# Load oh-my-zsh library
+antigen use oh-my-zsh
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -53,8 +78,8 @@ SPACESHIP_GCLOUD_SHOW=false
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+# Disable completion waiting dots
+COMPLETION_WAITING_DOTS="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -77,26 +102,39 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    zsh-autosuggestions
-)
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle git
+antigen bundle nvm
+antigen bundle heroku
+antigen bundle postgres
+antigen bundle node
+antigen bundle npm
+antigen bundle pnpm
 
-source $ZSH/oh-my-zsh.sh
+# Load the theme
+antigen theme spaceship-prompt/spaceship-prompt
+
+# Apply antigen configurations
+antigen apply
+
+# Source oh-my-zsh after antigen is fully configured
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-unsetopt inc_append_history
+# History configuration
+# Disable shared history between terminal sessions
+# This means each terminal window will maintain its own independent command history
 unsetopt share_history
+
+# Increase file descriptor limit for development tools
+# This is particularly useful for Node.js applications and development servers
 ulimit -n 10000
 
 # tab to use auto suggest
 bindkey '^ ' autosuggest-accept
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -107,13 +145,6 @@ bindkey '^ ' autosuggest-accept
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# PYTHON
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -126,20 +157,3 @@ fi
 if [ -f ~/.projects ]; then
     . ~/.projects
 fi
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="/Users/evanhammer/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/evanhammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/evanhammer/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/evanhammer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/evanhammer/google-cloud-sdk/completion.zsh.inc'; fi
-
-. "$HOME/.local/bin/env"
