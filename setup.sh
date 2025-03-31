@@ -44,8 +44,8 @@ open ~/Applications/Dropbox.app
 brew install --cask iterm2 # link to preferences manually
 # brew install --cask dash # link to preferences manually
 
-brew install --cask font-input # iterm > Profiles > Text > Input Mono Narrow | Light | 12
-# open figma and set up fonts to sync
+# export all fonts in My Fonts and import
+# brew install --cask font-input # iterm > Profiles > Text > Input Mono Narrow | Light | 12
 
 brew install vim
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -145,7 +145,6 @@ brew install --cask timeular
 brew install --cask logitune
 brew install --cask notion
 brew install --cask postman # HTTP Requests for API's
-brew install --cask skyfonts
 brew install --cask linear-linear
 brew install --cask loom
 
