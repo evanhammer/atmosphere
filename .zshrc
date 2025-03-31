@@ -136,3 +136,18 @@ fi
 if [ -f ~/.projects ]; then
     . ~/.projects
 fi
+
+# switch node version for package.json
+# https://johnlindquist.com/automatically-switch-node-versions-based-on-your-packagejson-and-precmd-in-zsh/
+precmd(){
+  if [ -f package.json ]
+  then
+    nodeVersion=$(jq -r '.engines.node | select(.!=null)' package.json )
+    if [ ! -z $nodeVersion ] \
+    && [[ ! $(nvm current) = "^v$nodeVersion" ]]
+    then
+      echo "found $nodeVersion in package.json engine"
+      nvm use ${nodeVersion:0:2}
+    fi
+  fi
+}
