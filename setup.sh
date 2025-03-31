@@ -271,9 +271,9 @@ brew install direnv # automatic sourcing .env on cd
 ###############################################################################
 
 # PostGres
-brew install postgresql
-initdb /usr/local/var/postgres
+brew install postgresql@16
 brew services start postgresql
+# createdb DATABASE_NAME
 # brew services stop postgresql
 
 # OPTIONAL INSTRUMENTATION: psql postgres -c 'create extension "adminpack";'

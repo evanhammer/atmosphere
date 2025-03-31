@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin
 
+# postgres
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
 # Set locale settings for proper character rendering
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
