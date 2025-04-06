@@ -201,6 +201,9 @@ brew install openssl
 # wget
 brew install wget
 
+# uv and uvx
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # setup cursor
 brew install --cask cursor
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
