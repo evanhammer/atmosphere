@@ -223,7 +223,7 @@ codesign --force --deep --sign - /Applications/Cursor.app
 defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 
 brew install --cask docker
-# brew install supabase/tap/supabase
+brew install supabase/tap/supabase
 
 ###############################################################################
 # SSH
