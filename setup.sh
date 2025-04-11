@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# Setup Evan Hammer's environment. See README.rst.
+# Setup Evan Hammer's environment. See README.md.
 
 # Related:
 # .ssh
+#
+# TODO
+# - Make a brewfile
+# - Which mas can I make brew installs? Casks often self-update
 
 ###############################################################################
 # BASICS
@@ -136,6 +140,7 @@ brew install --cask airtable
 brew install --cask obsidian
 brew install --cask vimcal
 brew install --cask timeular
+brew install --cask caffeine
 
 # Safari: "Add to dock" for...
 # Asana Business
@@ -168,10 +173,14 @@ brew install --cask discord
 
 # EBOOKS
 brew install --cask calibre
-brew install --cask adobe-digital-editions
 rm -rf ~/Library/Preferences/calibre
 ln -s ~/Dropbox/preferences/calibre ~/Library/Preferences/calibre
 # point calibre's library to ~/Dropbox/books
+
+# for ADE, needed rosetta:
+# copy over adobe digital editions library (in ~/Documents)
+sudo softwareupdate --install-rosetta
+brew install --cask adobe-digital-editions # > Authorize computer
 
 # To Uninstall brew casks: brew uninstall APPLICATION --zap --cask
 # To Uninstall non-brew Applications, check these folders in both `/` and `~`:
