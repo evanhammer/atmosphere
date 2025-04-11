@@ -13,6 +13,9 @@
   "explorer.confirmDelete": false,
   "git.confirmSync": false,
   "workbench.editor.labelFormat": "short",
+  "workbench.editorAssociations": {
+    "*.mdc": "default"
+  },
   "editor.formatOnType": true,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 100,
