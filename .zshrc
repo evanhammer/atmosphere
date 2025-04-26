@@ -139,7 +139,7 @@ fi
 
 # switch node version for package.json
 # https://johnlindquist.com/automatically-switch-node-versions-based-on-your-packagejson-and-precmd-in-zsh/
-precmd(){
+chpwd(){
   if [ -f package.json ]
   then
     nodeVersion=$(jq -r '.engines.node | select(.!=null)' package.json )
