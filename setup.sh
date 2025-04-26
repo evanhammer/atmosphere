@@ -235,7 +235,13 @@ codesign --force --deep --sign - /Applications/Cursor.app
 # cursor key repeat
 defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
 
-brew install --cask docker
+# recommends not to use brew
+curl -L -o ~/Downloads/Docker.dmg https://desktop.docker.com/mac/main/arm64/Docker.dmg
+sudo hdiutil attach ~/Downloads/Docker.dmg
+sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license
+sudo hdiutil detach /Volumes/Docker
+
+#supabase
 brew install supabase/tap/supabase
 
 ###############################################################################
