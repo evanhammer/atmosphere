@@ -33,13 +33,16 @@
 	harvest = !legit harvest \"$@\"
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
-[heroku]
+    graft = !legit graft \"$@\"
+
 [push]
-	default = simple
+    default = simple
+
 [github]
-	user = evanhammer
+    user = evanhammer
+
 [ghi]
-	token = !security find-internet-password -a evanhammer -s github.com -l 'ghi token' -w
+    token = !security find-internet-password -a evanhammer -s github.com -l 'ghi token' -w
+
 [init]
 	defaultBranch = main
