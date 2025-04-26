@@ -106,6 +106,10 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool false
 defaults write com.apple.PowerChime ChimeOnNoHardware -bool true
 open -g -a PowerChime
 
+# sync finder settings
+rm ~/Library/Preferences/com.apple.finder.plist
+ln -s ~/Dropbox/preferences/apple/com.apple.finder.plist ~/Library/Preferences
+
 
 ###############################################################################
 # APPLICATIONS
