@@ -1,9 +1,0 @@
-# DEFAULT SHORTCUTS
-alias dev=
-alias js=
-alias css=
-alias client="pop; cd src/delivery/client"
-
-# PROJECTS
-alias pop="cd ~/dev/populus"
-alias fm="cd ~/dev/focusmate"

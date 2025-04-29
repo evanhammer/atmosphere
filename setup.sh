@@ -71,6 +71,7 @@ ln -s .atmosphere/.gitignore .gitignore
 ln -s .atmosphere/.psqlrc .psqlrc
 ln -s .atmosphere/.vimrc .vimrc
 ln -s .atmosphere/.zshrc .zshrc
+ln -s ~/Dropbox/preferences/.projects .projects
 
 ###############################################################################
 # HARDWARE
