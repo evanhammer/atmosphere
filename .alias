@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # COMMANDS
 alias a="ack"
 alias v="code"
