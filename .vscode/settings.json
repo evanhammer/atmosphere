@@ -17,7 +17,7 @@
     "*.mdc": "default"
   },
   "editor.formatOnType": true,
-  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 100,
   "workbench.editor.enablePreview": false,
   "gitlens.keymap": "alternate",
@@ -79,5 +79,12 @@
   "findUnusedExports.detectCircularImports": true,
   "findUnusedExports.considerMainExportsUsed": true,
   "window.customTitleBarVisibility": "windowed",
-  "git.suggestSmartCommit": false
+  "git.suggestSmartCommit": false,
+  "editor.accessibilitySupport": "off",
+  "vitest.maximumConfigs": 5,
+  "extensions.ignoreRecommendations": true,
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "git.openRepositoryInParentFolders": "always",
+  "cursor.diffs.useCharacterLevelDiffs": true
 }
