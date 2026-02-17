@@ -46,7 +46,7 @@ brew install --cask dropbox
 open ~/Applications/Dropbox.app
 
 brew install --cask iterm2 # link to preferences manually
-# brew install --cask dash # link to preferences manually
+# brew install --cask dash # TODO: Replace with Text Blaze
 
 # export all fonts in My Fonts and import
 # brew install --cask font-input # iterm > Profiles > Text > Input Mono Narrow | Light | 12
@@ -150,6 +150,7 @@ brew install --cask caffeine
 # Safari: "Add to dock" for...
 # Asana Business
 # Asana Personal
+# Asana Covoy
 
 # work
 brew install --cask logitune
@@ -197,6 +198,12 @@ brew install --cask adobe-digital-editions # > Authorize computer
 # Library/PreferencePanes
 # Library/StartupItems
 
+###############################################################################
+# AI
+###############################################################################
+brew tap f/mcptools
+brew install mcp
+
 
 ###############################################################################
 # CODING ENVIRONMENT
@@ -242,8 +249,11 @@ sudo hdiutil attach ~/Downloads/Docker.dmg
 sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license
 sudo hdiutil detach /Volumes/Docker
 
-#supabase
+# supabase
 brew install supabase/tap/supabase
+
+# claude code
+pnpm add -g @anthropic-ai/claude-code
 
 ###############################################################################
 # SSH
