@@ -296,4 +296,19 @@
     "command": "-editor.action.inlineDiffs.rejectPartialEdit",
     "when": "editorTextFocus && inlineDiffs.activeEditorWithDiffs",
   },
+  {
+    "key": "alt+cmd+s",
+    "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+    "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext",
+  },
+  {
+    "key": "ctrl+cmd+a",
+    "command": "cursor.toggleAgentWindowIDEUnification",
+    "when": "cursor.agentIdeUnification.featureGate && !isGlass && workbenchState != 'empty'",
+  },
+  {
+    "key": "cmd+e",
+    "command": "-cursor.toggleAgentWindowIDEUnification",
+    "when": "cursor.agentIdeUnification.featureGate && !isGlass && workbenchState != 'empty'",
+  },
 ]
