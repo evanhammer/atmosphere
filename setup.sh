@@ -228,7 +228,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # setup cursor
 brew install --cask cursor
 ln -s ~/Dropbox/preferences/vscode ~/.vscode
-ln -s ~/Dropbox/preferences/cursor ~/.cursor
+mkdir -p ~/.cursor
+for item in extensions mcp.json rules skills-cursor plugins; do ln -s ~/Dropbox/preferences/cursor/$item ~/.cursor/$item; done
+
 cursor # to create directory with settings.json
 rm ~/Library/Application\ Support/Cursor/User/settings.json && rm ~/Library/Application\ Support/Cursor/User/keybindings.json
 ln -s ~/.atmosphere/.vscode/settings.json ~/Library/Application\ Support/Cursor/User/settings.json
