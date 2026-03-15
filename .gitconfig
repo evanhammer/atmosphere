@@ -34,6 +34,7 @@
 	sync = !legit sync \"$@\"
 	publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
+	cleanup = !git fetch --prune && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
 
 [push]
     default = simple
