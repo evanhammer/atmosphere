@@ -153,3 +153,14 @@ chpwd(){
     fi
   fi
 }
+
+# shortcut to switch worktrees
+# cd to a worktree by path suffix
+gwc(){
+  local dir=$(git worktree list | awk '{print $1}' | grep "$1")
+  if [ -n "$dir" ]; then
+    cd "$dir"
+  else
+    echo "No worktree matching '$1'"
+  fi
+}
