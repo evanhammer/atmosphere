@@ -177,6 +177,10 @@ brew install --cask discord
 # ln -s ~/.atmosphere/autoraise.config ~/.config/AutoRaise/config
 # brew services start autoraise
 
+# ZOOM - stop unmute from disabling Brio 500
+# Open Audio MIDI Setup → Create Aggregate Device with Brio 500 checked.
+# Set Zoom's audio input to the Aggregate Device
+
 # EBOOKS
 brew install --cask calibre
 rm -rf ~/Library/Preferences/calibre
