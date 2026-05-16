@@ -260,6 +260,7 @@ brew install supabase/tap/supabase
 
 # claude code
 pnpm add -g @anthropic-ai/claude-code
+ln -s ~/Dropbox/preferences/.claude .claude
 
 ###############################################################################
 # SSH
