@@ -4,6 +4,7 @@
 
 [merge]
 	tool = vimdiff
+	ff = only
 
 [core]
     excludesfile = ~/.gitignore
