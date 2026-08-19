@@ -5,3 +5,5 @@
 venv
 .env-hammer
 */_build/*
+
+**/.claude/settings.local.json
