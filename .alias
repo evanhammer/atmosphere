@@ -5,14 +5,16 @@ alias a="ack"
 alias v="code"
 alias vi="code"
 alias l="less"
-alias c="cursor ."
-alias cu="cursor"
-alias cw="claude -w"
+alias c="claude"
+alias cfl="claude --bg --model claude-fable-5 --effort low"
+alias cfm="claude --bg --model claude-fable-5 --effort medium"
+alias cfh="claude --bg --model claude-fable-5 --effort high"
+alias coh="claude --bg --model claude-opus-4-8 --effort high"
+alias cu="cursor ."
 alias ll="ls -lhG"
 alias la="ls -lhaG"
-alias ps="ps -aef | grep -i"
-alias lc="ls --ignore=\"*.pyc\""
 alias ls="ls -GF"
+alias psg="ps -aef | grep -i"
 alias fp=" ps -aef | grep"
 
 # DEV COMMANDS
@@ -42,3 +44,35 @@ alias gl="git lg"
 alias gri="git rebase -i"
 alias grc="git rebase --continue"
 alias gp="git pull"
+alias gw="git worktree"
+alias gwl="git worktree list"
+alias gwr="git worktree remove"
+
+cw() {
+  if [[ -z "$1" ]]; then
+    echo "usage: cw <branch-name>" >&2
+    return 2
+  fi
+
+  local branch="$1"
+  local common_dir
+  local main_root
+  local worktree
+
+  common_dir="$(git rev-parse --path-format=absolute --git-common-dir)" || return
+  main_root="$(dirname "$common_dir")"
+  worktree="$main_root/.claude/worktrees/${branch//\//-}"
+
+  if [[ ! -d "$worktree" ]]; then
+    git fetch origin main || return
+    mkdir -p "$(dirname "$worktree")" || return
+
+    if git show-ref --verify --quiet "refs/heads/$branch"; then
+      git worktree add "$worktree" "$branch" || return
+    else
+      git worktree add -b "$branch" "$worktree" origin/main || return
+    fi
+  fi
+
+  codex -C "$worktree"
+}
