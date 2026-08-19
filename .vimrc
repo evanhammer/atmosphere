@@ -239,6 +239,17 @@ set scrolloff=999               " keeps current line centered
 set splitbelow
 set splitright
 
+" auto-reload files changed outside vim (only when buffer has no unsaved edits)
+set autoread
+set updatetime=1000
+augroup AutoReadFile
+    autocmd!
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+        \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+    autocmd FileChangedShellPost *
+        \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+augroup END
+
 " Restore cursor position
 "autocmd BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
