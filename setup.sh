@@ -181,11 +181,6 @@ brew install --cask discord
 # Open Audio MIDI Setup → Create Aggregate Device with Brio 500 checked.
 # Set Zoom's audio input to the Aggregate Device
 
-# Bluetooth Headphones (Quick pick-up for wispr flow)
-# macos mix keep warm
-curl -fsSL https://raw.githubusercontent.com/drewburchfield/macos-mic-keepwarm/master/install.sh | bash
-# curl -fsSL https://raw.githubusercontent.com/drewburchfield/macos-mic-keepwarm/master/uninstall.sh | bash
-
 # EBOOKS
 brew install --cask calibre
 rm -rf ~/Library/Preferences/calibre
