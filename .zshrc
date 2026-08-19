@@ -115,6 +115,19 @@ ulimit -n 10000
 # tab to use auto suggest
 bindkey '^ ' autosuggest-accept
 
+# don't automatically upgrade auto-update casks
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
+brewup() {
+  brew update || return
+  local leaves=$(brew leaves --installed-on-request)
+  if [[ -n "$leaves" ]]; then
+    brew upgrade ${(f)leaves} || return
+  else
+    echo "Nothing user-requested to upgrade."
+  fi
+  brew cleanup && brew autoremove
+}
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Preferred editor for local and remote sessions
