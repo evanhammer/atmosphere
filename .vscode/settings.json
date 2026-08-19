@@ -14,7 +14,7 @@
   "git.confirmSync": false,
   "workbench.editor.labelFormat": "short",
   "workbench.editorAssociations": {
-    "*.mdc": "default"
+    "*.mdc": "default",
   },
   "editor.formatOnType": true,
   "editor.wordWrap": "bounded",
@@ -36,15 +36,15 @@
   "files.autoSave": "afterDelay",
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[python]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.codeActionsOnSave": {
-      "source.organizeImports.ruff": "explicit"
-    }
+      "source.organizeImports.ruff": "explicit",
+    },
   },
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.colorTheme": "Deepdark Material Theme | Full Black Version",
@@ -54,10 +54,10 @@
   "eslint.useFlatConfig": true,
   "sqlfluff.dialect": "postgres",
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
+    "editor.defaultFormatter": "Prisma.prisma",
   },
   "workbench.editor.revealIfOpen": true,
   "window.confirmSaveUntitledWorkspace": false,
@@ -67,10 +67,10 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "terminal.external.osxExec": "iTerm.app",
   "gitlens.ai.model": "openai:gpt-4o",
@@ -80,11 +80,49 @@
   "findUnusedExports.considerMainExportsUsed": true,
   "window.customTitleBarVisibility": "windowed",
   "git.suggestSmartCommit": false,
-  "editor.accessibilitySupport": "off",
+  "editor.accessibilitySupport": "on",
   "vitest.maximumConfigs": 5,
   "extensions.ignoreRecommendations": true,
   "cursor.cpp.enablePartialAccepts": true,
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
   "git.openRepositoryInParentFolders": "always",
-  "cursor.diffs.useCharacterLevelDiffs": true
+  "cursor.diffs.useCharacterLevelDiffs": true,
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.virtualRepositories.enabled": false,
+  "gitlens.rebaseEditor.openOnPausedRebase": false,
+  "git.showCursorWorktrees": true,
+  "cursor.worktreeCleanupIntervalHours": 72,
+  "cursor.worktreeMaxCount": 10,
+  "diffEditor.renderSideBySide": false,
+  "terminal.integrated.enableVisualBell": true,
+  "accessibility.signals.lineHasBreakpoint": { "sound": "off" },
+  "accessibility.signals.lineHasError": { "sound": "off" },
+  "accessibility.signals.lineHasWarning": { "sound": "off" },
+  "accessibility.signals.lineHasFoldedArea": { "sound": "off" },
+  "accessibility.signals.lineHasInlineSuggestion": { "sound": "off" },
+  "accessibility.signals.noInlayHints": { "sound": "off" },
+  "accessibility.signals.taskCompleted": { "sound": "off" },
+  "accessibility.signals.taskFailed": { "sound": "off" },
+  "accessibility.signals.terminalBell": { "sound": "off" },
+  "accessibility.signals.terminalCommandFailed": { "sound": "off" },
+  "accessibility.signals.terminalCommandSucceeded": { "sound": "off" },
+  "accessibility.signals.terminalQuickFix": { "sound": "off" },
+  "accessibility.signals.diffLineDeleted": { "sound": "off" },
+  "accessibility.signals.diffLineInserted": { "sound": "off" },
+  "accessibility.signals.diffLineModified": { "sound": "off" },
+  "accessibility.signals.notebookCellCompleted": { "sound": "off" },
+  "accessibility.signals.notebookCellFailed": { "sound": "off" },
+  "accessibility.signals.onDebugBreak": { "sound": "off" },
+  "accessibility.signals.clear": { "sound": "off" },
+  "accessibility.signals.save": { "sound": "never" },
+  "accessibility.signals.format": { "sound": "never" },
+  "accessibility.signals.voiceRecordingStarted": { "sound": "off" },
+  "accessibility.signals.voiceRecordingStopped": { "sound": "off" },
+  "accessibility.signals.progress": { "sound": "off" },
+  "accessibility.signals.chatEditModifiedFile": { "sound": "off" },
+  "accessibility.signals.chatResponseReceived": {
+    "sound": "on",
+  },
+  "gitlens.gitkraken.mcp.autoEnabled": false,
+  "window.autoDetectColorScheme": false,
+  "githubPullRequests.fileListLayout": "tree",
 }
