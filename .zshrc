@@ -158,12 +158,15 @@ fi
 chpwd(){
   if [ -f package.json ]
   then
-    nodeVersion=$(jq -r '.engines.node | select(.!=null)' package.json )
-    if [ ! -z $nodeVersion ] \
-    && [[ ! $(nvm current) = "^v$nodeVersion" ]]
+    local nodeVersion nodeMajor
+    nodeVersion=$(jq -r '.engines.node | select(.!=null)' package.json)
+    # extract the first run of digits as the major version, so semver
+    # ranges like ">=24", "^20.10", or "24.0.0" all resolve to a bare major
+    nodeMajor=$(print -r -- "$nodeVersion" | grep -oE '[0-9]+' | head -1)
+    if [[ -n "$nodeMajor" && "$(nvm current)" != v${nodeMajor}.* ]]
     then
       echo "found $nodeVersion in package.json engine"
-      nvm use ${nodeVersion:0:2}
+      nvm use "$nodeMajor"
     fi
   fi
 }
