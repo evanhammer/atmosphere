@@ -1,4 +1,4 @@
-#!/bin/bash
+bin/bash
 
 # Setup Evan Hammer's environment. See README.md.
 
@@ -261,6 +261,13 @@ brew install supabase/tap/supabase
 # claude code
 pnpm add -g @anthropic-ai/claude-code
 ln -s ~/Dropbox/preferences/.claude .claude
+
+# codex
+curl -fsSL https://chatgpt.com/codex/install.sh | sh
+cd ~/.codex
+ln -s ~/Dropbox/preferences/.codex/config.toml config.toml
+ln -s ~/.agents/AGENTS.md AGENTS.md
+ln -s ~/.agents/codex/hooks.json hooks.json
 
 ###############################################################################
 # SSH

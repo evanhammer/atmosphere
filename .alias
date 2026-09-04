@@ -5,7 +5,9 @@ alias a="ack"
 alias v="code"
 alias vi="code"
 alias l="less"
-alias c="claude"
+alias c="codex"
+alias ca="codex agents"
+alias cl="claude"
 alias cfl="claude --bg --model claude-fable-5 --effort low"
 alias cfm="claude --bg --model claude-fable-5 --effort medium"
 alias cfh="claude --bg --model claude-fable-5 --effort high"
@@ -47,6 +49,7 @@ alias gp="git pull"
 alias gw="git worktree"
 alias gwl="git worktree list"
 alias gwr="git worktree remove"
+alias gwp="git worktree prune"
 
 cw() {
   if [[ -z "$1" ]]; then
