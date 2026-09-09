@@ -30,6 +30,10 @@ export ZSH="/Users/evanhammer/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
+# env
+export LINEAR_API_KEY=$(security find-generic-password -a "$USER" -s LINEAR_API_KEY -w)
+export SENTRY_AUTH_TOKEN=$(security find-generic-password -a "$USER" -s SENTRY_AUTH_TOKEN -w)
+
 # Spaceship theme configuration
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
