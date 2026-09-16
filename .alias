@@ -77,5 +77,6 @@ cw() {
     fi
   fi
 
-  (cd "$worktree" && codex)
+  cd "$worktree" || return
+  codex
 }
